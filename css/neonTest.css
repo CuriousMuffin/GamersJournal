@@ -1,63 +1,59 @@
-/*
-.neonText {
-  // Sulla scritta
-  color: #CEF3F1;
-  text-shadow: 0 0 7px #CEF3F1, 0 0 10px #CEF3F1, 0 0 21px #1D7874,
-    // ombre 
-    0 0 42px #cde3f3, 0 0 82px #cde3f3, 0 0 92px #cde3f3,
-    0 0 102px #cde3f3, 0 0 151px #cde3f3;
-  font-family: "Warnes", cursive;
-}
-*/
-
 .neonText2 {
   /* Sulla scritta */
   color: #cef3f1;
-  text-shadow: 0 0 7px #cef3f1, 0 0 10px #cef3f1, 0 0 15px #1d7874,
-    /* ombre */ 0 0 42px #cde3f3, 0 0 82px #cde3f3, 0 0 92px #cde3f3,
-    0 0 102px #cde3f3, 0 0 151px #cde3f3;
+  /* ombre */
+  text-shadow: 0 0 7px #cef3f1, 0 0 10px #cef3f1, 0 0 15px #cef3f1, 
+  0 0 42px #cde3f3, 0 0 82px #cde3f3, 0 0 92px #cde3f3;
   font-family: "Tourney";
 }
 
-.neonSubText2 {
-  /* Sulla scritta */
-  color: #cef3f1;
-  text-shadow: 0 0 1px #cef3f1, 0 0 4px #1d7874, /* ombre */ 0 0 20px #cde3f3,
-    0 0 60px;
-  /* #cde3f3, 0 0 92px #cde3f3,
-    0 0 102px #cde3f3, 0 0 151px #cde3f3; */
-  font-family: "Tourney";
+.logo {
+  display: flex;
+  width: 30%;
+}
+
+#invader {
+  width: 100%;
+  height: auto;
+  /* padding: 4% 0 0 2%; */
+  fill: #cef3f1;
+}
+
+/* Effects */
+
+#invader {
+  filter: drop-shadow(0 0 25px #cde3f3);
 }
 
 /* Additional styling */
 
 body {
+  margin: 0;
   font-size: 18px;
-  background-color: #53287b;
-}
-
-h1,
-h2 {
-  text-align: center;
-  font-weight: 400;
-}
-
-h3 {
-  text-align: center;
+  background-color: #0d0118;
 }
 
 h1 {
-  font-size: 7rem;
+  font-weight: 400;
+  font-size: 4em;
 }
 
 h2 {
   font-size: 1.8rem;
 }
 
-h3 {
-  font-size: 3rem;
+.container {
+  display: flex;
+  justify-content: center;
 }
 
-.container {
-  margin-top: 20vh;
+.header {
+  width: 25vw;
+  display: flex;
+  padding-left: 1em; 
+  justify-content:space-evenly;
+}
+
+.header-background {
+  background-image: url("../images/stars01.jpg");
 }

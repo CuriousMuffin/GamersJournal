@@ -1,0 +1,34 @@
+#scrittalogo {
+  text-shadow: 0 0 20px #cef3f1;
+}
+
+/* #logo {
+  filter: drop-shadow(0 0 11px #0095ff);
+} */
+
+/* Additional styling */
+
+body {
+  margin: 0;
+  background-color: #0d0118;
+}
+
+/* .header {
+  width: 100%;
+  height: auto;
+} */
+
+.logo {
+  filter: drop-shadow(0 0 11px #0095ff);
+  display: flex;
+  width: 40vw;
+}
+
+.header {
+  display: flex;
+  width: 100vw;
+  height:fit-content;
+  background-image: url("../images/stars01.jpg");
+}
+
+
