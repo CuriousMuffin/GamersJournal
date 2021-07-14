@@ -63,23 +63,8 @@ body {
 }
 
 /* Right side navbar */
-#navbar a2 {
+#navbar a.rightNavbar {
   float: right;
-  display: block;
-  color: #cef3f1;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
-
-#navbar a2:hover {
-  background-color: #f3e6fb;
-  color: #0d0118;
-}
-
-#navbar a2.active {
-  background-color: #7c3fbe;
-  color: #cef3f1;
 }
 
 .content {
