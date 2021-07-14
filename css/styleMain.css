@@ -3,14 +3,18 @@
 } */
 
 /* Additional styling */
-
+p{
+  margin: 0;
+}
 body {
   margin: 0;
   background-color: #0d0118;
 }
 
+/* ================ Header ================ */
 .logo {
   display: flex;
+  justify-content: center;
   align-self: center;
   filter: drop-shadow(0 0 11px #0095ff);
   width: 40vw;
@@ -22,9 +26,138 @@ body {
 
 .header {
   display: flex;
-  /* background-color: rgb(0, 0, 129); */
+  justify-content: center;
   width: 100%;
   max-height: 18vw;
-  background-image: url("../images/stars03.jpg");
-  background-position: center;
+  background-color: #31546d;
+  /* background: linear-gradient(
+    to bottom,
+    #0d0118 0%,
+    #31546d 96%,
+    #31546d 100%
+  ); */
+  /* background-image: url("../images/stars03.jpg"); */
+}
+
+/* ================ Sticky navbar ================ */
+#navbar {
+  overflow: hidden;
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #31546d;
+  font-size: 2em;
+}
+
+/* Left side navbar */
+#navbar a {
+  float: left;
+  display: block;
+  color: #cef3f1;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  background-color: #cef3f1;
+  color: #0d0118;
+}
+
+#navbar a.active {
+  background-color: #0095ff;
+  color: #cef3f1;
+}
+
+/* Right side navbar */
+#navbar a2 {
+  float: right;
+  display: block;
+  color: #cef3f1;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+#navbar a2:hover {
+  background-color: #cef3f1;
+  color: #0d0118;
+}
+
+#navbar a2.active {
+  background-color: #0095ff;
+  color: #cef3f1;
+}
+
+.content {
+  padding: 1% 8%;
+  font-family: "Roboto", sans-serif;
+  font-size: 3em;
+  color: #cef3f1;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* ================ Footer ================ */
+footer {
+  bottom: 0;
+  width: 100%;
+  background-color: #31546d;
+  color: #cef3f1;
+  font-family: "Roboto Condensed", sans-serif;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+/* flex desing */
+.footer-container{
+  display: flex;
+  align-self:center;
+}
+
+footer {
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+}
+
+.logo-footer {
+  display: flex;
+  /* justify-content: center; */
+  align-self: center;
+  /* filter: drop-shadow(0 0 11px #0095ff); */
+  width: 20vw;
+}
+
+.footer-text-container {
+  flex-direction: row-reverse;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-text-cookies {
+  display: flex;
+  align-self: center;
+  justify-content: flex-end;
+  padding: 0px 20px;
+}
+
+.footer-text1 {
+  display: flex;
+  align-self: center;
+}
+
+#row1{
+  display: flex;
+  padding-top: 1%;
+  height: 66%;
+  justify-content:space-between 
+}
+
+#row2 {
+  display: flex;
+  /* height: 33%; */
+  font-size: 1rem;
+  justify-content: center;
 }
