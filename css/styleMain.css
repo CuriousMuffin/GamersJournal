@@ -11,6 +11,10 @@ body {
   background-color: #0d0118;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* ================ Header ================ */
 .logo {
   display: flex;
@@ -70,8 +74,9 @@ body {
 .content {
   padding: 1% 8%;
   font-family: "Roboto", sans-serif;
-  font-size: 3em;
-  color: #0d0118;
+  font-size: 1.5em;
+  /* color: #0d0118; */
+  color: white;
 }
 
 .sticky {
@@ -91,7 +96,7 @@ footer {
   font-size: 1.5em;
 }
 
-/* flex desing */
+/* flex design */
 .footer-container {
   display: flex;
   align-self: center;
@@ -140,4 +145,29 @@ footer {
   /* height: 33%; */
   font-size: 1rem;
   justify-content: center;
+}
+
+/* ================ ToTop Button ================ */
+
+#toTopButton {
+  display: none; /* Nascosto di default */
+  position: fixed; /* Posizione ancorata */
+  bottom: 20px; /* Distanza dal fondo pagina */
+  right: 20px; /* Distanza dalla destra */
+  z-index: 99; /* Posiziona il bottone al livello più alto */
+  border: none;
+  outline: none;
+  background-color: #7c3fbe;
+  color: white; /* Colore freccia */
+  width: 50px;
+  height: 50px;
+  /* padding: 15px; /* Padding: se imposto la dimensione non serve */
+  border-radius: 50%; /* Arrotonda angoli bottone */
+  font-size: 1.25rem; /* Dimensione font freccia */
+}
+
+#toTopButton:hover {
+  background-color: #f3e6fb; /* Evidenzia il bottone al passaggio del mouse */
+  color: #0d0118;
+  cursor: pointer; /* Il cursore diventa manina al passaggio del mouse */
 }
