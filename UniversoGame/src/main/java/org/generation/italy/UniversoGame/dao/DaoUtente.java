@@ -42,7 +42,7 @@ public class DaoUtente extends BasicDao implements IDaoUtente
 		
 		if(map != null)
 		{
-			ris = IMappablePro.fromMap(Utente.class, map);
+			ris = IMappablePro.fromMap(Utente.class, map);	
 		}
 		return ris;
 	}

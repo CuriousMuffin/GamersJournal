@@ -112,7 +112,7 @@ public interface IMappablePro {
 
 		// dalla classe prendo i suoi metodi
 		Method[] metodi = classe.getMethods();
-
+		System.out.println(map);
 		// itero i metodi
 		for (Method metodo : metodi) {
 			// del metodo prendo il nome
@@ -126,7 +126,7 @@ public interface IMappablePro {
 				// grazie alla chiave vado a recuperare dalla mappa il valore associato
 				String valore = map.get(chiave);
 //				System.out.println(chiave + " " + valore);
-
+				
 				// Abbiamo un problema: il valore � una stringa. Non va sempre bene
 				// in quanto i setter di propriet� numeriche, boolean oppure di tipo char
 				// vogliono un parametro di tipo differente da String
@@ -168,6 +168,8 @@ public interface IMappablePro {
 
 						Method[] metodiBoxati = tipoBoxato.getMethods();
 
+						System.out.println(valore);
+						
 						for (Method metodoBoxato : metodiBoxati) {
 							// Integer ha 3 metodi parseInt, quindi oltre a controllare che parte con
 							// parse controllo che abbia un solo parametro

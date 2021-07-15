@@ -44,7 +44,7 @@ public abstract class BasicDao {
 	 *         query inserita
 	 */
 	public List<Map<String, String>> getAll(String sql, Object... conditions) {
-		// ... � chiamato spread operator
+		// ... chiamato spread operator
 		// a questo metodo, oltre alla stringa sql possono arrivare da 0 a infiniti
 		// parametri
 		// di tipo generico

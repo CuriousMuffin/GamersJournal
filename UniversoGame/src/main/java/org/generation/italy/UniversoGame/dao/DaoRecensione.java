@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.generation.italy.UniversoGame.models.Notizia;
 import org.generation.italy.UniversoGame.models.Recensione;
+import org.generation.italy.UniversoGame.models.Utente;
+import org.generation.italy.UniversoGame.models.Videogioco;
 import org.generation.italy.UniversoGame.util.BasicDao;
 import org.generation.italy.UniversoGame.util.IMappablePro;
 import org.springframework.beans.factory.annotation.Value;
@@ -39,15 +42,19 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 	@Override
 	public Recensione recensione(int id) 
 	{
-		Recensione ris = null;
-		
 		Map<String, String> map = getOne("SELECT * FROM recensione WHERE id = ?", id);
-		
-		if (map != null) {
-			ris = IMappablePro.fromMap(Recensione.class, map);
-		}
-		
-		return ris;
+//		
+		Recensione recensione = IMappablePro.fromMap(Recensione.class, map);
+//		
+		Map<String,String> mappaUtente = getOne("select * from utente where id = ?", map.get("idutente"));
+//		
+		recensione.setUtente(IMappablePro.fromMap(Utente.class, mappaUtente));
+//		
+		Map<String,String> mappaVideogioco = getOne("select * from videogioco where id = ?", map.get("idvideogioco"));
+//		
+		recensione.setVideogioco(IMappablePro.fromMap(Videogioco.class, mappaVideogioco));
+//		
+		return recensione;
 	}
 
 	@Override

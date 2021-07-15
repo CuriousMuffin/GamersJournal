@@ -41,10 +41,24 @@ public class DaoVideogioco extends BasicDao implements IDaoVideogioco
 		Videogioco ris = null;
 		Map<String, String> map = getOne("SELECT * FROM videogioco WHERE id = ?", id);
 		
+		List<Map<String,String>> maps = getAll("select piattaforma.nome from videogioco inner join compatibilita on compatibilita.idvideogioco = videogioco.id "
+																+ "inner join piattaforma on compatibilita.idpiattaforma = piattaforma.id "
+																+ "where compatibilita.idvideogioco = ?",id);
+		
+		List<String> comp = new ArrayList<>();
+				
 		if(map != null)
 		{
 			ris = IMappablePro.fromMap(Videogioco.class, map);
-		}
+			
+			for(Map<String, String> m : maps)
+			{
+				String c = m.get("nome");
+				comp.add(c);
+			}
+			ris.setCompatibilita(comp);
+		}		
+		
 		return ris;
 	}
 	

@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Map;
 
 import org.generation.italy.UniversoGame.models.Notizia;
+import org.generation.italy.UniversoGame.models.Utente;
+import org.generation.italy.UniversoGame.models.Videogioco;
 import org.generation.italy.UniversoGame.util.BasicDao;
 import org.generation.italy.UniversoGame.util.IMappablePro;
 import org.springframework.beans.factory.annotation.Value;
@@ -37,16 +39,21 @@ public class DaoNotizia extends BasicDao implements IDaoNotizia
 	
 	@Override
 	public Notizia notizia(int id) 
-	{
-		Notizia ris = null;
-		
+	{	
 		Map<String, String> map = getOne("SELECT * FROM notizia WHERE id = ?", id);
-		
-		if (map != null) {
-			ris = IMappablePro.fromMap(Notizia.class, map);
-		}
-		
-		return ris;	}
+//		
+		Notizia notizia = IMappablePro.fromMap(Notizia.class, map);
+//		
+		Map<String,String> mappaUtente = getOne("select * from utente where id = ?", map.get("idutente"));
+//		
+		notizia.setUtente(IMappablePro.fromMap(Utente.class, mappaUtente));
+//		
+		Map<String,String> mappaVideogioco = getOne("select * from videogioco where id = ?", map.get("idvideogioco"));
+//		
+		notizia.setVideogioco(IMappablePro.fromMap(Videogioco.class, mappaVideogioco));
+//		
+		return notizia;
+	}
 	
 	@Override
 	public boolean add(Notizia notizia) 
