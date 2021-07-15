@@ -22,6 +22,8 @@ public class DaoImmagine extends BasicDao implements IDaoImmagine
 									
 	}
 
+	//Ciao amici
+	
 	@Override
 	public List<Immagine> immagini() 
 	{

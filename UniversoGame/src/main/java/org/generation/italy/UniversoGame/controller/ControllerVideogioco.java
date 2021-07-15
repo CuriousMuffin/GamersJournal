@@ -23,9 +23,9 @@ public class ControllerVideogioco
 	private IDaoVideogioco dao;
 	
 	@GetMapping
-	public List<Videogioco> get() 
+	public List<Videogioco> get()
 	{
-		return dao.videogiochi();
+		return dao.videogiochiORM();
 	}
 
 	@GetMapping("/{id}")

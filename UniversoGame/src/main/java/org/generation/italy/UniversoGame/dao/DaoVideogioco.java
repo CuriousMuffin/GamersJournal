@@ -36,6 +36,15 @@ public class DaoVideogioco extends BasicDao implements IDaoVideogioco
 	}
 	
 	@Override
+	public List<Videogioco> videogiochiORM() {
+		List<Videogioco> ris = new ArrayList<>();
+		for(Videogioco v : videogiochi()) {
+			ris.add(videogioco(v.getId()));
+		}
+		return ris;
+	}
+	
+	@Override
 	public Videogioco videogioco(int id) 
 	{
 		Videogioco ris = null;

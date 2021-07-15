@@ -7,6 +7,7 @@ import org.generation.italy.UniversoGame.models.Videogioco;
 public interface IDaoVideogioco 
 {
 	   public List<Videogioco> videogiochi();
+	   public List<Videogioco> videogiochiORM();
 	   public Videogioco videogioco (int id);
 	   public boolean add(Videogioco videogioco);
 	   public boolean delete(int id);
