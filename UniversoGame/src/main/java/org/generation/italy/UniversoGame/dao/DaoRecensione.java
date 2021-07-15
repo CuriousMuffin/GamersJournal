@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import org.generation.italy.UniversoGame.models.Notizia;
 import org.generation.italy.UniversoGame.models.Recensione;
 import org.generation.italy.UniversoGame.models.Utente;
 import org.generation.italy.UniversoGame.models.Videogioco;
@@ -60,7 +59,7 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 	@Override
 	public boolean add(Recensione recensione) 
 	{
-		return isExecute("INSERT INTO recensione (titolo, idCopertina, contenuto, valutazione, idAutore, dataPubblicazione, approvato, bozza, idVideogioco) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+		return isExecute("INSERT INTO recensione (titolo, idimmagine, contenuto, valutazione, idutente, datapubblicazione, approvato, bozza, idvideogioco) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
 				recensione.getTitolo(), recensione.getImmagine(), recensione.getContenuto(), recensione.getValutazione(), recensione.getUtente(), recensione.getDataPubblicazione(), 
 				recensione.isApprovato(), recensione.isBozza(), recensione.getVideogioco());
 	}
@@ -74,7 +73,7 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 	@Override
 	public boolean update(Recensione recensione) 
 	{
-		return isExecute("UPDATE recensione SET titolo = ?, idCopertina = ?, contenuto = ?, valutazione = ?, idAutore = ?, dataPubblicazione = ?, approvato = ?, bozza = ?, idVideogioco = ?, WHERE id = ?", 
+		return isExecute("UPDATE recensione SET titolo = ?, idimmagine= ?, contenuto = ?, valutazione = ?, idutente = ?, datapubblicazione = ?, approvato = ?, bozza = ?, idvideogioco = ? WHERE id = ?", 
 				recensione.getTitolo(), recensione.getImmagine(), recensione.getContenuto(), recensione.getValutazione(), recensione.getUtente(), recensione.getDataPubblicazione(), 
 				recensione.isApprovato(), recensione.isBozza(), recensione.getVideogioco(), recensione.getId());
 	}

@@ -39,8 +39,8 @@ public class Immagine implements IMappablePro
 
 	@Override
 	public String toString() {
-		return  " Immagine id:    " + id                  + "\n" +
-					" pathImmagine: " + pathImmagine + "\n\n";
+		return  " Immagine id:  " + id           + "\n" +
+				" pathImmagine: " + pathImmagine + "\n\n";
 	}
 
 }//fine classe

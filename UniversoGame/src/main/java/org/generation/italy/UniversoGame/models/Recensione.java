@@ -4,7 +4,7 @@ import org.generation.italy.UniversoGame.util.IMappablePro;
 
 public class Recensione implements IMappablePro
 {
-	
+
 	private int id;
 	private String titolo;
 	private String contenuto;
@@ -17,9 +17,9 @@ public class Recensione implements IMappablePro
 	private Videogioco videogioco;
 
 	public Recensione() {}
-	
+
 	public Recensione(int id, String titolo, String contenuto, double valutazione, String dataPubblicazione,
-							   boolean approvato, boolean bozza, Immagine immagine, Utente utente, Videogioco videogioco) 
+			boolean approvato, boolean bozza, Immagine immagine, Utente utente, Videogioco videogioco) 
 	{
 		super();
 		this.id = id;
@@ -136,16 +136,16 @@ public class Recensione implements IMappablePro
 
 	@Override
 	public String toString() {
-		return "Recensione id:        " + id                         + "\n"+
-				  " titolo:                   " + titolo                    + "\n"+
-				  " idCopertina:          " + immagine               + "\n"+
-				  " contenuto:             " + contenuto              + "\n"+
-				  " valutazione:           " + valutazione           + "\n" + 
-				  " idAutore:              " + utente                   + "\n" +
-				  " dataPubblicazione: " + dataPubblicazione + "\n" +
-				  " approvato:             " + approvato             + "\n" +
-				  " bozza:                   " + bozza                   + "\n" +
-				  " idVideogioco:          " + videogioco            +"\n\n";
+		return  " Recensione id:     " + id                + "\n" +
+				" titolo:            " + titolo            + "\n" +
+				" idCopertina:       " + immagine          + "\n" +
+				" contenuto:         " + contenuto         + "\n" +
+				" valutazione:       " + valutazione       + "\n" + 
+				" idAutore:          " + utente            + "\n" +
+				" dataPubblicazione: " + dataPubblicazione + "\n" +
+				" approvato:         " + approvato         + "\n" +
+				" bozza:             " + bozza             + "\n" +
+				" idVideogioco:      " + videogioco        +"\n\n";
 	}
 
 }//fine classe

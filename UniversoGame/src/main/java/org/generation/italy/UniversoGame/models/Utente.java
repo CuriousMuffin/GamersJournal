@@ -4,7 +4,7 @@ import org.generation.italy.UniversoGame.util.IMappablePro;
 
 public class Utente implements IMappablePro
 {
-	
+
 	private int id;
 	private String username;
 	private String password;
@@ -87,12 +87,12 @@ public class Utente implements IMappablePro
 
 	@Override
 	public String toString() {
-		return  " Utente id:      " + id                  + "\n"+
-				   " username:       " + username        + "\n"+
-				   " password:       " + password       + "\n"+
-				   " nickname:       " + nickname        + "\n"+
-				   " admin:            " + admin             + "\n" +
-				   " immagine:       " + immagine		 + "\n\n";
+		return  " Utente id:      " + id       + "\n"+
+				" username:       " + username + "\n"+
+				" password:       " + password + "\n"+
+				" nickname:       " + nickname + "\n"+
+				" admin:          " + admin    + "\n" +
+				" immagine:       " + immagine + "\n\n";
 	}
 
 }//fine classe

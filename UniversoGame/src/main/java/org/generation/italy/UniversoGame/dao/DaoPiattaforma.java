@@ -73,8 +73,8 @@ List<Map<String, String>> maps = getAll("SELECT * FROM piattaforma");
 	@Override
 	public boolean update(Piattaforma piattaforma) 
 	{
-		return isExecute("UPDATE piattaforma SET nome = ?, produttore = ?"
-				+ " WHERE id = ?",piattaforma.getNome(),piattaforma.getProduttore(),piattaforma.getId() );
+		return isExecute("UPDATE piattaforma SET nome = ?, produttore = ? WHERE id = ?",
+				piattaforma.getNome(),piattaforma.getProduttore(),piattaforma.getId() );
 	}
 
 

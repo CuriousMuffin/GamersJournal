@@ -6,7 +6,7 @@ import org.generation.italy.UniversoGame.util.IMappablePro;
 
 public class Videogioco implements IMappablePro
 {
-	
+
 	private int id;
 	private String titolo;
 	private String genere;
@@ -91,12 +91,12 @@ public class Videogioco implements IMappablePro
 	@Override
 	public String toString() 
 	{
-		return   " Videogioco id:    " + id                      + "\n"+ 
-					" titolo:                " + titolo                + "\n"+
-					" genere:              " + genere               + "\n"+
-					" dataUscita:        " + dataUscita         +"\n"+
-					" casaProduttrice: " + casaProduttrice + "\n" + 
-					" compatibilitÃ :   " + compatibilita     +"\n\n";
+		return  " Videogioco id:   " + id              + "\n" + 
+				" titolo:          " + titolo          + "\n" +
+				" genere:          " + genere          + "\n" +
+				" dataUscita:      " + dataUscita      + "\n" +
+				" casaProduttrice: " + casaProduttrice + "\n" + 
+				" compatibilità:   " + compatibilita   +"\n\n";
 	}
 
 }//fine classe

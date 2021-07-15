@@ -58,9 +58,8 @@ public class DaoNotizia extends BasicDao implements IDaoNotizia
 	@Override
 	public boolean add(Notizia notizia) 
 	{
-		return isExecute("insert into notizia (titolo,contenuto,dataPubblicazione,bozza,utente,videogioco) values (?,?,?,?,?,?)",
+		return isExecute("insert into notizia (titolo, contenuto, datapubblicazione, bozza, utente, videogioco) values (?,?,?,?,?,?)",
 							notizia.getTitolo(), notizia.getContenuto(), notizia.getDataPubblicazione(), notizia.isBozza());
-							//Qui va l'id dell'autore, Qui va l'id del videogioco);
 	}
 
 	@Override
@@ -72,9 +71,8 @@ public class DaoNotizia extends BasicDao implements IDaoNotizia
 	@Override
 	public boolean update(Notizia notizia) 
 	{
-		return isExecute("update notizia set titolo = ?, contenuto = ?, datapubblicazione = ?, bozza = ?, idautore = ?, idvideogioco = ?",
-						  notizia.getTitolo(), notizia.getContenuto(), notizia.getDataPubblicazione(), notizia.isBozza());
-						//Qui va l'id dell'autore, Qui va l'id del videogioco, notizia.GetId());
+		return isExecute("update notizia set titolo = ?, contenuto = ?, datapubblicazione = ?, bozza = ?, idutente = ?, idvideogioco = ? WHERE id =?",
+						  notizia.getTitolo(), notizia.getContenuto(), notizia.getDataPubblicazione(), notizia.isBozza(), notizia.getUtente(), notizia.getVideogioco(), notizia.getId());
 	}
 
 

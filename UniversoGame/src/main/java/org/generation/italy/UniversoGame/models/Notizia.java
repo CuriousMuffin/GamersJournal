@@ -112,14 +112,14 @@ public class Notizia implements IMappablePro
 
 	@Override
 	public String toString() {
-		return  " Notizia id:             " + id                         + "\n"+ 
-					" titolo:                   " + titolo                    +  "\n"+
-					" contenuto:             " + contenuto              + "\n"+
-					" dataPubblicazione: " + dataPubblicazione + "\n"+
-					" bozza:                   " + bozza                  + "\n"+
-					" immagine:               " + immagine              + "\n"+
-					" autore:                  " + utente                  + "\n"+
-					" videogioco:             " + videogioco            +"\n\n" ;
+		return  " Notizia id:        " + id                + "\n" + 
+				" titolo:            " + titolo            + "\n" +
+				" contenuto:         " + contenuto         + "\n" +
+				" dataPubblicazione: " + dataPubblicazione + "\n" +
+				" bozza:             " + bozza             + "\n" +
+				" immagine:          " + immagine          + "\n" +
+				" autore:            " + utente            + "\n" +
+				" videogioco:        " + videogioco        +"\n\n" ;
 	}
 	
 

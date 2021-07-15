@@ -50,9 +50,9 @@ public class Piattaforma implements IMappablePro
 	
 	@Override
 	public String toString() {
-		return "Piattaforma id: " + id                  + "\n"+
-				  " nome:               " + nome             + "\n"+
-				  " produttore:      " + produttore    +"\n\n";
+		return  " Piattaforma id: " + id         + "\n" +
+				" nome:           " + nome       + "\n" +
+				" produttore:     " + produttore +"\n\n";
 	}
 
 }//fine classe
