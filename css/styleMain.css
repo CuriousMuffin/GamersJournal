@@ -3,16 +3,17 @@
 } */
 
 /* Additional styling */
-p {
-  margin: 0;
+html {
+  scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
   background-color: #0d0118;
 }
 
-html {
-  scroll-behavior: smooth;
+p {
+  margin: 0;
 }
 
 /* ================ Header ================ */
@@ -71,6 +72,13 @@ html {
   float: right;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* ================ Content ================ */
 .content {
   padding: 1% 8%;
   font-family: "Roboto", sans-serif;
@@ -79,10 +87,64 @@ html {
   color: white;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+.grid-container {
+  display: grid;
+  grid-template-areas: 'recensioneL recensioneL recensioneM recensioneM recensioneR recensioneR' 
+  'recensioneL2 recensioneL2 recensioneM2 recensioneM2 recensioneR2 recensioneR2'
+  'notiziaL notiziaL notiziaL notiziaR notiziaR notiziaR'
+  'notiziaL2 notiziaL2 notiziaL2 notiziaR2 notiziaR2 notiziaR2';
+  background-color: #2196F3;
+  padding: 10px;
+  grid-gap: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  color: black;
+}
+
+.recensione1 {
+  grid-area: recensioneL;
+}
+
+.recensione2 {
+  grid-area: recensioneM;
+}
+
+.recensione3 {
+  grid-area: recensioneR;
+}
+
+.recensione4 {
+  grid-area: recensioneL2;
+}
+
+.recensione5 {
+  grid-area: recensioneM2;
+}
+
+.recensione6 {
+  grid-area: recensioneR2;
+}
+
+.notizia1 {
+  grid-area: notiziaL;
+}
+
+.notizia2 {
+  grid-area: notiziaR;
+}
+
+.notizia3 {
+  grid-area: notiziaL2;
+}
+
+.notizia4 {
+  grid-area: notiziaR2;
 }
 
 /* ================ Footer ================ */
