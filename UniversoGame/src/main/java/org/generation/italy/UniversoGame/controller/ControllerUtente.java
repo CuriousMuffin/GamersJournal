@@ -22,30 +22,60 @@ public class ControllerUtente
 	@Autowired
 	private IDaoUtente dao;
 	
+	/**
+	 * Metodo get della classe ControllerUtente
+	 * che restituisce la lista degli utenti
+	 * del database
+	 * @return
+	 */
 	@GetMapping
 	public List<Utente> get() 
 	{
 		return dao.utenti();
 	}
 
+	/**
+	 * Metodo GetOne della classe ControllerUtente
+	 * che restituisce un solo utente del database
+	 * specificato dall'id
+	 * @param id
+	 * @return
+	 */
 	@GetMapping("/{id}")
 	public Utente getOne(@PathVariable int id) 
 	{
 		return dao.utente(id);
 	}
 
+	/**
+	 * Metodo add della classe ControllerUtente
+	 * che aggiunge un utente al database
+	 * @param recensione
+	 * @param utente
+	 */
 	@PostMapping
 	public void add(@RequestBody Utente utente)
 	{
 		dao.add(utente); 
 	}
 
+	/**
+	 * Metodo delete della classe ControllerUtente
+	 * che elimina un utente dal database
+	 * @param id
+	 */
 	@DeleteMapping("/{id}")
 	public void delete(@PathVariable int id) 
 	{
 		dao.delete(id);
 	}
 
+	/**
+	 * Metodo update della classe ControllerUtente
+	 * che modifica un utente del database
+	 * @param recensione
+	 * @param utente
+	 */
 	@PutMapping
 	public void update(@RequestBody Utente utente) 
 	{
