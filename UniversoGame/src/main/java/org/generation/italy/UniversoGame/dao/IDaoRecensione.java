@@ -4,6 +4,14 @@ import java.util.List;
 
 import org.generation.italy.UniversoGame.models.Recensione;
 
+/**
+ * IDaoRecensione
+ * 
+ * Interfaccia contenete i metodi CRUD per l'oggetto Recensione
+ * 
+ * @author Admin
+ *
+ */
 public interface IDaoRecensione 
 {
 	   public List<Recensione> recensioni();

@@ -2,6 +2,14 @@ package org.generation.italy.UniversoGame.models;
 
 import org.generation.italy.UniversoGame.util.IMappablePro;
 
+/**
+ * Utente
+ * Classe Utente che implementa l'interfaccia IMappablePro
+ * Contiene le proprietà dell'oggetto Utente
+ * 
+ * @author Admin
+ *
+ */
 public class Utente implements IMappablePro
 {
 

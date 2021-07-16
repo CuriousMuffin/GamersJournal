@@ -2,6 +2,14 @@ package org.generation.italy.UniversoGame.models;
 
 import org.generation.italy.UniversoGame.util.IMappablePro;
 
+/**
+ * Recensione
+ * Classe Recensione che implementa l'interfaccia IMappablePro
+ * Contiene le proprietà dell'oggetto Recensione
+ * 
+ * @author Admin
+ *
+ */
 public class Recensione implements IMappablePro
 {
 

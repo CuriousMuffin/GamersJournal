@@ -2,6 +2,14 @@ package org.generation.italy.UniversoGame.models;
 
 import org.generation.italy.UniversoGame.util.IMappablePro;
 
+/**
+ * Piattaforma
+ * Classe Piattaforma che implementa l'interfaccia IMappablePro
+ * Contiene le proprietà dell'oggetto Piattaforma
+ * 
+ * @author Admin
+ *
+ */
 public class Piattaforma implements IMappablePro
 {
 	private int id;

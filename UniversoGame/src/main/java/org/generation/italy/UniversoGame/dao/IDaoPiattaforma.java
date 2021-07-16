@@ -4,6 +4,14 @@ import java.util.List;
 
 import org.generation.italy.UniversoGame.models.Piattaforma;
 
+/**
+ * IDaoPiattaforma
+ * 
+ * Interfaccia contenete i metodi CRUD per l'oggetto Piattaforma
+ * 
+ * @author Admin
+ *
+ */
 public interface IDaoPiattaforma 
 {
 	   public List<Piattaforma> piattaforme();

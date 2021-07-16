@@ -4,6 +4,14 @@ import java.util.List;
 
 import org.generation.italy.UniversoGame.util.IMappablePro;
 
+/**
+ * Videogioco
+ * Classe Videogioco che implementa l'interfaccia IMappablePro
+ * Contiene le proprietà dell'oggetto Videogioco
+ * 
+ * @author Admin
+ *
+ */
 public class Videogioco implements IMappablePro
 {
 
@@ -12,7 +20,7 @@ public class Videogioco implements IMappablePro
 	private String genere;
 	private String dataUscita;
 	private String casaProduttrice;
-	private List<String> compatibilita;
+	private List<String> compatibilita; //lista delle compatibilità dei videogiochi
 
 	public Videogioco(int id, String titolo, String genere, String dataUscita, String casaProduttrice, List<String> compatibilita) 
 	{

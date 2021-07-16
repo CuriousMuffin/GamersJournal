@@ -2,6 +2,14 @@ package org.generation.italy.UniversoGame.models;
 
 import org.generation.italy.UniversoGame.util.IMappablePro;
 
+/**
+ * Notizia
+ * Classe Notizia che implementa l'interfaccia IMappablePro
+ * Contiene le proprietà dell'oggetto Notizia
+ * 
+ * @author Admin
+ *
+ */
 public class Notizia implements IMappablePro
 {
 	

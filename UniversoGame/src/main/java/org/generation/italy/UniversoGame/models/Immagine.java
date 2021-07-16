@@ -2,6 +2,14 @@ package org.generation.italy.UniversoGame.models;
 
 import org.generation.italy.UniversoGame.util.IMappablePro;
 
+/**
+ * Immagine
+ * Classe Immagine che implementa l'interfaccia IMappablePro
+ * Contiene le proprietà dell'oggetto Immagine
+ * 
+ * @author Admin
+ *
+ */
 public class Immagine implements IMappablePro
 {
 	
