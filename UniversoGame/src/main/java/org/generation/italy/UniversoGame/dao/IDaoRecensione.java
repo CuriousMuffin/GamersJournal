@@ -3,6 +3,7 @@ package org.generation.italy.UniversoGame.dao;
 import java.util.List;
 
 import org.generation.italy.UniversoGame.models.Recensione;
+import org.generation.italy.UniversoGame.models.Videogioco;
 
 /**
  * IDaoRecensione

@@ -22,37 +22,37 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 			@Value("${db.password}") String password) {
 		super(dbAddress, user, password);
 	}
-	
+
 	@Override
 	public List<Recensione> recensioni() 
 	{
 		List<Recensione> ris = new ArrayList<>();
-		
+
 		List<Map<String, String>> maps = getAll("SELECT * FROM recensione");
 		//System.out.println(maps);
 		for (Map<String, String> map : maps) 
 		{
 			ris.add(IMappablePro.fromMap(Recensione.class, map));
 		}
-		
+
 		return ris;
 	}
-	
+
 	@Override
 	public Recensione recensione(int id) 
 	{
 		Map<String, String> map = getOne("SELECT * FROM recensione WHERE id = ?", id);
-//		
+		//		
 		Recensione recensione = IMappablePro.fromMap(Recensione.class, map);
-//		
+		//		
 		Map<String,String> mappaUtente = getOne("select * from utente where id = ?", map.get("idutente"));
-//		
+		//		
 		recensione.setUtente(IMappablePro.fromMap(Utente.class, mappaUtente));
-//		
+		//		
 		Map<String,String> mappaVideogioco = getOne("select * from videogioco where id = ?", map.get("idvideogioco"));
-//		
+		//		
 		recensione.setVideogioco(IMappablePro.fromMap(Videogioco.class, mappaVideogioco));
-//		
+		//		
 		return recensione;
 	}
 
