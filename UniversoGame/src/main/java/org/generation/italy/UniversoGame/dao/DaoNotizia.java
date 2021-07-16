@@ -60,10 +60,28 @@ public class DaoNotizia extends BasicDao implements IDaoNotizia
 //		
 		notizia.setUtente(IMappablePro.fromMap(Utente.class, mappaUtente));
 //		
+		Videogioco v = null;
 		Map<String,String> mappaVideogioco = getOne("select * from videogioco where id = ?", map.get("idvideogioco"));
-//		
-		notizia.setVideogioco(IMappablePro.fromMap(Videogioco.class, mappaVideogioco));
-//		
+		
+		List<Map<String,String>> maps = getAll("select piattaforma.nome from videogioco inner join compatibilita on compatibilita.idvideogioco = videogioco.id "
+				+ "inner join piattaforma on compatibilita.idpiattaforma = piattaforma.id "
+				+ "where compatibilita.idvideogioco = ?",id);
+		
+		List<String> comp = new ArrayList<>();
+		
+		if(map != null)
+		{
+			v = IMappablePro.fromMap(Videogioco.class, mappaVideogioco);
+			
+			for(Map<String, String> m : maps)
+			{
+				String c = m.get("nome");
+				comp.add(c);
+			}
+			v.setCompatibilita(comp);
+		}	
+		
+		notizia.setVideogioco(v);
 		return notizia;
 	}
 	
