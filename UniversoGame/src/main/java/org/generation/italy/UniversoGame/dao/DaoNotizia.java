@@ -22,7 +22,7 @@ import org.springframework.stereotype.Repository;
 public class DaoNotizia extends BasicDao implements IDaoNotizia
 {
 	/**
-	 * Costruttore di DaoImmagine per la connessione al database che prende i dati da application.properties
+	 * Costruttore di DaoNotizia per la connessione al database che prende i dati da application.properties
 	 * @param dbAddress
 	 * @param user
 	 * @param password
@@ -34,6 +34,9 @@ public class DaoNotizia extends BasicDao implements IDaoNotizia
 		super(dbAddress, user, password);
 	}
 	
+	/**
+	 * Metodo che restituisce tutte le notizie del database
+	 */
 	@Override
 	public List<Notizia> notizie() 
 	{
@@ -48,7 +51,9 @@ public class DaoNotizia extends BasicDao implements IDaoNotizia
 		
 		return ris;
 	}
-	
+	/**
+	 * Metodo che restituisce una notizia specifica del database
+	 */
 	@Override
 	public Notizia notizia(int id) 
 	{	
@@ -84,20 +89,26 @@ public class DaoNotizia extends BasicDao implements IDaoNotizia
 		notizia.setVideogioco(v);
 		return notizia;
 	}
-	
+	/**
+	 * Metodo che aggiunge una notizia al database
+	 */
 	@Override
 	public boolean add(Notizia notizia) 
 	{
 		return isExecute("insert into notizia (titolo, contenuto, datapubblicazione, bozza) values (?,?,?,?)",
 							notizia.getTitolo(), notizia.getContenuto(), notizia.getDataPubblicazione(), notizia.isBozza());
 	}
-
+    /**
+     * Metodo che elimina una notizia dal database
+     */
 	@Override
 	public boolean delete(int id) 
 	{
 		return isExecute("delete from notizia where id = ?", id);
 	}
-
+    /**
+     * Metodo che modifica una notizia del databse
+     */
 	@Override
 	public boolean update(Notizia notizia) 
 	{

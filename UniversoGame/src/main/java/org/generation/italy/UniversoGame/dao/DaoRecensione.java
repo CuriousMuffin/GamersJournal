@@ -16,13 +16,22 @@ import org.springframework.stereotype.Repository;
 public class DaoRecensione extends BasicDao implements IDaoRecensione
 {
 
+	
+	/**
+	 * Costruttore di DaoRecensione per la connessione al database che prende i dati da application.properties
+	 * @param dbAddress
+	 * @param user
+	 * @param password
+	 */
 	public DaoRecensione(
 			@Value("${db.address}") String dbAddress, 
 			@Value("${db.user}") String user, 
 			@Value("${db.password}") String password) {
 		super(dbAddress, user, password);
 	}
-
+    /**
+     * Metodo che restituisce tutte le recensioni del database
+     */
 	@Override
 	public List<Recensione> recensioni() 
 	{
@@ -37,7 +46,9 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 
 		return ris;
 	}
-
+    /**
+     * Metodo che restituisce una recensione specifica del database
+     */
 	@Override
 	public Recensione recensione(int id) 
 	{
@@ -74,7 +85,9 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 		//		
 		return recensione;
 	}
-
+    /**
+     * Metodo che aggiunge una recensione al database
+     */
 	@Override
 	public boolean add(Recensione recensione) 
 	{
@@ -82,13 +95,17 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 				recensione.getTitolo(), recensione.getImmagine(), recensione.getContenuto(), recensione.getValutazione(), recensione.getUtente(), recensione.getDataPubblicazione(), 
 				recensione.isApprovato(), recensione.isBozza(), recensione.getVideogioco());
 	}
-
+    /**
+     * Metodo che elimina una recensione dal database
+     */
 	@Override
 	public boolean delete(int id) 
 	{
 		return isExecute("DELETE FROM recensione WHERE id = ?", id);
 	}
-
+    /**
+     * Metodo che modifica una recensione dal database
+     */
 	@Override
 	public boolean update(Recensione recensione) 
 	{

@@ -22,30 +22,57 @@ public class ControllerImmagine
 	@Autowired
 	private IDaoImmagine dao;
 	
+	
+	/**
+	 * Metodo get della classe ControllerImmagine che
+	 * restituisce la lista di  immagini del database
+	 * @return
+	 */
 	@GetMapping
 	public List<Immagine> get() 
 	{
 		return dao.immagini();
 	}
-
+	
+    /**
+     * Metodo getOne della classe ControllerImmagine che
+     * restituisce una sola immagine del database specificata dall'id
+     * @param id
+     * @return
+     */
 	@GetMapping("/{id}")
 	public Immagine getOne(@PathVariable int id) 
 	{
 		return dao.immagine(id);
 	}
 
+	/**
+	 * Metodo add della classe ControllerImmagine che 
+	 * aggiunge un immagine al database
+	 * @param immagine
+	 */
 	@PostMapping
 	public void add(@RequestBody Immagine immagine)
 	{
 		dao.add(immagine); 
 	}
 
+	/**
+	 * Metodo delete della classe ControllerImmagine che 
+	 * elimina un immagine dal database
+	 * @param id
+	 */
 	@DeleteMapping("/{id}")
 	public void delete(@PathVariable int id) 
 	{
 		dao.delete(id);
 	}
 
+	/**
+	 * Metodo update della classe ControllerImmagine che
+	 * modifica un immagine del database
+	 * @param immagine
+	 */
 	@PutMapping
 	public void update(@RequestBody Immagine immagine) 
 	{

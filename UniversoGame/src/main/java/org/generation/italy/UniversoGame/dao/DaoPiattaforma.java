@@ -14,6 +14,13 @@ import org.springframework.stereotype.Repository;
 public class DaoPiattaforma extends BasicDao implements IDaoPiattaforma
 {
 
+	
+	/**
+	 * Costruttore di DaoPiattaforma per la connessione al database che prende i dati da application.properties
+	 * @param dbAddress
+	 * @param user
+	 * @param password
+	 */
 	public DaoPiattaforma(
 			@Value("${db.address}") String dbAddress, 
 			@Value("${db.user}") String user, 
@@ -21,7 +28,9 @@ public class DaoPiattaforma extends BasicDao implements IDaoPiattaforma
 		super(dbAddress, user, password);
 	}
 
-	
+    /**
+     * Metodo che restituisce tutte le piattaforme del database	
+     */
 	@Override
 	public List<Piattaforma> piattaforme() 
 	{
@@ -35,7 +44,9 @@ public class DaoPiattaforma extends BasicDao implements IDaoPiattaforma
 		
 		return ris;
 	}
-	
+	/**
+	 * Metodo che restituisce una piattaforma specifica del database
+	 */
 	@Override
 	public Piattaforma piattaforma(int id) 
 	{
@@ -46,16 +57,8 @@ public class DaoPiattaforma extends BasicDao implements IDaoPiattaforma
 	}
 	
 	/**
-	 * create table piattaforma
-(
-	id int primary key auto_increment,
-    nome varchar(200),
-    produttore varchar(200)
-);
+	 * Metodo che aggiunge una piattaforma al database
 	 */
-	
-	
-	
 	@Override
 	public boolean add(Piattaforma piattaforma) 
 	{
@@ -63,13 +66,17 @@ public class DaoPiattaforma extends BasicDao implements IDaoPiattaforma
 				piattaforma.getNome(),piattaforma.getProduttore()
 				);
 	}
-                                                                                                   
+     /**
+      * Metodo che elimina una piattaforma del database                                                                                              
+      */
 	@Override
 	public boolean delete(int id) 
 	{
 		return isExecute("DELETE FROM piattaforma WHERE id = ?", id);
 	}
-
+    /**
+     * Metodo che modifica una piattaforma del database
+     */
 	@Override
 	public boolean update(Piattaforma piattaforma) 
 	{

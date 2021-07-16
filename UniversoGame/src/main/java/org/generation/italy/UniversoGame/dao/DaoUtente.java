@@ -13,6 +13,13 @@ import org.springframework.stereotype.Repository;
 public class DaoUtente extends BasicDao implements IDaoUtente
 {
 
+	
+	/**
+	 * Costruttore di DaoUtente per la connessione al database che prende i dati da application.properties
+	 * @param dbAddress
+	 * @param user
+	 * @param password
+	 */
 	public DaoUtente(
 			@Value("${db.address}") String dbAddress, 
 			@Value("${db.user}") String user, 
@@ -20,6 +27,9 @@ public class DaoUtente extends BasicDao implements IDaoUtente
 		super(dbAddress, user, password);
 	}
 
+	/**
+	 * Metodo che restituisce tutti gli utenti del database
+	 */
 	@Override
 	public List<Utente> utenti() 
 	{
@@ -34,6 +44,9 @@ public class DaoUtente extends BasicDao implements IDaoUtente
 		return ris;
 	}
 	
+	/**
+	 * Metodo che restituisce un utente specifico del database
+	 */
 	@Override
 	public Utente utente(int id) 
 	{
@@ -46,6 +59,9 @@ public class DaoUtente extends BasicDao implements IDaoUtente
 		}
 		return ris;
 	}
+	/**
+	 * Metodo che aggiune un utente al database
+	 */
 	
 	@Override
 	public boolean add(Utente utente) 
@@ -53,13 +69,21 @@ public class DaoUtente extends BasicDao implements IDaoUtente
 		return isExecute("INSERT INTO utente (username, password, nickname, admin, idimmagine) VALUES (?, ?, ?, ?, ?)",
 				utente.getUsername(), utente.getPassword(), utente.getNickname(), utente.isAdmin(), utente.getImmagine());
 	}
+	
+	/**
+	 * Metodo che elimina un utente dal database
+	 */
 
 	@Override
 	public boolean delete(int id) 
 	{
 		return isExecute("DELETE FROM utente WHERE id = ?", id);
 	}
-
+     
+	/**
+	 * Metodo che modifica un utente del database
+	 */
+	
 	@Override
 	public boolean update(Utente utente) 
 	{

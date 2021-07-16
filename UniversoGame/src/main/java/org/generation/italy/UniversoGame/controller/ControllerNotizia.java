@@ -22,29 +22,60 @@ public class ControllerNotizia
 	@Autowired
 	private IDaoNotizia dao;
 	
+	
+	
+	
+	/**
+	 * Metodo get della classe ControllerNotizia che
+	 * restituisce la lista di notizie del database
+	 * @return
+	 */
 	@GetMapping
 	public List<Notizia> get() 
 	{
 		return dao.notizie();
 	}
 
+	 /**
+     * Metodo getOne della classe ControllerNotizia che
+     * restituisce una sola notizia del database specificata dall'id
+     * @param id
+     * @return
+     */
 	@GetMapping("/{id}")
 	public Notizia getOne(@PathVariable int id) 
 	{
 		return dao.notizia(id);
 	}
 
+	/**
+	 * Metodo add della classe ControllerNotizia che 
+	 * aggiunge una notizia al database
+	 * @param immagine
+	 */
 	@PostMapping
 	public void add(@RequestBody Notizia notizia)
 	{
 		dao.add(notizia); 
 	}
+	
 
+	/**
+	 * Metodo delete della classe ControllerNotizia che 
+	 * elimina una notizia dal database
+	 * @param id
+	 */
 	@DeleteMapping("/{id}")
 	public void delete(@PathVariable int id) 
 	{
 		dao.delete(id);
 	}
+
+	/**
+	 * Metodo update della classe ControllerNotizia che
+	 * modifica una notizia del database
+	 * @param immagine
+	 */
 
 	@PutMapping
 	public void update(@RequestBody Notizia notizia) 
