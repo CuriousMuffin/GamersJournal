@@ -26,7 +26,7 @@ public class DaoPiattaforma extends BasicDao implements IDaoPiattaforma
 	public List<Piattaforma> piattaforme() 
 	{
 		List<Piattaforma> ris = new ArrayList<>();
-List<Map<String, String>> maps = getAll("SELECT * FROM piattaforma");
+		List<Map<String, String>> maps = getAll("SELECT * FROM piattaforma");
 		
 		for (Map<String, String> map : maps) {
 			// al metodo fromMap invocato in maniera statica passo la class e la mappa

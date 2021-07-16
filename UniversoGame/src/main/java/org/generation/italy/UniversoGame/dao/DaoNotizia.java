@@ -1,6 +1,7 @@
 package org.generation.italy.UniversoGame.dao;
 
 import java.util.ArrayList;
+
 import java.util.List;
 import java.util.Map;
 
@@ -12,10 +13,20 @@ import org.generation.italy.UniversoGame.util.IMappablePro;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
+/**
+ * Dao di notizia che estende BasicDao e implementa l'interfaccia IDaoNotizia
+ * @author acer
+ *
+ */
 @Repository
 public class DaoNotizia extends BasicDao implements IDaoNotizia
 {
-
+	/**
+	 * Costruttore di DaoImmagine per la connessione al database che prende i dati da application.properties
+	 * @param dbAddress
+	 * @param user
+	 * @param password
+	 */
 	public DaoNotizia(
 			@Value("${db.address}") String dbAddress, 
 			@Value("${db.user}") String user, 
@@ -30,7 +41,8 @@ public class DaoNotizia extends BasicDao implements IDaoNotizia
 		
 		List<Map<String, String>> maps = getAll("SELECT * FROM notizia");
 		
-		for (Map<String, String> map : maps) {
+		for (Map<String, String> map : maps) 
+		{
 			ris.add(IMappablePro.fromMap(Notizia.class, map));
 		}
 		
@@ -58,7 +70,7 @@ public class DaoNotizia extends BasicDao implements IDaoNotizia
 	@Override
 	public boolean add(Notizia notizia) 
 	{
-		return isExecute("insert into notizia (titolo, contenuto, datapubblicazione, bozza, utente, videogioco) values (?,?,?,?,?,?)",
+		return isExecute("insert into notizia (titolo, contenuto, datapubblicazione, bozza) values (?,?,?,?)",
 							notizia.getTitolo(), notizia.getContenuto(), notizia.getDataPubblicazione(), notizia.isBozza());
 	}
 
@@ -72,7 +84,8 @@ public class DaoNotizia extends BasicDao implements IDaoNotizia
 	public boolean update(Notizia notizia) 
 	{
 		return isExecute("update notizia set titolo = ?, contenuto = ?, datapubblicazione = ?, bozza = ?, idutente = ?, idvideogioco = ? WHERE id =?",
-						  notizia.getTitolo(), notizia.getContenuto(), notizia.getDataPubblicazione(), notizia.isBozza(), notizia.getUtente(), notizia.getVideogioco(), notizia.getId());
+						  notizia.getTitolo(), notizia.getContenuto(), notizia.getDataPubblicazione(), notizia.isBozza(), notizia.getUtente(),
+						  notizia.getVideogioco(), notizia.getId());
 	}
 
 

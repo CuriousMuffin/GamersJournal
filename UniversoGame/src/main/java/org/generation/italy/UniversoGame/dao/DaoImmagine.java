@@ -9,11 +9,20 @@ import org.generation.italy.UniversoGame.util.BasicDao;
 import org.generation.italy.UniversoGame.util.IMappablePro;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
-
+/**
+ * Dao di immagine che estende BasicDao e implementa l'interfaccia IDaoImmagine
+ * @author acer
+ *
+ */
 @Repository
 public class DaoImmagine extends BasicDao implements IDaoImmagine
 {
-
+/**
+ * Costruttore di DaoImmagine per la connessione al database che prende i dati da application.properties
+ * @param dbAddress
+ * @param user
+ * @param password
+ */
 	public DaoImmagine(
 			@Value("${db.address}") String dbAddress, 
 			@Value("${db.user}") String user, 
@@ -21,9 +30,9 @@ public class DaoImmagine extends BasicDao implements IDaoImmagine
 		super(dbAddress, user, password);
 									
 	}
-
-	//Ciao amici
-	
+/**
+ * Metodo che restituisce una lista di tutte le immagini dal database
+ */
 	@Override
 	public List<Immagine> immagini() 
 	{
@@ -37,7 +46,9 @@ public class DaoImmagine extends BasicDao implements IDaoImmagine
 		
 		return ris;
 	}
-	
+/**
+ * Metodo che restituisce un'immagine specifica dal database
+ */
 	@Override
 	public Immagine immagine(int id) 
 	{
@@ -51,19 +62,25 @@ public class DaoImmagine extends BasicDao implements IDaoImmagine
 		
 		return ris;
 	}
-	
+/**
+ * Metodo che aggiunge un'immagine al database	
+ */
 	@Override
 	public boolean add(Immagine immagine) 
 	{
 		return isExecute("insert into immagine (pathimmagine) values (?)", immagine.getPathImmagine());
 	}
-
+/**
+ * Metodo che elimina un'immagine dal database
+ */
 	@Override
 	public boolean delete(int id) 
 	{
 		return isExecute("delete from immagine where id = ?",id);
 	}
-
+/**
+ * Metodo che modifica un'immagine sul database
+ */
 	@Override
 	public boolean update(Immagine immagine) 
 	{
