@@ -23,10 +23,12 @@ public class ControllerRecensione
 	@Autowired
 	private IDaoRecensione dao;
 	
+	/*================================================================================================================================================================*/
+
 	/**
 	 * Metodo get della classe ControllerRecensione
-	 * che restituisce la lista delle recensioni
-	 * del database
+	 * che restituisce la lista delle recensioni del database
+	 * 
 	 * @return
 	 */
 	@GetMapping
@@ -35,10 +37,12 @@ public class ControllerRecensione
 		return dao.recensioni();
 	}
 	
+	/*================================================================================================================================================================*/
+
 	/**
 	 * Metodo GetOne della classe ControllerRecensione
-	 * che restituisce una sola recensione del database
-	 * specificata dall'id
+	 * che restituisce una sola recensione del database specificata dall'id
+	 * 
 	 * @param id
 	 * @return
 	 */
@@ -48,37 +52,46 @@ public class ControllerRecensione
 		return dao.recensione(id);
 	}
 	
+	/*================================================================================================================================================================*/
+
 	/**
 	 * Metodo add dellla classe ControllerRecensione
 	 * che aggiunge una recensione al database
+	 * 
 	 * @param recensione
 	 */
 	@PostMapping
-	public void add(@RequestBody Recensione recensione)
+	public boolean add(@RequestBody Recensione recensione)
 	{
-		dao.add(recensione); 
+		return dao.add(recensione); 
 	}
 	
+	/*================================================================================================================================================================*/
+
 	/**
 	 * Metodo delete della classe ControllerRecensione
 	 * che elimina una recensione dal database
+	 * 
 	 * @param id
 	 */
 	@DeleteMapping("/{id}")
-	public void delete(@PathVariable int id) 
+	public boolean delete(@PathVariable int id) 
 	{
-		dao.delete(id);
+		return dao.delete(id);
 	}
+
+	/*================================================================================================================================================================*/
 
 	/**
 	 * Metodo update della classe ControllerRecensione
 	 * che modifica una recensione del database
+	 * 
 	 * @param recensione
 	 */
 	@PutMapping
-	public void update(@RequestBody Recensione recensione) 
+	public boolean update(@RequestBody Recensione recensione) 
 	{
-		dao.update(recensione);
+		return dao.update(recensione);
 	}
 
 }//fine controller

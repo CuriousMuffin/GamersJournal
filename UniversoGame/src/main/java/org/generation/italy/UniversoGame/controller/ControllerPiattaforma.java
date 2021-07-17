@@ -24,7 +24,8 @@ public class ControllerPiattaforma
 	
 	/**
 	 * Metodo get della classe ControllerPiattaforma che
-	 * restituisce la lista di  piattaforme del database
+	 * restituisce la lista di piattaforme del database
+	 * 
 	 * @return
 	 */
 	@GetMapping
@@ -33,9 +34,12 @@ public class ControllerPiattaforma
 		return dao.piattaforme();
 	}
 
+	/*================================================================================================================================================================*/
+
 	 /**
      * Metodo getOne della classe ControllerPiattaforma che
      * restituisce una sola piattaforma del database specificata dall'id
+     * 
      * @param id
      * @return
      */
@@ -45,37 +49,46 @@ public class ControllerPiattaforma
 		return dao.piattaforma(id);
 	}
 
+	/*================================================================================================================================================================*/
+
 	/**
 	 * Metodo add della classe ControllerPiattaforma che 
 	 * aggiunge una piattaforma al database
+	 * 
 	 * @param immagine
 	 */
 	@PostMapping
-	public void add(@RequestBody Piattaforma piattaforma)
+	public boolean add(@RequestBody Piattaforma piattaforma)
 	{
-		dao.add(piattaforma); 
+		return dao.add(piattaforma); 
 	}
+
+	/*================================================================================================================================================================*/
 
 	/**
 	 * Metodo delete della classe ControllerPiattaforma che 
 	 * elimina una piattaforma dal database
+	 * 
 	 * @param id
 	 */
 	@DeleteMapping("/{id}")
-	public void delete(@PathVariable int id) 
+	public boolean delete(@PathVariable int id) 
 	{
-		dao.delete(id);
+		return dao.delete(id);
 	}
+
+	/*================================================================================================================================================================*/
 
 	/**
 	 * Metodo update della classe ControllerPiattaforma che
 	 * modifica una piattaforma del database
+	 * 
 	 * @param immagine
 	 */
 	@PutMapping
-	public void update(@RequestBody Piattaforma piattaforma) 
+	public boolean update(@RequestBody Piattaforma piattaforma) 
 	{
-		dao.update(piattaforma);
+		return dao.update(piattaforma);
 	}
 
 }//fine controller

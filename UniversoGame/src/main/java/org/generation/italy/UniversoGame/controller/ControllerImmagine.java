@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
 @RequestMapping("/immagine")
 public class ControllerImmagine 
@@ -22,10 +23,12 @@ public class ControllerImmagine
 	@Autowired
 	private IDaoImmagine dao;
 	
-	
+	/*================================================================================================================================================================*/
+
 	/**
 	 * Metodo get della classe ControllerImmagine che
-	 * restituisce la lista di  immagini del database
+	 * restituisce la lista di immagini del database
+	 * 
 	 * @return
 	 */
 	@GetMapping
@@ -34,9 +37,12 @@ public class ControllerImmagine
 		return dao.immagini();
 	}
 	
+	/*================================================================================================================================================================*/
+
     /**
      * Metodo getOne della classe ControllerImmagine che
      * restituisce una sola immagine del database specificata dall'id
+     * 
      * @param id
      * @return
      */
@@ -46,37 +52,46 @@ public class ControllerImmagine
 		return dao.immagine(id);
 	}
 
+	/*================================================================================================================================================================*/
+
 	/**
 	 * Metodo add della classe ControllerImmagine che 
 	 * aggiunge un immagine al database
+	 * 
 	 * @param immagine
 	 */
 	@PostMapping
-	public void add(@RequestBody Immagine immagine)
+	public boolean add(@RequestBody Immagine immagine)
 	{
-		dao.add(immagine); 
+		return dao.add(immagine); 
 	}
+
+	/*================================================================================================================================================================*/
 
 	/**
 	 * Metodo delete della classe ControllerImmagine che 
 	 * elimina un immagine dal database
+	 * 
 	 * @param id
 	 */
 	@DeleteMapping("/{id}")
-	public void delete(@PathVariable int id) 
+	public boolean delete(@PathVariable int id) 
 	{
-		dao.delete(id);
+		return dao.delete(id);
 	}
+
+	/*================================================================================================================================================================*/
 
 	/**
 	 * Metodo update della classe ControllerImmagine che
 	 * modifica un immagine del database
+	 * 
 	 * @param immagine
 	 */
 	@PutMapping
-	public void update(@RequestBody Immagine immagine) 
+	public boolean update(@RequestBody Immagine immagine) 
 	{
-		dao.update(immagine);
+		return dao.update(immagine);
 	}
 
 }//fine controller

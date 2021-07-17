@@ -22,10 +22,12 @@ public class ControllerUtente
 	@Autowired
 	private IDaoUtente dao;
 	
+	/*================================================================================================================================================================*/
+
 	/**
 	 * Metodo get della classe ControllerUtente
-	 * che restituisce la lista degli utenti
-	 * del database
+	 * che restituisce la lista degli utenti del database
+	 * 
 	 * @return
 	 */
 	@GetMapping
@@ -34,10 +36,12 @@ public class ControllerUtente
 		return dao.utenti();
 	}
 
+	/*================================================================================================================================================================*/
+
 	/**
 	 * Metodo GetOne della classe ControllerUtente
-	 * che restituisce un solo utente del database
-	 * specificato dall'id
+	 * che restituisce un solo utente del database specificato dall'id
+	 * 
 	 * @param id
 	 * @return
 	 */
@@ -47,39 +51,48 @@ public class ControllerUtente
 		return dao.utente(id);
 	}
 
+	/*================================================================================================================================================================*/
+
 	/**
 	 * Metodo add della classe ControllerUtente
 	 * che aggiunge un utente al database
+	 * 
 	 * @param recensione
 	 * @param utente
 	 */
 	@PostMapping
-	public void add(@RequestBody Utente utente)
+	public boolean add(@RequestBody Utente utente)
 	{
-		dao.add(utente); 
+		return dao.add(utente); 
 	}
+
+	/*================================================================================================================================================================*/
 
 	/**
 	 * Metodo delete della classe ControllerUtente
 	 * che elimina un utente dal database
+	 * 
 	 * @param id
 	 */
 	@DeleteMapping("/{id}")
-	public void delete(@PathVariable int id) 
+	public boolean delete(@PathVariable int id) 
 	{
-		dao.delete(id);
+		return dao.delete(id);
 	}
+
+	/*================================================================================================================================================================*/
 
 	/**
 	 * Metodo update della classe ControllerUtente
 	 * che modifica un utente del database
+	 * 
 	 * @param recensione
 	 * @param utente
 	 */
 	@PutMapping
-	public void update(@RequestBody Utente utente) 
+	public boolean update(@RequestBody Utente utente) 
 	{
-		dao.update(utente);
+		return dao.update(utente);
 	}
 
 }//fine controller

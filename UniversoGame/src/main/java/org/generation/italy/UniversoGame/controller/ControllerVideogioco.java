@@ -22,10 +22,13 @@ public class ControllerVideogioco
 	@Autowired
 	private IDaoVideogioco dao;
 	
+	/*================================================================================================================================================================*/
+
 	/**
 	 * Metodo get della classe ControllerVideogioco
 	 * che restituisce la lista dei videogiochi
 	 * del database
+	 * 
 	 * @return
 	 */
 	@GetMapping
@@ -34,10 +37,13 @@ public class ControllerVideogioco
 		return dao.videogiochiORM();
 	}
 
+	/*================================================================================================================================================================*/
+
 	/**
 	 * Metodo GetOne della classe ControllerVideogioco
 	 * che restituisce un solo videogioco del database
 	 * specificato dall'id
+	 * 
 	 * @param id
 	 * @return
 	 */
@@ -47,37 +53,46 @@ public class ControllerVideogioco
 		return dao.videogioco(id);
 	}
 
+	/*================================================================================================================================================================*/
+
 	/**
 	 * Metodo add della classe ControllerVideogioco
 	 * che aggiunge un videogioco al database
+	 * 
 	 * @param videogioco
 	 */
 	@PostMapping
-	public void add(@RequestBody Videogioco videogioco)
+	public boolean add(@RequestBody Videogioco videogioco)
 	{
-		dao.add(videogioco); 
+		return dao.add(videogioco); 
 	}
+
+	/*================================================================================================================================================================*/
 
 	/**
 	 * Metodo delete della classe ControllerVideogioco
 	 * che elimina un videogioco dal database
+	 * 
 	 * @param id
 	 */
 	@DeleteMapping("/{id}")
-	public void delete(@PathVariable int id) 
+	public boolean delete(@PathVariable int id) 
 	{
-		dao.delete(id);
+		return dao.delete(id);
 	}
+
+	/*================================================================================================================================================================*/
 
 	/**
 	 * Metodo update della classe ControllerVideogioco
 	 * che modifica un videogioco del database
+	 * 
 	 * @param videogioco
 	 */
 	@PutMapping
-	public void update(@RequestBody Videogioco videogioco) 
+	public boolean update(@RequestBody Videogioco videogioco) 
 	{
-		dao.update(videogioco);
+		return dao.update(videogioco);
 	}
 
 }//fine controller

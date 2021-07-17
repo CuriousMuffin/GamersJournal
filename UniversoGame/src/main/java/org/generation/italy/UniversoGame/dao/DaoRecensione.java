@@ -12,13 +12,21 @@ import org.generation.italy.UniversoGame.util.IMappablePro;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
+/**
+ * Estende BasicDao ed implementa le firme dei metodi di IDaoRecensione
+ * Contiene il metodo di collegamento al DB e i metodi riguardanti la classe Recensione
+ * 
+ * @author Admin
+ *
+ */
 @Repository
 public class DaoRecensione extends BasicDao implements IDaoRecensione
 {
 
-	
 	/**
-	 * Costruttore di DaoRecensione per la connessione al database che prende i dati da application.properties
+	 * Costruttore di DaoRecensione per la connessione al database univeersogames
+	 * tramite /UniversoGame/src/main/resources/application.properties
+	 * 
 	 * @param dbAddress
 	 * @param user
 	 * @param password
@@ -29,9 +37,14 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 			@Value("${db.password}") String password) {
 		super(dbAddress, user, password);
 	}
-    /**
-     * Metodo che restituisce tutte le recensioni del database
-     */
+	
+	/*================================================================================================================================================================*/
+
+	/**
+	 * Metodo che restituisce la lista di oggetti Recensione dal database,
+	 * con tutte le loro proprietà
+	 * 
+	 */
 	@Override
 	public List<Recensione> recensioni() 
 	{
@@ -46,33 +59,37 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 
 		return ris;
 	}
-    /**
-     * Metodo che restituisce una recensione specifica del database
-     */
+	
+	/*================================================================================================================================================================*/
+	
+	/**
+	 * Metodo che restituisce il dettaglio di uno specifico oggetto 
+	 * Recensione dal database, con le sue proprietà
+	 * 
+	 */
 	@Override
 	public Recensione recensione(int id) 
 	{
-		Map<String, String> map = getOne("SELECT * FROM recensione WHERE id = ?", id);
-		//		
-		Recensione recensione = IMappablePro.fromMap(Recensione.class, map);
-		//		
+		Map<String, String> map = getOne("SELECT * FROM recensione WHERE id = ?", id);	
+		Recensione recensione = IMappablePro.fromMap(Recensione.class, map); //recupera una recensione specifica dal DB
+
 		Map<String,String> mappaUtente = getOne("select * from utente where id = ?", map.get("idutente"));
-		//		
-		recensione.setUtente(IMappablePro.fromMap(Utente.class, mappaUtente));
-		//
+		recensione.setUtente(IMappablePro.fromMap(Utente.class, mappaUtente)); //recupera l'utente che ha scritto la recensione
+
 		Videogioco v = null;
-		Map<String,String> mappaVideogioco = getOne("select * from videogioco where id = ?", map.get("idvideogioco"));
-		
-		List<Map<String,String>> maps = getAll("select piattaforma.nome from videogioco inner join compatibilita on compatibilita.idvideogioco = videogioco.id "
-				+ "inner join piattaforma on compatibilita.idpiattaforma = piattaforma.id "
-				+ "where compatibilita.idvideogioco = ?",id);
-		
+		Map<String,String> mappaVideogioco = getOne("select * from videogioco where id = ?", map.get("idvideogioco")); //recupera il videogioco relativo alla recensione
+
+		List<Map<String,String>> maps = getAll("select piattaforma.nome from videogioco "
+											+ "inner join compatibilita on compatibilita.idvideogioco = videogioco.id "
+											+ "inner join piattaforma on compatibilita.idpiattaforma = piattaforma.id "
+											+ "where compatibilita.idvideogioco = ?",id);
+
 		List<String> comp = new ArrayList<>();
-		
+
 		if(map != null)
 		{
 			v = IMappablePro.fromMap(Videogioco.class, mappaVideogioco);
-			
+
 			for(Map<String, String> m : maps)
 			{
 				String c = m.get("nome");
@@ -80,38 +97,57 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 			}
 			v.setCompatibilita(comp);
 		}	
-		
 		recensione.setVideogioco(v);
-		//		
+	
 		return recensione;
 	}
-    /**
-     * Metodo che aggiunge una recensione al database
-     */
+	
+	/*================================================================================================================================================================*/
+	
+	/**
+	 * Metodo CRUD per l'aggiunta di un oggetto Recensione 
+	 * Restituisce un valore booleano TRUE se l'operazione è andata a buon fine
+	 * o FALSE in caso di errore
+	 * 
+	 */
 	@Override
 	public boolean add(Recensione recensione) 
 	{
-		return isExecute("INSERT INTO recensione (titolo, idimmagine, contenuto, valutazione, idutente, datapubblicazione, approvato, bozza, idvideogioco) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
-				recensione.getTitolo(), recensione.getImmagine(), recensione.getContenuto(), recensione.getValutazione(), recensione.getUtente(), recensione.getDataPubblicazione(), 
-				recensione.isApprovato(), recensione.isBozza(), recensione.getVideogioco());
+		return isExecute("INSERT INTO recensione (titolo, idimmagine, contenuto, valutazione, idutente, datapubblicazione, approvato, bozza, idvideogioco) "
+						+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+				recensione.getTitolo(), recensione.getImmagine(), recensione.getContenuto(), recensione.getValutazione(), recensione.getUtente(), 
+				recensione.getDataPubblicazione(), recensione.isApprovato(), recensione.isBozza(), recensione.getVideogioco());
 	}
-    /**
-     * Metodo che elimina una recensione dal database
-     */
+	
+	/*================================================================================================================================================================*/
+	
+	/**
+	 * Metodo CRUD per l'eliminazione di un oggetto Recensione 
+	 * Restituisce un valore booleano TRUE se l'operazione è andata a buon fine
+	 * o FALSE in caso di errore
+	 * 
+	 */
 	@Override
 	public boolean delete(int id) 
 	{
 		return isExecute("DELETE FROM recensione WHERE id = ?", id);
 	}
-    /**
-     * Metodo che modifica una recensione dal database
-     */
+	
+	/*================================================================================================================================================================*/
+	
+	/**
+	 * Metodo CRUD per la modifica di un oggetto Recensione 
+	 * Restituisce un valore booleano TRUE se l'operazione è andata a buon fine
+	 * o FALSE in caso di errore
+	 * 
+	 */
 	@Override
 	public boolean update(Recensione recensione) 
 	{
-		return isExecute("UPDATE recensione SET titolo = ?, idimmagine= ?, contenuto = ?, valutazione = ?, idutente = ?, datapubblicazione = ?, approvato = ?, bozza = ?, idvideogioco = ? WHERE id = ?", 
-				recensione.getTitolo(), recensione.getImmagine(), recensione.getContenuto(), recensione.getValutazione(), recensione.getUtente(), recensione.getDataPubblicazione(), 
-				recensione.isApprovato(), recensione.isBozza(), recensione.getVideogioco(), recensione.getId());
+		return isExecute("UPDATE recensione SET titolo = ?, idimmagine= ?, contenuto = ?, valutazione = ?, idutente = ?, datapubblicazione = ?, "
+						+ "approvato = ?, bozza = ?, idvideogioco = ? WHERE id = ?", 
+				recensione.getTitolo(), recensione.getImmagine(), recensione.getContenuto(), recensione.getValutazione(), recensione.getUtente(), 
+				recensione.getDataPubblicazione(), recensione.isApprovato(), recensione.isBozza(), recensione.getVideogioco(), recensione.getId());
 	}
 
 }//fine dao

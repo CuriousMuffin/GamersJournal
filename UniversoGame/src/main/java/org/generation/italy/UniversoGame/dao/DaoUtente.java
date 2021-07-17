@@ -9,13 +9,21 @@ import org.generation.italy.UniversoGame.util.IMappablePro;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
+/**
+ * Estende BasicDao ed implementa le firme dei metodi di IDaoUtente
+ * Contiene il metodo di collegamento al DB e i metodi riguardanti la classe Utente.
+ * 
+ * @author Admin
+ *
+ */
 @Repository
 public class DaoUtente extends BasicDao implements IDaoUtente
 {
 
-	
 	/**
-	 * Costruttore di DaoUtente per la connessione al database che prende i dati da application.properties
+	 * Costruttore di DaoUtente per la connessione al database universogames
+	 * tramite /UniversoGame/src/main/resources/application.properties
+	 * 
 	 * @param dbAddress
 	 * @param user
 	 * @param password
@@ -23,12 +31,17 @@ public class DaoUtente extends BasicDao implements IDaoUtente
 	public DaoUtente(
 			@Value("${db.address}") String dbAddress, 
 			@Value("${db.user}") String user, 
-			@Value("${db.password}") String password) {
+			@Value("${db.password}") String password) 
+	{
 		super(dbAddress, user, password);
 	}
+	
+	/*================================================================================================================================================================*/
 
 	/**
-	 * Metodo che restituisce tutti gli utenti del database
+	 * Metodo che restituisce la lista di oggetti Utente dal database,
+	 * con tutte le loro proprietà
+	 * 
 	 */
 	@Override
 	public List<Utente> utenti() 
@@ -44,25 +57,34 @@ public class DaoUtente extends BasicDao implements IDaoUtente
 		return ris;
 	}
 	
+	/*================================================================================================================================================================*/
+
 	/**
-	 * Metodo che restituisce un utente specifico del database
+	 * Metodo che restituisce il dettaglio di uno specifico oggetto 
+	 * Utente dal database, con le sue proprietà
+	 * 
 	 */
 	@Override
 	public Utente utente(int id) 
 	{
 		Utente ris = null;
 		Map<String, String> map = getOne("SELECT * FROM utente WHERE id = ?", id);
-		
+
 		if(map != null)
 		{
 			ris = IMappablePro.fromMap(Utente.class, map);	
 		}
 		return ris;
 	}
-	/**
-	 * Metodo che aggiune un utente al database
-	 */
 	
+	/*================================================================================================================================================================*/
+
+	/**
+	 * Metodo CRUD per l'aggiunta di un oggetto Utente 
+	 * Restituisce un valore booleano TRUE se l'operazione è andata a buon fine
+	 * o FALSE in caso di errore
+	 * 
+	 */
 	@Override
 	public boolean add(Utente utente) 
 	{
@@ -70,20 +92,28 @@ public class DaoUtente extends BasicDao implements IDaoUtente
 				utente.getUsername(), utente.getPassword(), utente.getNickname(), utente.isAdmin(), utente.getImmagine());
 	}
 	
-	/**
-	 * Metodo che elimina un utente dal database
-	 */
+	/*================================================================================================================================================================*/
 
+	/**
+	 * Metodo CRUD per l'eliminazione di un oggetto Utente 
+	 * Restituisce un valore booleano TRUE se l'operazione è andata a buon fine
+	 * o FALSE in caso di errore
+	 * 
+	 */
 	@Override
 	public boolean delete(int id) 
 	{
 		return isExecute("DELETE FROM utente WHERE id = ?", id);
 	}
-     
-	/**
-	 * Metodo che modifica un utente del database
-	 */
 	
+	/*================================================================================================================================================================*/
+
+	/**
+	 * Metodo CRUD per l'eliminazione di un oggetto Utente 
+	 * Restituisce un valore booleano TRUE se l'operazione è andata a buon fine
+	 * o FALSE in caso di errore
+	 * 
+	 */
 	@Override
 	public boolean update(Utente utente) 
 	{
@@ -91,4 +121,4 @@ public class DaoUtente extends BasicDao implements IDaoUtente
 				utente.getUsername(), utente.getPassword(), utente.getNickname(), utente.isAdmin(), utente.getImmagine(), utente.getId());
 	}
 
-}//fine dao
+}//fine DaoUtente

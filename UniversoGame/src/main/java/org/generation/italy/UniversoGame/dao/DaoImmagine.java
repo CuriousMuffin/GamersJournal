@@ -9,30 +9,41 @@ import org.generation.italy.UniversoGame.util.BasicDao;
 import org.generation.italy.UniversoGame.util.IMappablePro;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
+
 /**
- * Dao di immagine che estende BasicDao e implementa l'interfaccia IDaoImmagine
- * @author acer
+ * Estende BasicDao ed implementa le firme dei metodi di IDaoImmagine
+ * Contiene il metodo di collegamento al DB e i metodi riguardanti la classe Immagine
+ * 
+ * @author Admin
  *
  */
 @Repository
 public class DaoImmagine extends BasicDao implements IDaoImmagine
 {
-/**
- * Costruttore di DaoImmagine per la connessione al database che prende i dati da application.properties
- * @param dbAddress
- * @param user
- * @param password
- */
+	
+	/**
+	 * Costruttore di DaoImmagine per la connessione al database univeersogames
+	 * tramite /UniversoGame/src/main/resources/application.properties
+	 * 
+	 * @param dbAddress
+	 * @param user
+	 * @param password
+	 */
 	public DaoImmagine(
 			@Value("${db.address}") String dbAddress, 
 			@Value("${db.user}") String user, 
-			@Value("${db.password}") String password) {
-		super(dbAddress, user, password);
-									
+			@Value("${db.password}") String password) 
+	{
+		super(dbAddress, user, password);							
 	}
-/**
- * Metodo che restituisce una lista di tutte le immagini dal database
- */
+	
+	/*================================================================================================================================================================*/
+
+	/**
+	 * Metodo che restituisce la lista di oggetti Immagine dal database,
+	 * con tutte le loro proprietà
+	 * 
+	 */
 	@Override
 	public List<Immagine> immagini() 
 	{
@@ -46,9 +57,14 @@ public class DaoImmagine extends BasicDao implements IDaoImmagine
 		
 		return ris;
 	}
-/**
- * Metodo che restituisce un'immagine specifica dal database
- */
+	
+	/*================================================================================================================================================================*/
+
+	/**
+	 * Metodo che restituisce il dettaglio di uno specifico oggetto 
+	 * Immagine dal database, con le sue proprietà
+	 * 
+	 */
 	@Override
 	public Immagine immagine(int id) 
 	{
@@ -59,33 +75,49 @@ public class DaoImmagine extends BasicDao implements IDaoImmagine
 		if (map != null) {
 			ris = IMappablePro.fromMap(Immagine.class, map);
 		}
-		
 		return ris;
 	}
-/**
- * Metodo che aggiunge un'immagine al database	
- */
+	
+	/*================================================================================================================================================================*/
+
+	/**
+	 * Metodo CRUD per l'aggiunta di un oggetto Immagine 
+	 * Restituisce un valore booleano TRUE se l'operazione è andata a buon fine
+	 * o FALSE in caso di errore
+	 * 
+	 */
 	@Override
 	public boolean add(Immagine immagine) 
 	{
 		return isExecute("insert into immagine (pathimmagine) values (?)", immagine.getPathImmagine());
 	}
-/**
- * Metodo che elimina un'immagine dal database
- */
+
+	/*================================================================================================================================================================*/
+
+	/**
+	 * Metodo CRUD per l'eliminazione di un oggetto Immagine 
+	 * Restituisce un valore booleano TRUE se l'operazione è andata a buon fine
+	 * o FALSE in caso di errore
+	 * 
+	 */
 	@Override
 	public boolean delete(int id) 
 	{
 		return isExecute("delete from immagine where id = ?",id);
 	}
-/**
- * Metodo che modifica un'immagine sul database
- */
+	
+	/*================================================================================================================================================================*/
+
+	/**
+	 * Metodo CRUD per la modifica di un oggetto Immagine 
+	 * Restituisce un valore booleano TRUE se l'operazione è andata a buon fine
+	 * o FALSE in caso di errore
+	 * 
+	 */
 	@Override
 	public boolean update(Immagine immagine) 
 	{
 		return isExecute("update immagine set pathimmagine = ? where id = ?", immagine.getPathImmagine(), immagine.getId());
 	}
-
 
 }//fine dao
