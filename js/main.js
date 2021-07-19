@@ -1,5 +1,7 @@
 $(document).ready(function () {
-  $("#content").load("test.html");
+  $("#content").load("homeContentContainer.html", function () {
+    $(".recensione1").load("recensionePreview.html");
+  });
 
   $("#news").click(function () {
     $("#content").load("news.html");
@@ -16,6 +18,11 @@ $(document).ready(function () {
   $(".logo").click(function () {
     document.location.href = "index.html";
   });
+
+  // qundo c'è qualcosa con questo id, all'evento assegna una funzione
+  // $("#content").on("", "#multi-reviews", function () {
+  //   $("#multiReviews").load("recensionePreview.html");
+  // });
 });
 
 // Sticky nav bar & ToTop button function
@@ -52,4 +59,8 @@ function showTopButtonFunction() {
 function topFunction() {
   document.body.scrollTop = 0; // per Safari
   document.documentElement.scrollTop = 0; // per Chrome, Firefox, IE ed Opera
+}
+
+function readyRecensioni() {
+  // chiamata get
 }
