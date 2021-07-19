@@ -74,7 +74,7 @@ function topFunction() {
 
 function getRevPreviewInfo() {
   $.get("recensione", function (res) {
-    for (let i = 0; i < res.length; i++) {
+    for (let i = 0; i < 6; i++) {
       let substr = `${res[i].contenuto}.substring(0, 10)` + "...";
       $(`
         <div class="container">
