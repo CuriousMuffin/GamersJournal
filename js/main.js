@@ -1,6 +1,11 @@
 $(document).ready(function () {
   $("#content").load("homeContentContainer.html", function () {
     $(".recensione1").load("recensionePreview.html");
+    $(".recensione2").load("recensionePreview.html");
+    $(".recensione3").load("recensionePreview.html");
+    $(".recensione4").load("recensionePreview.html");
+    $(".recensione5").load("recensionePreview.html");
+    $(".recensione6").load("recensionePreview.html");
   });
 
   $("#news").click(function () {
