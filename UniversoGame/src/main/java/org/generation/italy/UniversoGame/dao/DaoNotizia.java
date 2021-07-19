@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.generation.italy.UniversoGame.models.Immagine;
 import org.generation.italy.UniversoGame.models.Notizia;
 import org.generation.italy.UniversoGame.models.Utente;
 import org.generation.italy.UniversoGame.models.Videogioco;
@@ -74,10 +75,22 @@ public class DaoNotizia extends BasicDao implements IDaoNotizia
 	{	
 		Map<String, String> map = getOne("SELECT * FROM notizia WHERE id = ?", id);
 		Notizia notizia = IMappablePro.fromMap(Notizia.class, map);
+<<<<<<< Updated upstream
 	
 		Map<String,String> mappaUtente = getOne("select * from utente where id = ?", map.get("idutente"));
 		notizia.setUtente(IMappablePro.fromMap(Utente.class, mappaUtente));
 	
+=======
+//		
+		Map<String,String> mappaUtente = getOne("select * from utente where id = ?", map.get("idutente"));		
+//		
+		notizia.setUtente(IMappablePro.fromMap(Utente.class, mappaUtente));
+//		
+		Map<String,String> mappaImmagine = getOne("select * from immagine where id = ?", map.get("idimmagine"));
+		
+		notizia.setImmagine(IMappablePro.fromMap(Immagine.class, mappaImmagine));
+		
+>>>>>>> Stashed changes
 		Videogioco v = null;
 		Map<String,String> mappaVideogioco = getOne("select * from videogioco where id = ?", map.get("idvideogioco"));
 		

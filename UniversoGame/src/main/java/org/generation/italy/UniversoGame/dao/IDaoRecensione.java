@@ -20,5 +20,6 @@ public interface IDaoRecensione
 	   public boolean add(Recensione recensione);
 	   public boolean delete(int id);
 	   public boolean update(Recensione recensione);
+	   public List<Recensione> recensioniORM();
 
 }// fine Idao

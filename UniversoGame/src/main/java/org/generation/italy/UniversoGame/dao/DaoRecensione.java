@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.generation.italy.UniversoGame.models.Immagine;
 import org.generation.italy.UniversoGame.models.Recensione;
 import org.generation.italy.UniversoGame.models.Utente;
 import org.generation.italy.UniversoGame.models.Videogioco;
@@ -60,6 +61,7 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 		return ris;
 	}
 	
+<<<<<<< Updated upstream
 	/*================================================================================================================================================================*/
 	
 	/**
@@ -73,6 +75,30 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 		Map<String, String> map = getOne("SELECT * FROM recensione WHERE id = ?", id);	
 		Recensione recensione = IMappablePro.fromMap(Recensione.class, map); //recupera una recensione specifica dal DB
 
+=======
+	@Override
+	public List<Recensione> recensioniORM() {
+		List<Recensione> ris = new ArrayList<>();
+		for (Recensione r : recensioni()) {
+			ris.add(recensione(r.getId()));
+		}
+		return ris;
+	}
+    /**
+     * Metodo che restituisce una recensione specifica del database
+     */
+	@Override
+	public Recensione recensione(int id) 
+	{
+		Map<String, String> map = getOne("SELECT * FROM recensione WHERE id = ?", id);
+		//		
+		Recensione recensione = IMappablePro.fromMap(Recensione.class, map);
+		
+		Map<String,String> mappaImmagine = getOne("select * from immagine where id = ?", map.get("idimmagine"));
+		
+		recensione.setImmagine(IMappablePro.fromMap(Immagine.class, mappaImmagine));
+		//		
+>>>>>>> Stashed changes
 		Map<String,String> mappaUtente = getOne("select * from utente where id = ?", map.get("idutente"));
 		recensione.setUtente(IMappablePro.fromMap(Utente.class, mappaUtente)); //recupera l'utente che ha scritto la recensione
 

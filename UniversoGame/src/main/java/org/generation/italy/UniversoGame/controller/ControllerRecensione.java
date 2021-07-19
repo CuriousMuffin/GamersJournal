@@ -34,7 +34,7 @@ public class ControllerRecensione
 	@GetMapping
 	public List<Recensione> get() 
 	{
-		return dao.recensioni();
+		return dao.recensioniORM();
 	}
 	
 	/*================================================================================================================================================================*/
