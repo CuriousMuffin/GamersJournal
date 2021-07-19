@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Universo Games</title>
     <!-- Favicon -->
-    <link rel="manifest" href="/manifest.webmanifest">
-    <link rel="icon" href="../favicon.ico">
-    <link rel="icon" href="../icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="../favicon.ico" />
+    <link rel="icon" href="../icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
     <!-- Icone -->
     <script
       src="https://kit.fontawesome.com/0b5cc0bf06.js"
@@ -67,72 +67,23 @@
       </div>
     </div>
     <div id="navbar">
-      <a class="active" href="javascript:void(0)"
+      <a id="home" href="javascript:void(0)"
         ><i class="fas fa-home"></i> Home</a
       >
-      <a href="javascript:void(0)">News</a>
-      <a href="javascript:void(0)">Recensioni</a>
-      <a href="javascript:void(0)">Contatti</a>
-      <a class="rightNavbar" href="javascript:void(0)"><i class="fa fa-fw fa-user"></i>Log-In</a>
+      <a id="news" href="javascript:void(0)">News</a>
+      <a id="reviews" href="javascript:void(0)">Recensioni</a>
+      <a class="rightNavbar" href="javascript:void(0)"
+        ><i class="fa fa-fw fa-user"></i>Log-In</a
+      >
       <a class="rightNavbar" href="javascript:void(0)"
         ><i class="fa fa-fw fa-search"></i> Ricerca</a
       >
     </div>
-    <div id="content" class="content">
-      <!-- <p>
-        The navbar will stick to the top when you reach its scroll position.
-        Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum
-        definitiones no quo, maluisset concludaturque et eum, altera fabulas ut
-        quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert
-        laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no
-        molestiae voluptatibus. Lorem ipsum dolor sit amet, illum definitiones
-        no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui
-        causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-        repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
-        voluptatibus. Lorem ipsum dolor sit amet, illum definitiones no quo,
-        maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae
-        gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-        repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
-        voluptatibus. Lorem ipsum dolor sit amet, illum definitiones no quo,
-        maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae
-        gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-        repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
-        voluptatibus. Lorem ipsum dolor sit amet, illum definitiones no quo,
-        maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae
-        gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-        repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
-        voluptatibus. Lorem ipsum dolor sit amet, illum definitiones no quo,
-        maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae
-        gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-        repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
-        voluptatibus. Lorem ipsum dolor sit amet, illum definitiones no quo,
-        maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae
-        gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-        repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
-        voluptatibus. Lorem ipsum dolor sit amet, illum definitiones no quo,
-        maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae
-        gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-        repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
-        voluptatibus. Lorem ipsum dolor sit amet, illum definitiones no quo,
-        maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae
-        gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-        repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
-        voluptatibus. Lorem ipsum dolor sit amet, illum definitiones no quo,
-        maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae
-        gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-        repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
-        voluptatibus. Lorem ipsum dolor sit amet, illum definitiones no quo,
-        maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae
-        gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-        repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
-        voluptatibus. Some text to enable scrolling.. Lorem ipsum dolor sit
-        amet, illum definitiones no quo, maluisset concludaturque et eum, altera
-        fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
-        eum. Affert laboramus repudiandae nec et.
-      </p> -->
-    </div>
+    <div id="content" class="content"></div>
     <div id="toTop">
-      <button onclick="topFunction()" id="toTopButton"><i class="fa fa-solid fa-arrow-up"></i></button>
+      <button onclick="topFunction()" id="toTopButton">
+        <i class="fa fa-solid fa-arrow-up"></i>
+      </button>
     </div>
     <div class="footer-container">
       <footer>
@@ -172,6 +123,7 @@
             <p class="footer-text-cookies">
               Cookies<i class="fa fa-fw fa-cookie-bite"></i>
             </p>
+            <p class="footer-text-contacts" href="#">Contatti</p>
           </div>
         </div>
         <div id="row2">

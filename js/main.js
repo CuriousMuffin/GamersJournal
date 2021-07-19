@@ -1,7 +1,22 @@
-$(document).ready(function() {
-  $("#content").load( "test.html" );
-});
+$(document).ready(function () {
+  $("#content").load("test.html");
 
+  $("#news").click(function () {
+    $("#content").load("news.html");
+  });
+
+  $("#reviews").click(function () {
+    $("#content").load("recensioni.html");
+  });
+
+  $("#home").click(function () {
+    document.location.href = "index.html";
+  });
+
+  $(".logo").click(function () {
+    document.location.href = "index.html";
+  });
+});
 
 // Sticky nav bar & ToTop button function
 window.onscroll = function () {
@@ -21,7 +36,6 @@ function myStickyNavBarFunction() {
 }
 // all'onclick di una delle sezioni, la sezione selezionata deve acquisire la classe "active"
 
-
 // ToTop Button
 var totopbutton = document.getElementById("toTopButton");
 
@@ -39,5 +53,3 @@ function topFunction() {
   document.body.scrollTop = 0; // per Safari
   document.documentElement.scrollTop = 0; // per Chrome, Firefox, IE ed Opera
 }
-
-
