@@ -94,21 +94,17 @@ p {
   color: white;
 }
 
-.grid-container {
+/* recensioni grid */
+.review-container {
   display: grid;
-  grid-template-columns: 33 33 33;
-  grid-template-rows: 50 50;
-  grid-template-areas:
-    "recensioneL recensioneL recensioneM recensioneM recensioneR recensioneR"
-    "recensioneL2 recensioneL2 recensioneM2 recensioneM2 recensioneR2 recensioneR2"
-    "notiziaL notiziaL notiziaL notiziaR notiziaR notiziaR"
-    "notiziaL2 notiziaL2 notiziaL2 notiziaR2 notiziaR2 notiziaR2";
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: repeat(2, 50%);
   background-color: #2196f3;
   padding: 10px;
   grid-gap: 10px;
 }
 
-.grid-container > div {
+.review-container > div {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
   /* padding: 20px; */
@@ -117,44 +113,23 @@ p {
   color: black;
 }
 
-.recensione1 {
-  grid-area: recensioneL;
+/* news grid */
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, 50%);
+  background-color: #2196f3;
+  padding: 10px;
+  grid-gap: 10px;
 }
 
-.recensione2 {
-  grid-area: recensioneM;
-}
-
-.recensione3 {
-  grid-area: recensioneR;
-}
-
-.recensione4 {
-  grid-area: recensioneL2;
-}
-
-.recensione5 {
-  grid-area: recensioneM2;
-}
-
-.recensione6 {
-  grid-area: recensioneR2;
-}
-
-.notizia1 {
-  grid-area: notiziaL;
-}
-
-.notizia2 {
-  grid-area: notiziaR;
-}
-
-.notizia3 {
-  grid-area: notiziaL2;
-}
-
-.notizia4 {
-  grid-area: notiziaR2;
+.news-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  /* padding: 20px; */
+  font-size: 30px;
+  text-align: center;
+  color: black;
 }
 
 /* ================ Footer ================ */

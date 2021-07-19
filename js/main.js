@@ -1,12 +1,14 @@
 $(document).ready(function () {
-  $("#content").load("homeContentContainer.html", function () {
-    $(".recensione1").load("recensionePreview.html");
-    $(".recensione2").load("recensionePreview.html");
-    $(".recensione3").load("recensionePreview.html");
-    $(".recensione4").load("recensionePreview.html");
-    $(".recensione5").load("recensionePreview.html");
-    $(".recensione6").load("recensionePreview.html");
-  });
+  $("#content").load("homeContentContainer.html", getRevPreviewInfo()
+  // function () {
+  //   $(".recensione").load("recensionePreview.html");
+  //   $(".recensione2").load("recensionePreview.html");
+  //   $(".recensione3").load("recensionePreview.html");
+  //   $(".recensione4").load("recensionePreview.html");
+  //   $(".recensione5").load("recensionePreview.html");
+  //   $(".recensione6").load("recensionePreview.html");
+  // }
+  );
 
   $("#news").click(function () {
     $("#content").load("news.html");
@@ -30,6 +32,7 @@ $(document).ready(function () {
   // });
 });
 
+// =========================== NAVBAR ===========================
 // Sticky nav bar & ToTop button function
 window.onscroll = function () {
   myStickyNavBarFunction();
@@ -48,7 +51,8 @@ function myStickyNavBarFunction() {
 }
 // all'onclick di una delle sezioni, la sezione selezionata deve acquisire la classe "active"
 
-// ToTop Button
+// =========================== ToTop Button ===========================
+
 var totopbutton = document.getElementById("toTopButton");
 
 // Quando l'utente scorre in basso di 20px dalla cima del documento, mostra il bottone
@@ -66,6 +70,24 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // per Chrome, Firefox, IE ed Opera
 }
 
-function readyRecensioni() {
-  // chiamata get
+// =========================== MORTE E DISPERAZIONE ===========================
+
+function getRevPreviewInfo() {
+  $.get("recensione", function (res) {
+    for (let i = 0; i < res.length; i++) {
+      let substr = `${res[i].contenuto}.substring(0, 10)` + "...";
+      $(`
+        <div class="container">
+          <img src="${res[i].immagine.pathImmagine}"
+          alt="This was suppose to be an image"
+          class="image"
+          />
+          <div class="overlay">
+            <h1 id="TitleRev">${res[i].titolo}</h1>
+            <h3 id="SubtRev">${substr}</h3>
+          </div>
+        </div>
+      `).appendTo($(".review-container"));
+    }
+  });
 }
