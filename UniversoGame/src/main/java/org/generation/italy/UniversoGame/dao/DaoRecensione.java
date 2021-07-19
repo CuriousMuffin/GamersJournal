@@ -61,7 +61,7 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 		return ris;
 	}
 	
-<<<<<<< Updated upstream
+
 	/*================================================================================================================================================================*/
 	
 	/**
@@ -69,13 +69,13 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 	 * Recensione dal database, con le sue proprietà
 	 * 
 	 */
-	@Override
-	public Recensione recensione(int id) 
-	{
-		Map<String, String> map = getOne("SELECT * FROM recensione WHERE id = ?", id);	
-		Recensione recensione = IMappablePro.fromMap(Recensione.class, map); //recupera una recensione specifica dal DB
-
-=======
+//	@Override
+//	public Recensione recensione(int id) 
+//	{
+//		Map<String, String> map = getOne("SELECT * FROM recensione WHERE id = ?", id);	
+//		Recensione recensione = IMappablePro.fromMap(Recensione.class, map); //recupera una recensione specifica dal DB
+//
+//	}
 	@Override
 	public List<Recensione> recensioniORM() {
 		List<Recensione> ris = new ArrayList<>();
@@ -98,7 +98,7 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 		
 		recensione.setImmagine(IMappablePro.fromMap(Immagine.class, mappaImmagine));
 		//		
->>>>>>> Stashed changes
+
 		Map<String,String> mappaUtente = getOne("select * from utente where id = ?", map.get("idutente"));
 		recensione.setUtente(IMappablePro.fromMap(Utente.class, mappaUtente)); //recupera l'utente che ha scritto la recensione
 
