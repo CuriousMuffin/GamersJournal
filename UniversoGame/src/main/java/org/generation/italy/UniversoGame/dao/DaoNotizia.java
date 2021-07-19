@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.generation.italy.UniversoGame.models.Immagine;
 import org.generation.italy.UniversoGame.models.Notizia;
+import org.generation.italy.UniversoGame.models.Recensione;
 import org.generation.italy.UniversoGame.models.Utente;
 import org.generation.italy.UniversoGame.models.Videogioco;
 import org.generation.italy.UniversoGame.util.BasicDao;
@@ -60,6 +61,15 @@ public class DaoNotizia extends BasicDao implements IDaoNotizia
 			ris.add(IMappablePro.fromMap(Notizia.class, map));
 		}
 		
+		return ris;
+	}
+	
+	@Override
+	public List<Notizia> notizieORM() {
+		List<Notizia> ris = new ArrayList<>();
+		for (Notizia n : notizie()) {
+			ris.add(notizia(n.getId()));
+		}
 		return ris;
 	}
 	

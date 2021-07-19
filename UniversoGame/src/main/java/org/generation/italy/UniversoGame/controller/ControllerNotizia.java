@@ -30,7 +30,7 @@ public class ControllerNotizia
 	@GetMapping
 	public List<Notizia> get() 
 	{
-		return dao.notizie();
+		return dao.notizieORM();
 	}
 
 	/*================================================================================================================================================================*/

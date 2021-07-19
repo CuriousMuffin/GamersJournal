@@ -15,9 +15,11 @@ import org.generation.italy.UniversoGame.models.Notizia;
 public interface IDaoNotizia 
 {
 	   public List<Notizia> notizie();
+	   public List<Notizia> notizieORM();
 	   public Notizia notizia(int id);
 	   public boolean add(Notizia notizia);
 	   public boolean delete(int id);
 	   public boolean update(Notizia notizia);
+	   
 
 }// fine Idao
