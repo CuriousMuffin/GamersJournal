@@ -1,0 +1,272 @@
+/* #logo {
+  filter: drop-shadow(0 0 11px #0095ff);
+} */
+
+/* Additional styling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #0d0118;
+}
+
+p {
+  margin: 0;
+}
+
+/* ================ Header ================ */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  filter: drop-shadow(0 0 11px #0095ff);
+  width: 40vw;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+#scrittalogo {
+  text-shadow: 0 0 20px #cef3f1;
+}
+
+.header {
+  z-index: 95;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-height: 18vw;
+  /* background-color: #31546d; */
+  background: linear-gradient(to bottom, #0d0118 0%, #31546d 96%, #31546d 100%);
+  /* background-image: url("../images/stars03.jpg"); */
+}
+
+/* ================ Sticky navbar ================ */
+#navbar {
+  z-index: 95;
+  overflow: hidden;
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #31546d;
+  font-size: 1.5rem;
+}
+
+/* Left side navbar */
+#navbar a {
+  float: left;
+  display: block;
+  color: #cef3f1;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  background-color: #f3e6fb;
+  color: #0d0118;
+}
+
+#navbar a.active {
+  background-color: #7c3fbe;
+  color: #cef3f1;
+}
+
+/* Right side navbar */
+#navbar a.rightNavbar {
+  float: right;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* ================ Content ================ */
+.content {
+  z-index: 90;
+  padding: 1% 8%;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5em;
+  /* color: #0d0118; */
+  color: white;
+}
+
+/* recensioni grid */
+.review-container {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: repeat(2, 50%);
+  background-color: #2196f3;
+  padding: 10px;
+  grid-gap: 10px;
+}
+
+.review-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  /* padding: 20px; */
+  font-size: 30px;
+  text-align: center;
+  color: black;
+}
+
+/* news grid */
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, 50%);
+  background-color: #2196f3;
+  padding: 10px;
+  grid-gap: 10px;
+}
+
+.news-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  /* padding: 20px; */
+  font-size: 30px;
+  text-align: center;
+  color: black;
+}
+
+/* ================ Footer ================ */
+footer {
+  bottom: 0;
+  width: 100%;
+  background-color: #31546d;
+  color: #cef3f1;
+  font-family: "Roboto Condensed", sans-serif;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+/* flex design */
+.footer-container {
+  display: flex;
+  align-self: center;
+}
+
+footer {
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+}
+
+.logo-footer {
+  display: flex;
+  /* justify-content: center; */
+  align-self: center;
+  /* filter: drop-shadow(0 0 11px #0095ff); */
+  width: 20vw;
+}
+
+.footer-text-container {
+  flex-direction: row-reverse;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-text-cookies {
+  display: flex;
+  align-self: center;
+  justify-content: flex-end;
+  padding: 0px 20px;
+}
+
+.footer-text-contacts {
+  display: flex;
+  align-self: center;
+  justify-content: flex-end;
+  padding: 0px 20px;
+}
+
+.footer-text1 {
+  display: flex;
+  align-self: center;
+}
+
+#row1 {
+  display: flex;
+  padding-top: 1%;
+  height: 66%;
+  justify-content: space-between;
+}
+
+#row2 {
+  display: flex;
+  /* height: 33%; */
+  font-size: 1rem;
+  justify-content: center;
+}
+
+/* ================ ToTop Button ================ */
+
+#toTopButton {
+  display: none; /* Nascosto di default */
+  position: fixed; /* Posizione ancorata */
+  bottom: 20px; /* Distanza dal fondo pagina */
+  right: 20px; /* Distanza dalla destra */
+  z-index: 99; /* Posiziona il bottone al livello più alto */
+  border: none;
+  outline: none;
+  background-color: #7c3fbe;
+  color: white; /* Colore freccia */
+  width: 50px;
+  height: 50px;
+  /* padding: 15px; /* Padding: se imposto la dimensione non serve */
+  border-radius: 50%; /* Arrotonda angoli bottone */
+  font-size: 1.25rem; /* Dimensione font freccia */
+}
+
+#toTopButton:hover {
+  background-color: #f3e6fb; /* Evidenzia il bottone al passaggio del mouse */
+  color: #0d0118;
+  cursor: pointer; /* Il cursore diventa manina al passaggio del mouse */
+}
+
+/* ================ preview style ================ */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 100%;
+  /* max-width: 300px; */
+}
+
+.container:hover {
+  cursor: pointer;
+}
+
+/* Make the image to responsive */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 0.8rem;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.container:hover .overlay {
+  opacity: 1;
+}
