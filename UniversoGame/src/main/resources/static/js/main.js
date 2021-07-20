@@ -1,9 +1,9 @@
 $(document).ready(function () {
-  $("#content").load("homeContentContainer.html", function() {
-	setTimeout (function () {
-		getPreviewInfo()
-	}, 100)
-});
+  $("#content").load("homeContentContainer.html", function () {
+    setTimeout(function () {
+      getPreviewInfo();
+    }, 100);
+  });
 
   $("#news").click(function () {
     $(this).addClass("active");
@@ -35,6 +35,9 @@ $(document).ready(function () {
     document.location.href = "index.html";
   });
 
+  $("#ricerca").click(function () {
+    formRicerca();
+  });
 
   // qundo c'è qualcosa con questo id, all'evento assegna una funzione
   // $("#content").on("", "#multi-reviews", function () {
@@ -146,7 +149,7 @@ function getRevList() {
             <h3 id="SubtRev">Autore: ${res[i].utente.nickname}</h3>
           </div>
         </div>
-       </li>
+      </li>
       `).appendTo($(".review-list"));
     }
   });
@@ -167,7 +170,7 @@ function getNewsList() {
             <h3 id="SubtRev">Autore: ${res[i].utente.nickname}</h3>
           </div>
         </div>
-       </div>
+      </div>
       `).appendTo($(".news-list"));
     }
   });
@@ -175,53 +178,74 @@ function getNewsList() {
 
 // =========================== DETTAGLIO NEWS/RECENSIONI ===========================
 
-	$("#content").on("click", "#recensione", function() {
-		const id = +$(this).attr("data-id");
+$("#content").on("click", "#recensione", function () {
+  const id = +$(this).attr("data-id");
 
-		console.log("click su recensione id " + id);
-		
-    	$("#content").load("recensione-detail.html", getRev(id));
-		
-		;
-	})
+  console.log("click su recensione id " + id);
 
-		$("#content").on("click", "#notizia", function() {
-		const id = +$(this).attr("data-id");
+  $("#content").load("recensione-detail.html", getRev(id));
+});
 
-		console.log("click su notizia numero " + id);
-		
-    	$("#content").load("notizia-detail.html", getNews(id));
-		
-		;
-	})
+$("#content").on("click", "#notizia", function () {
+  const id = +$(this).attr("data-id");
 
-	function getRev(id) {
-		$.get(`recensione/${id}`, function(res) {
-			$(`
+  console.log("click su notizia numero " + id);
+
+  $("#content").load("notizia-detail.html", getNews(id));
+});
+
+function getRev(id) {
+  $.get(`recensione/${id}`, function (res) {
+    $(`
 			<img src="${res.immagine.pathImmagine}"
           		alt="This was supposed to be an image"
           		class="image"
-         		/>
+      />
 				<h1>RECENSIONE: ${res.titolo}</h1>
 				<h2>Gioco: ${res.videogioco.titolo} - voto: ${res.valutazione}</h2>
 				<p>${res.contenuto}</p>
 				<h4>Autore: ${res.utente.nickname} - pubblicata il: ${res.dataPubblicazione}</h4>
-				`).appendTo($('.review-detail'));
-		})
-	}
-	
-	function getNews(id) {
-		$.get(`notizia/${id}`, function(res) {
-			$(`
+				`).appendTo($(".review-detail"));
+  });
+}
+
+function getNews(id) {
+  $.get(`notizia/${id}`, function (res) {
+    $(`
 			<img src="${res.immagine.pathImmagine}"
           		alt="This was supposed to be an image"
           		class="image"
-         		/>
+      />
 				<h1>NOTIZIA: ${res.titolo}</h1>
 				<h2>Gioco: ${res.videogioco.titolo} - publisher: ${res.videogioco.casaProduttrice}</h2>
 				<p>${res.contenuto}</p>
 				<h4>Autore: ${res.utente.nickname} - pubblicata il: ${res.dataPubblicazione}</h4>
-				`).appendTo($('.news-detail'));
-		})
-	}
+				`).appendTo($(".news-detail"));
+  });
+}
 
+function formRicerca() {
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on the button, open the modal
+  $("#myModal").css("display", "block");
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+    $("#myModal").css("display", "none");
+  };
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      $("#myModal").css("display", "none");
+    }
+  };
+}
