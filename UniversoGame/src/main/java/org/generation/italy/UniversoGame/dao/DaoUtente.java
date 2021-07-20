@@ -89,7 +89,7 @@ public class DaoUtente extends BasicDao implements IDaoUtente
 	public boolean add(Utente utente) 
 	{
 		return isExecute("INSERT INTO utente (username, password, nickname, admin, idimmagine) VALUES (?, ?, ?, ?, ?)",
-				utente.getUsername(), utente.getPassword(), utente.getNickname(), utente.isAdmin(), utente.getImmagine());
+				utente.getUsername(), utente.getPassword(), utente.getUsername(), utente.getRuolo());
 	}
 	
 	/*================================================================================================================================================================*/
@@ -118,7 +118,7 @@ public class DaoUtente extends BasicDao implements IDaoUtente
 	public boolean update(Utente utente) 
 	{
 		return isExecute("UPDATE prodotto SET username = ?, password = ?, nickname = ?, admin = ?, idimmagine = ? WHERE id = ?", 
-				utente.getUsername(), utente.getPassword(), utente.getNickname(), utente.isAdmin(), utente.getImmagine(), utente.getId());
+				utente.getUsername(), utente.getPassword(), utente.getUsername(), utente.getRuolo(), utente.getId());
 	}
 
 }//fine DaoUtente
