@@ -2,11 +2,11 @@ $(document).ready(function () {
   $("#content").load("homeContentContainer.html", getPreviewInfo());
 
   $("#news").click(function () {
-    $("#content").load("news.html");
+    $("#content").load("news.html", getNewsList());
   });
 
   $("#reviews").click(function () {
-    $("#content").load("recensioni.html");
+    $("#content").load("recensioni.html", getRevList());
   });
 
   $("#home").click(function () {
@@ -61,7 +61,7 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // per Chrome, Firefox, IE ed Opera
 }
 
-// =========================== MORTE E DISPERAZIONE ===========================
+// =========================== ULTIME NEWS/RECENSIONI IN HOME ===========================
 
 function getRevPreviewInfo() {
   $.get("recensione", function (res) {
@@ -91,7 +91,7 @@ function getNewsPreviewInfo() {
       <div class="notizia${i}">
         <div class="container">
           <img src="${res[i].immagine.pathImmagine}"
-          alt="This was suppose to be an image"
+          alt="This was supposed to be an image"
           class="image"
           />
           <div class="overlay">
@@ -109,3 +109,48 @@ function getPreviewInfo() {
 	getRevPreviewInfo()
 	getNewsPreviewInfo()
 }
+
+// =========================== LISTA NEWS/RECENSIONI ===========================
+
+function getRevList() {
+  $.get("recensione", function (res) {
+    for (let i = 0; i < res.length; i++) {
+      $(`
+      <li class="recensione${i}">
+        <div class="container">
+          <img src="${res[i].immagine.pathImmagine}"
+          alt="This was supposed to be an image"
+          class="image"
+          />
+          <div class="overlay">
+            <h1 id="TitleRev">${res[i].titolo}</h1>
+            <h3 id="SubtRev">Autore: ${res[i].utente.nickname}</h3>
+          </div>
+        </div>
+       </li>
+      `).appendTo($(".review-list"));
+    }
+  });
+}
+
+function getNewsList() {
+  $.get("notizia", function (res) {
+    for (let i = 0; i < res.length; i++) {
+      $(`
+      <div class="notizia${i}">
+        <div class="container">
+          <img src="${res[i].immagine.pathImmagine}"
+          alt="This was supposed to be an image"
+          class="image"
+          />
+          <div class="overlay">
+            <h1 id="TitleRev">${res[i].titolo}</h1>
+            <h3 id="SubtRev">Autore: ${res[i].utente.nickname}</h3>
+          </div>
+        </div>
+       </div>
+      `).appendTo($(".news-list"));
+    }
+  });
+}
+

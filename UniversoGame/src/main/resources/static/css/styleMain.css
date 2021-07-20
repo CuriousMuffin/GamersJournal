@@ -97,12 +97,14 @@ p {
 /* recensioni grid */
 .review-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  background-color: #2196f3;
+  grid-template-columns: repeat(auto-fill, minmax(50vh, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(40vh, 2fr));
+  background-color: #0d0118;
   padding: 10px;
   grid-gap: 10px;
   place-items: center;
+  filter: drop-shadow(0 0 11px #0095ff);
+  
 }
 
 .review-container > div {
@@ -117,15 +119,17 @@ p {
 /* news grid */
 .news-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  background-color: #2196f3;
+  grid-template-columns: repeat(auto-fill, minmax(75vh, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(40vh, 1fr));
+  background-color: #0d0118;
   padding: 10px;
   grid-gap: 10px;
+  place-items: center;
+  filter: drop-shadow(0 0 11px #0095ff);
 }
 
 .news-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
+  /* background-color: rgba(255, 255, 255, 0.8); */
   border: 1px solid rgba(0, 0, 0, 0.8);
   /* padding: 20px; */
   font-size: 30px;
@@ -238,6 +242,7 @@ footer {
   position: relative;
   width: 100%;
   /* max-width: 300px; */
+  
 }
 
 .container:hover {
@@ -248,7 +253,7 @@ footer {
 .image {
   display: block;
   width: 100%;
-  height: 300px;
+  height: 20vw;
   object-fit: cover;
 }
 
@@ -259,10 +264,11 @@ footer {
   background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.5); /* Black see-through */
   width: 100%;
+  height: 70%;
   transition: 0.5s ease;
   opacity: 0;
   color: white;
-  font-size: 0.8rem;
+  font-size: 0.8vw;
   padding: 20px;
   text-align: center;
 }
@@ -271,3 +277,15 @@ footer {
 .container:hover .overlay {
   opacity: 1;
 }
+
+
+/* ================ list style ================ */
+
+.review-list > li {
+  margin: 0 0 20px 0;
+}
+
+.news-list > div {
+  margin: 0 0 20px 0;
+}
+
