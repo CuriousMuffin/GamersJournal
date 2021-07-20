@@ -2,18 +2,32 @@ $(document).ready(function () {
   $("#content").load("homeContentContainer.html", getPreviewInfo());
 
   $("#news").click(function () {
+    $(this).addClass("active");
+    $("#reviews").removeClass("active");
+    $("#home").removeClass("active");
+    // $(this).addClass("active");
     $("#content").load("news.html", getNewsList());
   });
 
   $("#reviews").click(function () {
+    $(this).addClass("active");
+    $("#home").removeClass("active");
+    $("#news").removeClass("active");
+    // document.getElementById("reviews").setAttribute("class", "active");
     $("#content").load("recensioni.html", getRevList());
   });
 
   $("#home").click(function () {
+    $(this).addClass("active");
+    $("#reviews").removeClass("active");
+    $("#news").removeClass("active");
     document.location.href = "index.html";
   });
 
   $(".logo").click(function () {
+    $(this).addClass("active");
+    $("#reviews").removeClass("active");
+    $("#news").removeClass("active");
     document.location.href = "index.html";
   });
 
@@ -78,12 +92,12 @@ function getRevPreviewInfo() {
             <h3 id="SubtRev">Autore: ${res[i].utente.nickname}</h3>
           </div>
         </div>
-       </div>
+      </div>
       `).appendTo($(".review-container"));
     }
   });
 }
-  
+
 function getNewsPreviewInfo() {
   $.get("notizia", function (res) {
     for (let i = 0; i < 4; i++) {
@@ -106,8 +120,8 @@ function getNewsPreviewInfo() {
 }
 
 function getPreviewInfo() {
-	getRevPreviewInfo()
-	getNewsPreviewInfo()
+  getRevPreviewInfo();
+  getNewsPreviewInfo();
 }
 
 // =========================== LISTA NEWS/RECENSIONI ===========================
@@ -153,4 +167,3 @@ function getNewsList() {
     }
   });
 }
-
