@@ -1,5 +1,9 @@
 $(document).ready(function () {
-  $("#content").load("homeContentContainer.html", getPreviewInfo());
+  $("#content").load("homeContentContainer.html", function() {
+	setTimeout (function () {
+		getPreviewInfo()
+	}, 100)
+});
 
   $("#news").click(function () {
     $(this).addClass("active");
@@ -30,6 +34,7 @@ $(document).ready(function () {
     $("#news").removeClass("active");
     document.location.href = "index.html";
   });
+
 
   // qundo c'è qualcosa con questo id, all'evento assegna una funzione
   // $("#content").on("", "#multi-reviews", function () {
@@ -81,7 +86,7 @@ function getRevPreviewInfo() {
   $.get("recensione", function (res) {
     for (let i = 0; i < 6; i++) {
       $(`
-      <div class="recensione${i}">
+      <div id="recensione" data-id='${res[i].id}'>
         <div class="container">
           <img src="${res[i].immagine.pathImmagine}"
           alt="This was suppose to be an image"
@@ -102,7 +107,7 @@ function getNewsPreviewInfo() {
   $.get("notizia", function (res) {
     for (let i = 0; i < 4; i++) {
       $(`
-      <div class="notizia${i}">
+      <div id="notizia" data-id='${res[i].id}'>
         <div class="container">
           <img src="${res[i].immagine.pathImmagine}"
           alt="This was supposed to be an image"
@@ -130,7 +135,7 @@ function getRevList() {
   $.get("recensione", function (res) {
     for (let i = 0; i < res.length; i++) {
       $(`
-      <li class="recensione${i}">
+      <li id="recensione" data-id='${res[i].id}'>
         <div class="container">
           <img src="${res[i].immagine.pathImmagine}"
           alt="This was supposed to be an image"
@@ -151,7 +156,7 @@ function getNewsList() {
   $.get("notizia", function (res) {
     for (let i = 0; i < res.length; i++) {
       $(`
-      <div class="notizia${i}">
+      <div id="notizia" data-id='${res[i].id}'>
         <div class="container">
           <img src="${res[i].immagine.pathImmagine}"
           alt="This was supposed to be an image"
@@ -167,3 +172,56 @@ function getNewsList() {
     }
   });
 }
+
+// =========================== DETTAGLIO NEWS/RECENSIONI ===========================
+
+	$("#content").on("click", "#recensione", function() {
+		const id = +$(this).attr("data-id");
+
+		console.log("click su recensione id " + id);
+		
+    	$("#content").load("recensione-detail.html", getRev(id));
+		
+		;
+	})
+
+		$("#content").on("click", "#notizia", function() {
+		const id = +$(this).attr("data-id");
+
+		console.log("click su notizia numero " + id);
+		
+    	$("#content").load("notizia-detail.html", getNews(id));
+		
+		;
+	})
+
+	function getRev(id) {
+		$.get(`recensione/${id}`, function(res) {
+			$(`
+			<img src="${res.immagine.pathImmagine}"
+          		alt="This was supposed to be an image"
+          		class="image"
+         		/>
+				<h1>RECENSIONE: ${res.titolo}</h1>
+				<h2>Gioco: ${res.videogioco.titolo} - voto: ${res.valutazione}</h2>
+				<p>${res.contenuto}</p>
+				<h4>Autore: ${res.utente.nickname} - pubblicata il: ${res.dataPubblicazione}</h4>
+				`).appendTo($('.review-detail'));
+		})
+	}
+	
+	function getNews(id) {
+		$.get(`notizia/${id}`, function(res) {
+			$(`
+			<img src="${res.immagine.pathImmagine}"
+          		alt="This was supposed to be an image"
+          		class="image"
+         		/>
+				<h1>NOTIZIA: ${res.titolo}</h1>
+				<h2>Gioco: ${res.videogioco.titolo} - publisher: ${res.videogioco.casaProduttrice}</h2>
+				<p>${res.contenuto}</p>
+				<h4>Autore: ${res.utente.nickname} - pubblicata il: ${res.dataPubblicazione}</h4>
+				`).appendTo($('.news-detail'));
+		})
+	}
+
