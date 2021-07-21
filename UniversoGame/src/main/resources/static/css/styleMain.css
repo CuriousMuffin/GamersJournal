@@ -78,6 +78,12 @@ p {
   float: right;
 }
 
+#navbar input[type="text"] {
+  border: none;
+  color: #cef3f1;
+  filter: drop-shadow(0 0 11px #0095ff);
+}
+
 .sticky {
   position: fixed;
   top: 0;
