@@ -39,9 +39,7 @@ $(document).ready(function () {
     formRicerca();
   });
 
-  $("#log-in").click(function () {
-    
-  });
+  $("#log-in").click(function () {});
 
   // qundo c'è qualcosa con questo id, all'evento assegna una funzione
   // $("#content").on("", "#multi-reviews", function () {
@@ -93,7 +91,7 @@ function getLastRevPreviewInfo() {
   $.get("recensione/byPublDataDesc", function (res) {
     for (let i = 0; i < 6; i++) {
       $(`
-      <div class="recensione${i}">
+      <div id="recensione" data-id='${res[i].id}' >
         <div class="container">
           <img src="${res[i].immagine.pathImmagine}"
           alt="This was suppose to be an image"
@@ -101,7 +99,7 @@ function getLastRevPreviewInfo() {
           />
           <div class="overlay">
             <h1 id="TitleRev">${res[i].titolo}</h1>
-            <h3 id="SubtRev">Autore: ${res[i].titolo}</h3>
+            <h3 id="SubtRev">Autore: AUTORE </h3>
           </div>
         </div>
       </div>
@@ -114,7 +112,7 @@ function getLastNewsPreviewInfo() {
   $.get("notizia/byPublDataDesc", function (res) {
     for (let i = 0; i < 4; i++) {
       $(`
-      <div class="notizia${i}">
+      <div id="notizia" data-id='${res[i].id}'>
         <div class="container">
           <img src="${res[i].immagine.pathImmagine}"
           alt="This was suppose to be an image"
@@ -122,7 +120,7 @@ function getLastNewsPreviewInfo() {
           />
           <div class="overlay">
             <h1 id="TitleRev">${res[i].titolo}</h1>
-            <h3 id="SubtRev">Autore: ${res[i].titolo}</h3>
+            <h3 id="SubtRev">Autore: AUTORE </h3>
           </div>
         </div>
       </div>
@@ -185,7 +183,7 @@ function getNewsList() {
 $("#content").on("click", "#recensione", function () {
   const id = +$(this).attr("data-id");
 
-  console.log("click su recensione id " + id);
+  // console.log("click su recensione id " + id);
 
   $("#content").load("recensione-detail.html", getRev(id));
 });
@@ -193,7 +191,7 @@ $("#content").on("click", "#recensione", function () {
 $("#content").on("click", "#notizia", function () {
   const id = +$(this).attr("data-id");
 
-  console.log("click su notizia numero " + id);
+  // console.log("click su notizia numero " + id);
 
   $("#content").load("notizia-detail.html", getNews(id));
 });
