@@ -35,6 +35,10 @@ $(document).ready(function () {
     document.location.href = "index.html";
   });
 
+  // $("#ricerca").on("focus", function () {
+  //   $("#search-icon").css("transition", "width 0.4s ease-in-out");
+  // });
+
   // $("#ricerca").click(function () {
   //   formRicerca();
   // });

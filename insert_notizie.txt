@@ -1,0 +1,182 @@
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco) values
+("CYBERPUNK 2077 ATTENDE I DLC E LE ESPANSIONI: NUMERI E DETTAGLI AVVISTATI DA DATAMINER:",
+"Mentre una grande patch da 38 GB di Cyberpunk 2077 appare su Epic Games Store, emergono in rete interessanti
+ dettagli sulla possibile struttura del supporto post lancio in programma per il titolo.Come noto da tempo, 
+i prossimi mesi dovrebbero vedere CD Projekt RED pronta ad ampliare l'universo di Night City, tramite DLC gratuiti ed espansioni a 
+pagamento. Per il momento, la software house si è limitata a confermare che i primi 
+contenuti aggiuntivi esordiranno nel corso del 2021, ma manca ancora un calendario preciso. 
+Assenti anche dettagli più specifici su quelli che saranno i contenuti proposti: 
+circostanza che ha condotto diversi dataminer a dedicarsi alla ricerca di indizi 
+tra le maglie del codice di Cyberpunk 2077.Tra questi ultimi, trova spazio anche un utente Reddit dall'occhio particolarmente attento, 
+che afferma di essere riuscito a recuperare diversi dati, tra cui i "nomi" provvisori dei DLC del GDR. Secondo il dataminer, 
+questi ultimi sarebbero 17 e risponderebbero alle seguenti nomenclature:
+dlc1_swp,
+dlc2_jposes,
+dlc3_kab01,
+dlc4_quartz,
+dlc5_jackets,
+dlc6_apart,
+dlc7_pwp,
+dlc8_mirror,
+dlc9_arr06,
+dlc10_monster,
+dlc11_jlook,
+dlc12_mfinish,
+dlc13_twp, **
+dlc14_arr12,
+dlc15_ngplus,
+dlc16_jpn06
+dlc17_bwp.
+In aggiunta, prosegue l'indagatore di codici, sarebbero previste due grandi espansioni a pagamento, 
+indicate come EP1 ed EP2. Se su quest'ultima il dataminer afferma di non aver scovato indizi, per quanto riguarda invece la prima, 
+l'utente afferma che amplierà l'area di Pacifica e aggiungerà una Combat Zone. A livello narrativo, inoltre, EP1 dovrebbe
+ veder aggiungersi altre quest all'elenco di attività proposte da Mr. Hands.
+Ricordiamo tuttavia che quanto avvistato dal dataminer potrebbe non rappresentare correttamente i piani di CD Projekt RED. Per saperne 
+di più, non resta che attendere eventuali conferme da parte del team polacco. Nel frattempo, 
+a dispetto delle polemiche che hanno accompagnato il lancio del gioco, Cyberpunk 2077 è stato il gioco più venduto su PS4 a giugno.", "2021-7-20", false, 1, 1),
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco) values
+("CYBERPUNK 2077 È DI NUOVO DISPONIBILE SUL PLAYSTATION STORE!",
+"Cyberpunk 2077 fa il suo ritorno sul PlayStation Store ed è ora disponibile in tutto il mondo.
+Potete giocarlo su PlayStation 4 Pro e PlayStation 5. In aggiunta, un upgrade per le console next gen 
+sarà disponibile gratuitamente nella seconda metà del 2021, per tutti i possessori della versione PS4 di Cyberpunk 2077. 
+Questo upgrade permetterà al titolo di sfruttare appieno l’hardware più potente presente nelle console di nuova generazione.
+Gli utenti potrebbero ancora riscontrare dei problemi di prestazioni con la versione PS4 del gioco mentre continuiamo 
+a rilasciare aggiornamenti per migliorare la stabilità su tutte le piattaforme. Potete avere la migliore esperienza 
+di gioco su PlayStation, giocando su PS4 Pro e PS5.", "2021-7-13", false, 1, 1),
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco) values
+("ANIMAL CROSSING NEW HORIZONS TRASFORMA NINTENDO SWITCH: LE SPETTACOLARI DOCK DEI FAN",
+"Dopo aver conquistato i giocatori diventando un fenomeno pop di portata mondiale, 
+Animal Crossing New Horizons conquista anche gli appassionati dei celebri mattoncini danesi grazie 
+al lavoro di OrangeTeam, uno dei LEGO User Group (LUG) più attivi in Italia e riconosciuto ufficialmente da LEGO.Oltre 6.000 mattoncini
+ e tre mesi di realizzazione in pieno lockdown, che hanno visto la nascita del diorama di un’isola di Animal Crossing 
+New Horizons con i personaggi più iconici del videogioco, dal cane musicista K.K. Slider al gabbiano marinaio Gulliver.
+Un’isola reale con tutti gli elementi che i fan della serie hanno imparato a conoscere: dal Banco da lavoro agli alberi, 
+fino a un immancabile falò con panchine pronte ad accogliere gli Abitanti dell’Isola. Nonostante le complicazioni dovute al lockdown, 
+dopo tre mesi di lavoro Animal Crossing New Horizons è finalmente giunto nel mondo reale e oltre ai personaggi 
+già realizzati altri personaggi come Tom Nook sbarcheranno presto sull'isola LEGO.Sui canali ufficiali di 
+OrangeTeamLug arriveranno presto delle pratiche guide alla costruzione, che consentiranno di riprodurre 
+fedelmente i personaggi entrati nell’immaginario collettivo nell’anno trascorso dall’uscita del gioco.
+ Animal Crossing New Horizons ha venduto oltre 35 milioni di copie dal marzo 2020 ad oggi, sette milioni delle quali sono in Europa.", "2021-6-30", false, 1, 1),
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco) values
+("ANIMAL CROSSING NEW HORIZONS FESTEGGIA I CAMPIONATI EUROPEI DI CALCIO",
+"L'isola di Calciopea debutta su Animal Crossing New Horizons: uno spazio pensato per vivere i campionati europei di calcio con spogliatoi,
+ uno stadio, postazioni fotografica e Il Viale delle Nazioni, una zona dedicata alle 24 nazionali che prenderanno parte a UEFA EURO 2020.
+L’isola è accessibile anche attraverso un sito web che offre in aggiunta a un tour virtuale delle aree visitabili, 
+anche un kit per il tifoso da indossare in-game con maglia di gioco, bandierina e makeup,
+ utile per supportare gli Azzurri e le altre compagini impegnate nella fase finale della competizione.
+Animal Crossing New Horizons è il videogioco Nintendo venduto più velocemente in Europa, 
+con oltre 7 milioni di copie vendute e si dimostra ancora una volta simbolo della creatività per eccellenza, 
+un luogo di incontro ideale per settori e ambiti più disparati, dentro e fuori dal mondo dei videogiochi.
+ Animal Crossing New Horizons ha venduto più di 35 milioni di copie dal marzo 2020 ad oggi diventando un vero 
+e proprio fenomeno di costume e conquistando anche attori, cantanti e personaggi del mondo dello spettacolo.
+Questa è solo l'ultima delle numerose collaborazioni tra Animal Crossing e il mondo reale come dimostra l'arrivo delle jersey 
+NSS x Puma x StockX dedicate a Napoli o il diorama Animal Crossing x LEGO realizzato da OrangeTeam.", "2021-7-1", false, 1, 1),
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco) values
+("STAY È UN CORTO FANMADE CON UN FINALE STRAZIANTE ISPIRATO A THE LAST OF US",
+"Un artista VFX che ha già dato il suo prezioso contributo alla realizzazione di kolossal cinematografici
+ quali Deadpool 2 e Star Wars: Episodio IX - L'ascesa di Skywalker ha dato vita ad un impressionante
+ corto fanmade ispirato a The Last of Us, capolavoro di Naughty Dog e uno dei titoli più iconici
+ all'interno della lineup Sony.Stay è il titolo del sorprendente corto che, pur includendo il
+ noto personaggio di Ellie, racconta l'emozionante storia di due volti completamente originali,
+ Emily e Sean, qui condensata in circa 7 minuti di filmato. Se inizialmente troviamo i due amanti
+ in una situazione di calma e complicità, in seguito le cose diventano estremamente più drammatiche
+ alla prima apparizione dei clicker, forse le creature che più sono in grado di mettere in stato 
+di ansia i giocatori (in questo gli spettatori) di The Last of Us. Sfortunatamente, 
+sarà Emily a pagare per prima le conseguenze degli eventi venendo infettata da parte
+ di una delle mostruose creature. Vi invitiamo a prendere visione del video che trovate in cima
+ per dare uno sguardo al finale a dir poco straziante con cui si conclude il corto.
+Come precisato all'interno della descrizione del filmato, Stay è un'idea di Joshua Toonen 
+e realizzata grazie alla collaborazione di 40 artisti. Non è la prima volta in cui assistiamo
+ ad un tributo questo genere: in passato abbiamo già avuto la fortuna di ammirare in azione un 
+altro corto ispirato al gioco, The Last of Us Ellie's Revenge. Tutto questo, in attesa di conoscere
+ la data di uscita della serie TV di HBO dedicata a The Last of Us che si dipanerà nel corso di 10 episodi.", "2021-7-18", false, 1, 1),
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco) values
+("THE LAST OF US 2: IN ARRIVO UN TAGLIO DI PREZZO PERMANENTE? INDIZI DAL PS STORE USA",
+"Sul PlayStation Store americano, il capolavoro di Naughty Dog viene proposto ad un prezzo inferiore, ma senza alcuna indicazione su sconti applicati o promozioni in atto. L'ipotesi del taglio di prezzo permanente di The Last of Us 2 sta già alimentando un acceso dibattito sui social e sui forum più frequentati.Come segnalato dagli appassionati che stanno affollando di messaggi le bacheche dei portali online e dei social, l'edizione Standard di The Last of Us Parte 2 viene venduta sul PlayStation Store americano a 39,99 dollari. 
+Allo stesso modo, anche la Digital Deluxe è interessata da questo cambio di prezzo inatteso e viene proposta all'utenza PS4 e PS5 statunitense a 49,99 dollari.A differenza delle altre promozioni in corso, la piattaforma digitale di Sony non riporta alcuna indicazione sulla conclusione dello sconto, da qui la ridda di commenti della community che spera nell'annuncio imminente di un taglio di prezzo "definitivo" per TLOU 2. Nel momento in cui scriviamo, nelle diverse versioni europee del PlayStation Store il prezzo indicato per le edizioni Standard e Digital Deluxe di The Last of Us 2 continua ad essere rispettivamente di 69,99 e 79,99 euro. Anche il PS Store britannico riporta un prezzo in sterline rapportabile a quello italiano e degli altri mercati del Vecchio Continente.Rimaniamo perciò in attesa di ricevere delle informazioni esaustive da parte di Naughty Dog e Sony Interactive Entertainment. Nel frattempo, ricordiamo a chi ci segue che sulle nostre pagine potete leggere lo speciale sull'update PS5 di The Last of Us 2 e la differenza dei 60fps.", "2021-7-14", false, 1, 1),
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco) values
+("FALLOUT 76: DENTRO IL VAULT - AGGIORNAMENTI DI LUGLIO 2021",
+"Viene difficile credere che l’aggiornamento Regno d’acciaio sia già stato pubblicato da un’intera settimana! Ci siamo divertiti un mondo ad affrontare la nuova serie di missioni della Confraternita d’Acciaio, a salire di grado sul tavoliere della stagione 5 e a creare oggetti leggendari insieme a voi. Con queste nuove missioni e funzionalità finalmente disponibili, stiamo già guardando al nostro prossimo aggiornamento importante di Fallout 76, la cui pubblicazione è prevista a settembre.
+Non abbiamo ancora discusso di cosa ci sarà nell’aggiornamento di settembre, ma includerà una nuova e significativa funzionalità che offrirà ai giocatori ancora più varietà nel modo di vivere Fallout 76. Stiamo lavorando per riaprire il server pubblico di test questo mese affinché la community possa collaudare questa nuova funzionalità e condividere il proprio feedback il prima possibile. Anche se non possiamo ancora fornire tutti i dettagli, tenete d’occhio Fallout.com la prossima settimana per aggiornamenti su contenuti e modalità di accesso al PTS.
+Questa settimana abbiamo riscontrato un volume insolitamente elevato di movimenti sotterranei. Al momento, crediamo che i minatori talpa cacciatori di tesori si stiano preparando ancora una volta a uscire in superficie. Sventate i loro piani di saccheggio cercando e abbattendo quanti più cacciatori di tesori possibile nel fine settimana. Ognuno di loro lascerà a terra del bottino leggendario e un contenitore da minatore talpa che potete aprire per ottenere alcuni dei tesori che hanno trovato. Inoltre, i commercianti presso le stazioni ferroviarie vi venderanno contenitori da minatore talpa vuoti in cambio di qualche tappo. Usateli per creare e aprire contenitori pieni e ottenere ancora più bottino. L’evento inizia oggi. Qui sotto, gli orari di inizio e fine.", "2021-7-10", false, 1, 1),
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco) values
+("FALLOUT 76: CREAZIONI C.A.M.P.: MINATORI TALPA",
+"Il tema per le creazioni C.A.M.P. di giugno era “Minatori talpa”! Da condotti minerari abbandonati a rifugi sventrati, passando per scavi in piena regola, la community si è dimostrata in grado di realizzare qualsiasi cosa, utilizzando solo qualche attrezzo e un’abbondante quantità di pietre e fango.
+La sfida più difficile di ogni mese è scegliere solo alcuni tra i meravigliosi C.A.M.P. e rifugi che avete condiviso. Consigliamo quindi di ammirare TUTTE le creazioni sul nostro canale Discord ufficiale. Se non siete riusciti a inviare il materiale in tempo l’ultima volta, nessun problema! Luglio è già qui! Il tema di questo mese è “Circo”. Ricordatevi di inviare le foto dei vostri C.A.M.P. o rifugi tramite Discord entro il 28 luglio per avere modo di partecipare ed essere selezionati nell’articolo del prossimo mese.
+Non vediamo l’ora di goderci i vostri C.A.M.P.!", "2021-7-13", false, 1, 1),
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco) values
+("MONSTER HUNTER RISE RICEVE LA NUOVA MISSIONE EVENTO: ECCO I BONUS E LE SFIDE DA COMPLETARE",
+"Il supporto post-lancio di Monster Hunter Rise prosegue con la nuova Missione Evento organizzata da Capcom per spronare tutti gli appassionati dell'ultimo kolossal action ruolistico su Switch a proseguire la propria avventura.L'ultima attività ingame introdotta dalla software house giapponese è già disponibile dal 9 luglio e può essere sbloccata semplicemente recandosi al banco delle missioni della base di caccia. Una volta acquisita, la Missione Evento Furia: Festa del Fango sprona gli utenti a recarsi presso la Fortezza Rossa per difendere il cancello finale dagli assalti delle creature del posto.Per partecipare a questa attività, è richiesto il raggiungimento del livello GC 4 o superiore. Come ricompensa per i servizi resi al villaggio di Kamura e agli abitanti degli insediamenti limitrofi, gli avventurieri di Monster Hunter Rise maggiormente dediti alla causa potranno sbloccare il Set Adesivi Festival per customizzare ulteriormente il proprio alter-ego. In calce alla notizia trovate un'immagine che mostra in anteprima alcuni dei set di cui si compone il nuovo pacchetto come bonus per il completamento dell'ultima attività endgame.Se vi state avventurando solo adesso nelle lande dell'ultimo capolavoro di Capcom, o intendete farlo a breve, vi tornerà certamente comodo leggere questo nostro speciale su armi e armature più indicate per i novizi di MH Rise.", "2021-6-1", false, 1, 1),
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco) values
+("MONSTER HUNTER RISE: A CACCIA DEL LEVIATANO ALMUDRON NELLA NUOVA MISSIONE EVENTO",
+"Dopo aver svelato i nuovi contenuti di giugno e luglio di Monster Hunter Rise, gli sviluppatori di Capcom arricchiscono ulteriormente la già enorme esperienza ludica del loro action GDR lanciando una nuova Missione Evento con sfide di caccia e bonus per chi sarà in grado di avere la meglio su Almudron.La nuova attività ingame di MH Rise è attiva dal 25 giugno e sprona gli appassionati del kolossal ruolistico per Nintendo Switch a partecipare all'evento "Almudron, Vittima della Moda", una sfida di alto livello per cacciatori di livello GC8 e superiore.Una volta accettata la sfida attraverso l'apposita opzione accessibili dal banco delle missioni evento del villaggio, gli esploratori della dimensione fantasy di Monster Hunter Rise devono recarsi nelle Piane Sabbiose e cacciare il possente leviatano Almudron per ottenere i materiali per forgiare lo stile armatura speciale "Pelle Nera". Ma non è tutto.Chi desidera mettersi alla prova in sfide altrettanto impegnative, può infatti partecipare a diverse missioni introdotte di recente da Capcom per rimpolpare di contenuti l'endgame di Monster Hunter Rise:
+Wyvern rapaci della rovina? - caccia Gran Baggi, Gran Izuchi e Kulu-Ya-Ku nell'Arena per ricevere i materiali con cui sbloccare la skin di Tsukino per il companion
+Cuore di ninja - caccia Tobi-Kadachi, Barrioth e Nargacuga nell'Arena per ottenere i titoli speciali Ninja, Esca, Duprrr-lica, Spedito, Tecnica, Fianco, Il codice, Prepara!, È così e Avanzata!
+Parasole danzante, aria nevosa - caccia un Aknosom nelle Isole Ghiacciate per ottenere gli Adesivi "Set Gufufo"
+Un'alleanza danzante - caccia un Somnacanth nelle Isole Ghiacciate per sbloccare il gesto "Mandare un Bacio"
+La fretta è cattiva consigliera - caccia un Arzuros Apex nella Foresta inondata per ottenere "Occhiali arguti"
+A chi si sta avventurando solo adesso nelle pericolose lande del capolavoro di Capcom, consigliamo di leggere questo nostro approfondimento sulle armi e le armature più indicate per i novizi di MH Rise.", "2021-7-17", false, 1, 1),
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco) values
+("Watch Dogs: Legion – Bloodline: un video dietro le quinte per l'attesa espansione",
+"Ubisoft ha pubblicato un video dietro le quinte di Watch Dogs: Legion - Bloodline per svelare alcuni dettagli sullo sviluppo. Per chi non sapesse di cosa stiamo parlando, si tratta della nuova espansione del gioco con protagonista Aiden Pearce. Sarà pubblicata il 6 luglio 2021 su PC, Xbox One, Xbox Series X e S, PS4 e PS5.
+Legion sarà acquistabile singolarmente come DLC o scaricabile come parte del Season Pass di Watch Dogs Legion.", "2021-7-21", false, 1, 1),
+
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco) values
+("WATCH DOGS LEGION: L'ESPANSIONE BLOODLINE CON AIDEN PEARCE ARRIVA A LUGLIO",
+"Nelle fasi finali del pre-show dell'Ubisoft Forward è stato mostrato lo story trailer di Watch Dogs Legion Bloodline, la nuova espansione del terzo capitolo della serie che sarà disponibile a partire dal prossimo 6 luglio.Il nuovo contenuto, parte del Season Pass relativo a Watch Dogs Legion, vedrà il ritorno come personaggio principale di Aiden Pearce, protagonista del primo capitolo della serie uscito nel 2014. Assieme a lui farà il suo ritorno anche Wrench, già visto in Watch Dogs 2. Pearce si trova nella Londra post-Brexit dopo aver ricevuto una chiamata di una sua vecchia conoscenza, Jordi Chin, che gli ha chiesto aiuto per creare una nuova organizzazione DedSec operativa nel Regno Unito. Bloodline promette di offrire una storia carica di tensione e coinvolgimento, con Aiden che rischierà spesso la sua vita ritrovandosi coinvolto in qualcosa di ancora più grande di quanto immaginato. Dovrà quindi fare affidamento su tutte le sue abilità di hacker e con le armi da fuoco per sopravvivere alle minacce di una Londra ostile.Ricordiamo che Ubisoft ha di recente diffuso l'update 4.5 di Watch Dogs Legion che aggiunge diversi nuovi contenuti al gioco base, incluso l'arrivo della nonnina hacker Helen come Operatrice aggiuntiva gratis a partire da martedì 15 giugno.", "2021-6-13", false, 1, 1),
+
+
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco) values
+("Little Nightmares 2: Tarsier Studios passerà ad altro, ma Bandai Namco potrebbe proseguire la serie",
+"Little Nightmares 2 ha confermato ulteriormente la validità della serie e le capacità del team Tarsier Studios, ma il team svedese in ogni caso ha concluso l'impegno sulla serie, volendo ora passare a nuovi progetti, lasciando però aperta la porta a ulteriori sviluppi da parte di Bandai Namco.
+"Non abbiamo nulla da annunciare in questo momento, ma visto che abbiamo ricevuto così tanto supporto da parte dei fan in tutto il mondo con il rilascio di Little Nightmares 2, ci sentiamo propensi a portare nuovi contenuti in futuro", ha infatti scritto il publisher Bandai Namco con una comunicazione ufficiale.", "2021-5-11", false, 1, 1),
+
+
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco) values
+("LITTLE NIGHTMARES 2, L'ORRORE AI FORNELLI: ANNUNCIATO COOKING MONO",
+"Con oltre 1 milione di copie vendute per Little Nightmares II, Bandai Namco festeggia il traguardo con un succulento annuncio legato all'inquietante e cupa avventura.Nonostante una Tarsier Studio al lavoro su nuove IP, l'universo dei Piccoli Incubi è infatti pronto ad offrire ancora un'ulteriore gustosa avventura. Come potete verificare direttamente in calce a questa news, Bandai Namco ha infatti annunciato ufficialmente Little Nightmares 2: Cooking Mono. Al momento non sono stati diffusi trailer dedicati, ma dagli account social ufficiali della serie è stata diffusa la key art del prodotto, la cui natura non è però al momento del tutto chiara: si tratterà di un titolo stand-alone oppure di un DLC?In attesa di saperne di più sulle modalità di distribuzione, si apprende che Little Nightmares 2: Cooking Mono vedrà il giocatore impegnato a rifornire di manicaretti la caffetteria di una scuola rimasta orfana di Lunch Lady. La cuoca dell'istituto è infatti inspiegabilmente assente e toccherà proprio al povero Mono destreggiarsi tra le richieste di un gruppo di bulli affamati. Fallire è fuori discussione: significherebbe infatti divenire il pasto degli spietati studenti! Ancora restia a comunicare la data di uscita di Little Nightmares 2: Cooking Mono, Bandai Namco ha comunque invitato i videogiocatori con la passione per la cucina a inviare le proprie ricette per essere si da ora d'aiuto a Mono: i migliori 3 cuochi riceveranno un premio via mail.", "2021-6-10", false, 1, 1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
