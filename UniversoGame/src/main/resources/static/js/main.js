@@ -1,26 +1,37 @@
 $(document).ready(function () {
-  $("#content").load("homeContentContainer.html", function() 
-{
-	setTimeout(function()
-	{
-		getPreviewInfo()
-	},1000);	
-} 
-);
+  $("#content").load("homeContentContainer.html", function () {
+    setTimeout(function () {
+      getPreviewInfo();
+    }, 100);
+  });
 
   $("#news").click(function () {
-    $("#content").load("news.html");
+    $(this).addClass("active");
+    $("#reviews").removeClass("active");
+    $("#home").removeClass("active");
+    // $(this).addClass("active");
+    $("#content").load("news.html", getNewsList());
   });
 
   $("#reviews").click(function () {
-    $("#content").load("recensioni.html");
+    $(this).addClass("active");
+    $("#home").removeClass("active");
+    $("#news").removeClass("active");
+    // document.getElementById("reviews").setAttribute("class", "active");
+    $("#content").load("recensioni.html", getRevList());
   });
 
   $("#home").click(function () {
+    $(this).addClass("active");
+    $("#reviews").removeClass("active");
+    $("#news").removeClass("active");
     document.location.href = "index.html";
   });
 
   $(".logo").click(function () {
+    $(this).addClass("active");
+    $("#reviews").removeClass("active");
+    $("#news").removeClass("active");
     document.location.href = "index.html";
   });
 
@@ -72,7 +83,7 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // per Chrome, Firefox, IE ed Opera
 }
 
-// =========================== MORTE E DISPERAZIONE ===========================
+// =========================== ULTIME NEWS/RECENSIONI IN HOME ===========================
 
 function getRevPreviewInfo() {
   $.get("recensione", function (res) {
@@ -94,7 +105,7 @@ function getRevPreviewInfo() {
     }
   });
 }
-  
+
 function getNewsPreviewInfo() {
   $.get("notizia", function (res) {
     for (let i = 0; i < 4; i++) {
