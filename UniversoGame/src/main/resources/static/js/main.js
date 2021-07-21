@@ -39,6 +39,10 @@ $(document).ready(function () {
     formRicerca();
   });
 
+  $("#log-in").click(function () {
+    
+  });
+
   // qundo c'è qualcosa con questo id, all'evento assegna una funzione
   // $("#content").on("", "#multi-reviews", function () {
   //   $("#multiReviews").load("recensionePreview.html");

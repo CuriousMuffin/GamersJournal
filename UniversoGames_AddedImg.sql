@@ -79,6 +79,7 @@ insert into videogioco (titolo,genere,datauscita,casaproduttrice) values
 ('Cyberpunk 2077', 'Open World', '2020-09-17', 'CD Projekt RED'),
 ('Watch Dogs: Legion', 'Action-Adventure', '2020-10-29', 'Ubisoft Toronto'),
 ('Little Nightmares', 'Survival horror', '2020-12-09', 'Tarsier Studios'),
+('Monster Hunter Rise', 'Action RPG', '2021-03-26', 'Capcom'),
 ('Animal Crossing', 'Life simulator', '2020-03-20', 'NintendoEPD'),
 ("Assasin's Creed Valhalla", 'Action RPG', '2020-11-12', 'Ubisoft Montreal'),
 ('Crash Bandicoot', 'Platform', '2007-06-22', 'Naughty Dog'),
@@ -88,8 +89,8 @@ insert into videogioco (titolo,genere,datauscita,casaproduttrice) values
 ("Ratchet and Clank 'Rift Apart'", 'TPS', '2021-06-11', 'Insomniac Games'),
 ('Super Mario Bros', 'Platform', '1987-05-15', 'Nintendo'),
 ('The Last of Us 2', 'Survival horror', '2020-06-19', 'Naughty Dog'),
-("The Legend of Zelda 'Breath of the Wild'", 'Action adventure', '2017-03-03', 'NintendoEPD'),
-('Monster Hunter Rise', 'Action RPG', '2021-03-26', 'Capcom');
+("The Legend of Zelda 'Breath of the Wild'", 'Action adventure', '2017-03-03', 'NintendoEPD');
+
 
 insert into immagine (pathimmagine) values
 ('../immagini_progetto/videogiochi/animal_crossing/animal-crossing1.jpg'),
