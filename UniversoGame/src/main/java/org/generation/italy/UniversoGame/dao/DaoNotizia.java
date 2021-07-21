@@ -158,7 +158,7 @@ public class DaoNotizia extends BasicDao implements IDaoNotizia
 	public List<Notizia> notizie(String query, Object... conditions) {
 		List<Notizia> ris = new ArrayList<>();
 		
-		List<Map<String, String>> maps = getAll("SELECT * FROM notizia");
+		List<Map<String, String>> maps = getAll(query, conditions);
 		
 		for (Map<String, String> map : maps) 
 		{
@@ -178,8 +178,8 @@ public class DaoNotizia extends BasicDao implements IDaoNotizia
 	}
 
 	@Override
-	public List<Notizia> notiziePerData() {
-		return notizieORM("SELECT * FROM notizia ORDER BY datapubblicazione desc ");
+	public List<Notizia> notiziePerData() {		
+		return notizieORM("SELECT * FROM notizia ORDER BY datapubblicazione DESC ");
 	}
 
 
