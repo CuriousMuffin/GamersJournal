@@ -42,6 +42,27 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 	/*================================================================================================================================================================*/
 
 	/**
+	 * Metodo accessorio per effettuare query sulla lista di recensioni
+	 */
+	@Override
+	public List<Recensione> recensioni(String query, Object... conditions) 
+	{
+		List<Recensione> ris = new ArrayList<>();
+		
+		List<Map<String, String>> maps = getAll(query, conditions);
+		//System.out.println(maps);
+		for (Map<String, String> map : maps) 
+		{
+			ris.add(IMappablePro.fromMap(Recensione.class, map));
+		}
+		
+		return ris;
+	}
+	
+	
+	/*================================================================================================================================================================*/
+
+	/**
 	 * Metodo che restituisce la lista di oggetti Recensione dal database,
 	 * con tutte le loro proprietà
 	 * 
@@ -49,20 +70,11 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 	@Override
 	public List<Recensione> recensioni() 
 	{
-		List<Recensione> ris = new ArrayList<>();
-
-		List<Map<String, String>> maps = getAll("SELECT * FROM recensione");
-		//System.out.println(maps);
-		for (Map<String, String> map : maps) 
-		{
-			ris.add(IMappablePro.fromMap(Recensione.class, map));
-		}
-
-		return ris;
+		return recensioni("SELECT * FROM recensione ");
 	}
 	
-
 	/*================================================================================================================================================================*/
+
 	
 	/**
 	 * Metodo che restituisce il dettaglio di uno specifico oggetto 
@@ -77,12 +89,28 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 //
 //	}
 	@Override
-	public List<Recensione> recensioniORM() {
+	public List<Recensione> recensioniORM(String query, Object... conditions) {
 		List<Recensione> ris = new ArrayList<>();
-		for (Recensione r : recensioni()) {
+		for (Recensione r : recensioni(query, conditions)) {
 			ris.add(recensione(r.getId()));
 		}
 		return ris;
+	}
+	
+	@Override
+	public List<Recensione> recensioniORM() {
+		return recensioniORM("SELECT * FROM recensione ");
+	}
+	
+	/**
+	 * Metodo che restituisce un elenco di recensioni in ordine di<br>data di pubblicazione dalla più recente
+	 * alla più vecchia.
+	 * 
+	 * @return lista di recensioni ordinata per data di pubblicazione 
+	 */
+	public List<Recensione> recensioniPerData(){
+	
+		return recensioniORM("SELECT * FROM recensione ORDER BY datapubblicazione desc ");
 	}
 	
     /**

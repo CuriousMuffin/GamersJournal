@@ -14,11 +14,15 @@ import org.generation.italy.UniversoGame.models.Recensione;
  */
 public interface IDaoRecensione 
 {
-	   public List<Recensione> recensioni();
-	   public Recensione recensione(int id);
-	   public boolean add(Recensione recensione);
-	   public boolean delete(int id);
-	   public boolean update(Recensione recensione);
-	   public List<Recensione> recensioniORM();
+	
+	public List<Recensione> recensioni(String query, Object... conditions);
+	public List<Recensione> recensioniORM(String query, Object... conditions);
+	public List<Recensione> recensioni();
+	public List<Recensione> recensioniORM();
+	public List<Recensione> recensioniPerData();
+	public Recensione recensione(int id);
+	public boolean add(Recensione recensione);
+	public boolean delete(int id);
+	public boolean update(Recensione recensione);
 
 }// fine Idao

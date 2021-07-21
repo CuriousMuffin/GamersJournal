@@ -85,8 +85,8 @@ function topFunction() {
 
 // =========================== ULTIME NEWS/RECENSIONI IN HOME ===========================
 
-function getRevPreviewInfo() {
-  $.get("recensione", function (res) {
+function getLastRevPreviewInfo() {
+  $.get("recensione/byPublDataDesc", function (res) {
     for (let i = 0; i < 6; i++) {
       $(`
       <div class="recensione${i}">
@@ -106,8 +106,8 @@ function getRevPreviewInfo() {
   });
 }
 
-function getNewsPreviewInfo() {
-  $.get("notizia", function (res) {
+function getLastNewsPreviewInfo() {
+  $.get("notizia/byPublDataDesc", function (res) {
     for (let i = 0; i < 4; i++) {
       $(`
       <div class="notizia${i}">
@@ -128,8 +128,8 @@ function getNewsPreviewInfo() {
 }
 
 function getPreviewInfo() {
-  getRevPreviewInfo();
-  getNewsPreviewInfo();
+  getLastRevPreviewInfo();
+  getLastNewsPreviewInfo();
 }
 
 // =========================== LISTA NEWS/RECENSIONI ===========================

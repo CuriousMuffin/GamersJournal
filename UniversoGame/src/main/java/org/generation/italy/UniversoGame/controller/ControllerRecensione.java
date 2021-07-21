@@ -55,6 +55,20 @@ public class ControllerRecensione
 	/*================================================================================================================================================================*/
 
 	/**
+	 * Metodo getAllbyPublData della classe ControllerRecensione
+	 * che restituisce la lista di recensioni orindate per data;
+	 * 
+	 * @return lista di recensioni orindate per data dalla più recente.
+	 */
+	@GetMapping("/byPublDataDesc")
+	public List<Recensione> getAllbyPublData() 
+	{
+		return dao.recensioniPerData();
+	}
+	
+	/*================================================================================================================================================================*/
+
+	/**
 	 * Metodo add dellla classe ControllerRecensione
 	 * che aggiunge una recensione al database
 	 * 

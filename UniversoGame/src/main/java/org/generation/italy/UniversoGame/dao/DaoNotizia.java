@@ -52,25 +52,12 @@ public class DaoNotizia extends BasicDao implements IDaoNotizia
 	@Override
 	public List<Notizia> notizie() 
 	{
-		List<Notizia> ris = new ArrayList<>();
-		
-		List<Map<String, String>> maps = getAll("SELECT * FROM notizia");
-		
-		for (Map<String, String> map : maps) 
-		{
-			ris.add(IMappablePro.fromMap(Notizia.class, map));
-		}
-		
-		return ris;
+		return notizie("SELECT * FROM notizia ");
 	}
 	
 	@Override
 	public List<Notizia> notizieORM() {
-		List<Notizia> ris = new ArrayList<>();
-		for (Notizia n : notizie()) {
-			ris.add(notizia(n.getId()));
-		}
-		return ris;
+		return notizieORM("SELECT * FROM notizia");
 	}
 	
 	/*================================================================================================================================================================*/
@@ -165,6 +152,34 @@ public class DaoNotizia extends BasicDao implements IDaoNotizia
 		return isExecute("update notizia set titolo = ?, contenuto = ?, datapubblicazione = ?, bozza = ?, idutente = ?, idvideogioco = ? WHERE id =?",
 						  notizia.getTitolo(), notizia.getContenuto(), notizia.getDataPubblicazione(), notizia.isBozza(), notizia.getUtente(),
 						  notizia.getVideogioco(), notizia.getId());
+	}
+
+	@Override
+	public List<Notizia> notizie(String query, Object... conditions) {
+		List<Notizia> ris = new ArrayList<>();
+		
+		List<Map<String, String>> maps = getAll("SELECT * FROM notizia");
+		
+		for (Map<String, String> map : maps) 
+		{
+			ris.add(IMappablePro.fromMap(Notizia.class, map));
+		}
+		
+		return ris;
+	}
+
+	@Override
+	public List<Notizia> notizieORM(String query, Object... conditions) {
+		List<Notizia> ris = new ArrayList<>();
+		for (Notizia n : notizie(query, conditions)) {
+			ris.add(notizia(n.getId()));
+		}
+		return ris;
+	}
+
+	@Override
+	public List<Notizia> notiziePerData() {
+		return notizieORM("SELECT * FROM notizia ORDER BY datapubblicazione desc ");
 	}
 
 

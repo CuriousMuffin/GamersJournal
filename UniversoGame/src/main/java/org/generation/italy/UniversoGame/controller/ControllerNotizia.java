@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.generation.italy.UniversoGame.dao.IDaoNotizia;
 import org.generation.italy.UniversoGame.models.Notizia;
+import org.generation.italy.UniversoGame.models.Recensione;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -48,7 +49,15 @@ public class ControllerNotizia
 	}
 
 	/*================================================================================================================================================================*/
-
+	
+	@GetMapping("/byPublDataDesc")
+	public List<Notizia> getAllbyPublData() 
+	{
+		return dao.notiziePerData();
+	}
+	
+	/*================================================================================================================================================================*/
+	
 	/**
 	 * Metodo add della classe ControllerNotizia che 
 	 * aggiunge una notizia al database
