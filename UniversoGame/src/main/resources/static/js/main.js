@@ -1,37 +1,26 @@
 $(document).ready(function () {
-  $("#content").load("homeContentContainer.html", function () {
-    setTimeout(function () {
-      getPreviewInfo();
-    }, 100);
-  });
+  $("#content").load("homeContentContainer.html", function() 
+{
+	setTimeout(function()
+	{
+		getPreviewInfo()
+	},1000);	
+} 
+);
 
   $("#news").click(function () {
-    $(this).addClass("active");
-    $("#reviews").removeClass("active");
-    $("#home").removeClass("active");
-    // $(this).addClass("active");
-    $("#content").load("news.html", getNewsList());
+    $("#content").load("news.html");
   });
 
   $("#reviews").click(function () {
-    $(this).addClass("active");
-    $("#home").removeClass("active");
-    $("#news").removeClass("active");
-    // document.getElementById("reviews").setAttribute("class", "active");
-    $("#content").load("recensioni.html", getRevList());
+    $("#content").load("recensioni.html");
   });
 
   $("#home").click(function () {
-    $(this).addClass("active");
-    $("#reviews").removeClass("active");
-    $("#news").removeClass("active");
     document.location.href = "index.html";
   });
 
   $(".logo").click(function () {
-    $(this).addClass("active");
-    $("#reviews").removeClass("active");
-    $("#news").removeClass("active");
     document.location.href = "index.html";
   });
 
@@ -83,13 +72,13 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // per Chrome, Firefox, IE ed Opera
 }
 
-// =========================== ULTIME NEWS/RECENSIONI IN HOME ===========================
+// =========================== MORTE E DISPERAZIONE ===========================
 
 function getRevPreviewInfo() {
   $.get("recensione", function (res) {
     for (let i = 0; i < 6; i++) {
       $(`
-      <div id="recensione" data-id='${res[i].id}'>
+      <div class="recensione${i}">
         <div class="container">
           <img src="${res[i].immagine.pathImmagine}"
           alt="This was suppose to be an image"
@@ -97,7 +86,7 @@ function getRevPreviewInfo() {
           />
           <div class="overlay">
             <h1 id="TitleRev">${res[i].titolo}</h1>
-            <h3 id="SubtRev">Autore: ${res[i].utente.nickname}</h3>
+            <h3 id="SubtRev">Autore: ${res[i].titolo}</h3>
           </div>
         </div>
       </div>
@@ -105,20 +94,20 @@ function getRevPreviewInfo() {
     }
   });
 }
-
+  
 function getNewsPreviewInfo() {
   $.get("notizia", function (res) {
     for (let i = 0; i < 4; i++) {
       $(`
-      <div id="notizia" data-id='${res[i].id}'>
+      <div class="notizia${i}">
         <div class="container">
           <img src="${res[i].immagine.pathImmagine}"
-          alt="This was supposed to be an image"
+          alt="This was suppose to be an image"
           class="image"
           />
           <div class="overlay">
             <h1 id="TitleRev">${res[i].titolo}</h1>
-            <h3 id="SubtRev">Autore: ${res[i].utente.nickname}</h3>
+            <h3 id="SubtRev">Autore: ${res[i].titolo}</h3>
           </div>
         </div>
       </div>
