@@ -3,7 +3,7 @@
     <title>Home page</title>
   </head>
   <body>
-    <h1>SignUp</h1>
+    <h2>Join us, we have cookies</h2>
     <form action="/signup" method="post">
       <p>Email</p>
       <input name="email" type="email" />
@@ -12,6 +12,10 @@
       <p>Password</p>
       <input name="password" type="password" />
       <button>Registra</button>
+      <div>
+      <h2>Ci conosciamo già?</h2>
+	 <button onclick="location.href='/login'" type="button">Log-In</button>
+      </div>
     </form>
   </body>
 </html>
