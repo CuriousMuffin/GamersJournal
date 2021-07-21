@@ -77,8 +77,7 @@ public class DaoNotizia extends BasicDao implements IDaoNotizia
 		Map<String,String> mappaUtente = getOne("select * from utente where id = ?", map.get("idutente"));
 		
 		notizia.setUtente(IMappablePro.fromMap(Utente.class, mappaUtente));
-//		
-//		
+	
 		Map<String,String> mappaImmagine = getOne("select * from immagine where id = ?", map.get("idimmagine"));
 		
 		notizia.setImmagine(IMappablePro.fromMap(Immagine.class, mappaImmagine));
@@ -125,8 +124,8 @@ public class DaoNotizia extends BasicDao implements IDaoNotizia
 	}
 	
 	/*================================================================================================================================================================*/
-
-	/**
+  
+	/** 
 	 * Metodo CRUD per l'eliminazione di un oggetto Notizia 
 	 * Restituisce un valore booleano TRUE se l'operazione è andata a buon fine
 	 * o FALSE in caso di errore
@@ -154,11 +153,13 @@ public class DaoNotizia extends BasicDao implements IDaoNotizia
 						  notizia.getVideogioco(), notizia.getId());
 	}
 
+	/*================================================================================================================================================================*/
+
 	@Override
 	public List<Notizia> notizie(String query, Object... conditions) {
 		List<Notizia> ris = new ArrayList<>();
 		
-		List<Map<String, String>> maps = getAll("SELECT * FROM notizia");
+		List<Map<String, String>> maps = getAll(query, conditions);
 		
 		for (Map<String, String> map : maps) 
 		{
@@ -168,18 +169,27 @@ public class DaoNotizia extends BasicDao implements IDaoNotizia
 		return ris;
 	}
 
+	/*================================================================================================================================================================*/
+ 
 	@Override
 	public List<Notizia> notizieORM(String query, Object... conditions) {
 		List<Notizia> ris = new ArrayList<>();
-		for (Notizia n : notizie(query, conditions)) {
+		List<Notizia> N = notizie(query, conditions);
+
+		for (Notizia n : N) 
+		{
 			ris.add(notizia(n.getId()));
 		}
 		return ris;
 	}
 
+	/*================================================================================================================================================================*/
+	
 	@Override
-	public List<Notizia> notiziePerData() {
-		return notizieORM("SELECT * FROM notizia ORDER BY datapubblicazione desc ");
+	public List<Notizia> notiziePerData() 
+	{
+		List<Notizia> res = notizieORM("SELECT * FROM  notizia order by datapubblicazione desc ");
+		return res;
 	}
 
 

@@ -51,10 +51,11 @@ public class Utente implements UserDetails, IMappablePro
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	@Column(unique = true) 
+	@Column(nullable = false, unique = true) 
 	private String email;
-	@Column(unique = true)
+	@Column(nullable = false, unique = true)
 	private String username;
+	@Column(nullable = false)
 	private String password;
 	private String ruolo;
 
@@ -156,7 +157,7 @@ public class Utente implements UserDetails, IMappablePro
 		return  " Utente id:      " + id       + "\n"+
 				" email:          " + email    + "\n"+
 				" password:       " + password + "\n"+
-				" nickname:       " + username + "\n"+
+				" username:       " + username + "\n"+
 				" ruolo:          " + ruolo    + "\n\n";
 	}
 	

@@ -23,7 +23,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class DaoRecensione extends BasicDao implements IDaoRecensione
 {
-
+ 
 	/**
 	 * Costruttore di DaoRecensione per la connessione al database univeersogames
 	 * tramite /UniversoGame/src/main/resources/application.properties
