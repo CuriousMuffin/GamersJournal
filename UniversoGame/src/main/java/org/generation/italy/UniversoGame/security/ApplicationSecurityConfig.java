@@ -41,13 +41,13 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter
 		.antMatchers(HttpMethod.GET, "/dettaglio").hasAnyRole(Roles.USER)
 		.antMatchers("/account.html").hasAnyRole(Roles.ADMIN, Roles.USER)
 		.antMatchers("/accountmanager/**").hasAnyRole(Roles.ADMIN) // solo gli admin accedono a /management/**
-		.anyRequest().permitAll() // tutte le (altre) richieste richiedono authenticazione
+		.anyRequest().permitAll()
 		.and()
 		.exceptionHandling()
 		.accessDeniedPage("/forbidden.html")
 		.and()
 		.formLogin()
-		//.loginPage("/login.html") // indirizzo a cui arriveranno le richieste login
+		// .loginPage("/login.html")
 		.loginProcessingUrl("/login")
 		.permitAll() 
 		.defaultSuccessUrl("/index.html", true) // se riesce ad accedere lo rimando ad index.html

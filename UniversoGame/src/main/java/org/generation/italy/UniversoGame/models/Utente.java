@@ -142,7 +142,6 @@ public class Utente implements UserDetails, IMappablePro
 	public boolean isCredentialsNonExpired() 
 	{
 		return true;
-		
 	}
 
 	@Override
