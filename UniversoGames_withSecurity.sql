@@ -1,3 +1,5 @@
+#DROP SCHEMA universogames;
+
 create database universogames;
 use universogames;
 
@@ -16,17 +18,6 @@ create table immagine
     pathimmagine varchar(200)
 );
 
-create table utente
-(
-	id int primary key auto_increment,
-    username varchar(200),
-    password varchar(200),
-    nickname varchar(200),
-    admin boolean,
-    idimmagine int,
-    foreign key (idimmagine) references immagine(id)
-);
-
 create table recensione
 (
 	id int primary key auto_increment,
@@ -40,7 +31,7 @@ create table recensione
     idutente int,
     idvideogioco int,
     foreign key (idimmagine) references immagine(id),
-    foreign key (idutente) references utente(id),
+    #foreign key (idutente) references utente(id),
     foreign key (idvideogioco) references videogioco(id)
 );
 
@@ -55,7 +46,7 @@ create table notizia
     idutente int,
     idvideogioco int,
     foreign key (idimmagine) references immagine(id),
-    foreign key (idutente) references utente(id),
+    #foreign key (idutente) references utente(id),
     foreign key (idvideogioco) references videogioco(id)
 );
 
@@ -253,5 +244,3 @@ insert into compatibilita (idvideogioco,idpiattaforma) values
 (3, 2),
 (2, 3),
 (4, 3);
-
-#drop database universogames;
