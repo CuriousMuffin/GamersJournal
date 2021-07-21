@@ -9,13 +9,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/signup")
-public class SignupController {
+public class SignupController 
+{
 	@Autowired
 	private AuthService authService;
 
 	@PostMapping
 	public String signup(@RequestParam String email, @RequestParam String username, @RequestParam String password) {
 		authService.signup(email, username, password);
-		return "OK";
+		return "`<h1>Registrazione avvenuta con successo></h1>\r\n"
+				+ "<button onclick=\"location.href='/login'\" type=\"button\">\r\n"
+				+ "         Log-In</button>\r\n"
+				+ "`";
 	}
 }
