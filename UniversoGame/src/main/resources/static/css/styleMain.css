@@ -103,7 +103,6 @@ p {
   grid-gap: 10px;
   place-items: center;
   filter: drop-shadow(0 0 11px #0095ff);
-  
 }
 
 .review-container > div {
@@ -170,6 +169,12 @@ footer {
   flex-direction: row-reverse;
   display: flex;
   justify-content: space-around;
+}
+
+.footer-text-container > a {
+  color: #cef3f1;
+  font-family: "Roboto Condensed", sans-serif;
+  text-decoration: none;
 }
 
 .footer-text-cookies {
@@ -241,7 +246,6 @@ footer {
   position: relative;
   width: 100%;
   /* max-width: 300px; */
-  
 }
 
 .container:hover {
@@ -299,23 +303,26 @@ footer {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  filter: drop-shadow(0 0 11px #0095ff);
 }
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+  background-color: #7c3fbe;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
   font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.2em;
+  color: #f3e6fb;
 }
 
 /* The Close Button */
 .close {
-  color: #aaa;
+  color: #f3e6fb;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -323,7 +330,7 @@ footer {
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: #ffffff;
   text-decoration: none;
   cursor: pointer;
 }
