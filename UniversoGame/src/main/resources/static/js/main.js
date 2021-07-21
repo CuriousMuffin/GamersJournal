@@ -35,11 +35,9 @@ $(document).ready(function () {
     document.location.href = "index.html";
   });
 
-  $("#ricerca").click(function () {
-    formRicerca();
-  });
-
-  $("#log-in").click(function () {});
+  // $("#ricerca").click(function () {
+  //   formRicerca();
+  // });
 
   // qundo c'è qualcosa con questo id, all'evento assegna una funzione
   // $("#content").on("", "#multi-reviews", function () {
@@ -148,7 +146,7 @@ function getRevList() {
           />
           <div class="overlay">
             <h1 id="TitleRev">${res[i].titolo}</h1>
-            <h3 id="SubtRev">Autore: ${res[i].utente.nickname}</h3>
+            <h3 id="SubtRev">Autore: AUTORE</h3>
           </div>
         </div>
       </li>
@@ -169,7 +167,7 @@ function getNewsList() {
           />
           <div class="overlay">
             <h1 id="TitleRev">${res[i].titolo}</h1>
-            <h3 id="SubtRev">Autore: ${res[i].utente.nickname}</h3>
+            <h3 id="SubtRev">Autore: AUTORE</h3>
           </div>
         </div>
       </div>
@@ -206,7 +204,7 @@ function getRev(id) {
 				<h1>RECENSIONE: ${res.titolo}</h1>
 				<h2>Gioco: ${res.videogioco.titolo} - voto: ${res.valutazione}</h2>
 				<p>${res.contenuto}</p>
-				<h4>Autore: ${res.utente.nickname} - pubblicata il: ${res.dataPubblicazione}</h4>
+				<h4>Autore: AUTORE - pubblicata il: ${res.dataPubblicazione}</h4>
 				`).appendTo($(".review-detail"));
   });
 }
@@ -221,7 +219,7 @@ function getNews(id) {
 				<h1>NOTIZIA: ${res.titolo}</h1>
 				<h2>Gioco: ${res.videogioco.titolo} - publisher: ${res.videogioco.casaProduttrice}</h2>
 				<p>${res.contenuto}</p>
-				<h4>Autore: ${res.utente.nickname} - pubblicata il: ${res.dataPubblicazione}</h4>
+				<h4>Autore: AUTORE - pubblicata il: ${res.dataPubblicazione}</h4>
 				`).appendTo($(".news-detail"));
   });
 }
