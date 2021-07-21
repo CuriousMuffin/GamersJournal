@@ -88,7 +88,8 @@ function topFunction() {
 function getLastRevPreviewInfo() {
   $.get("recensione/byPublDataDesc", function (res) {
     for (let i = 0; i < 6; i++) {
-      $(`
+      if (isPublished(res[i].bozza)) {
+        $(`
       <div id="recensione" data-id='${res[i].id}' >
         <div class="container">
           <img src="${res[i].immagine.pathImmagine}"
@@ -103,6 +104,7 @@ function getLastRevPreviewInfo() {
         </div>
       </div>
       `).appendTo($(".review-container"));
+      }
     }
   });
 }
@@ -110,21 +112,23 @@ function getLastRevPreviewInfo() {
 function getLastNewsPreviewInfo() {
   $.get("notizia/byPublDataDesc", function (res) {
     for (let i = 0; i < 4; i++) {
-      $(`
-      <div id="notizia" data-id='${res[i].id}'>
-        <div class="container">
-          <img src="${res[i].immagine.pathImmagine}"
-          alt="This was suppose to be an image"
-          class="image"
-          />
-          <div class="overlay">
-            <h1 id="TitleRev">${res[i].titolo}</h1>
-            <h3 id="SubtRev">Autore: ${res[i].utente.username} </h3>
-            <h3 id="SubtRev">Pubblicato il: ${res[i].dataPubblicazione} </h3>
+      if (isPublished(res[i].bozza)) {
+        $(`
+        <div id="notizia" data-id='${res[i].id}'>
+          <div class="container">
+            <img src="${res[i].immagine.pathImmagine}"
+            alt="This was suppose to be an image"
+            class="image"
+            />
+            <div class="overlay">
+              <h1 id="TitleRev">${res[i].titolo}</h1>
+              <h3 id="SubtRev">Autore: ${res[i].utente.username} </h3>
+              <h3 id="SubtRev">Pubblicato il: ${res[i].dataPubblicazione} </h3>
+            </div>
           </div>
         </div>
-      </div>
-      `).appendTo($(".news-container"));
+        `).appendTo($(".news-container"));
+      }
     }
   });
 }
@@ -139,7 +143,8 @@ function getPreviewInfo() {
 function getRevList() {
   $.get("recensione", function (res) {
     for (let i = 0; i < res.length; i++) {
-      $(`
+      if (isPublished(res[i].bozza)) {
+        $(`
       <li id="recensione" data-id='${res[i].id}'>
         <div class="container">
           <img src="${res[i].immagine.pathImmagine}"
@@ -153,6 +158,7 @@ function getRevList() {
         </div>
       </li>
       `).appendTo($(".review-list"));
+      }
     }
   });
 }
@@ -160,7 +166,8 @@ function getRevList() {
 function getNewsList() {
   $.get("notizia", function (res) {
     for (let i = 0; i < res.length; i++) {
-      $(`
+      if (isPublished(res[i].bozza)) {
+        $(`
       <div id="notizia" data-id='${res[i].id}'>
         <div class="container">
           <img src="${res[i].immagine.pathImmagine}"
@@ -174,6 +181,7 @@ function getNewsList() {
         </div>
       </div>
       `).appendTo($(".news-list"));
+      }
     }
   });
 }
@@ -226,28 +234,32 @@ function getNews(id) {
   });
 }
 
-function formRicerca() {
-  // Get the modal
-  var modal = document.getElementById("myModal");
+// function formRicerca() {
+//   // Get the modal
+//   var modal = document.getElementById("myModal");
 
-  // Get the button that opens the modal
-  var btn = document.getElementById("myBtn");
+//   // Get the button that opens the modal
+//   var btn = document.getElementById("myBtn");
 
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
+//   // Get the <span> element that closes the modal
+//   var span = document.getElementsByClassName("close")[0];
 
-  // When the user clicks on the button, open the modal
-  $("#myModal").css("display", "block");
+//   // When the user clicks on the button, open the modal
+//   $("#myModal").css("display", "block");
 
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function () {
-    $("#myModal").css("display", "none");
-  };
+//   // When the user clicks on <span> (x), close the modal
+//   span.onclick = function () {
+//     $("#myModal").css("display", "none");
+//   };
 
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      $("#myModal").css("display", "none");
-    }
-  };
+//   // When the user clicks anywhere outside of the modal, close it
+//   window.onclick = function (event) {
+//     if (event.target == modal) {
+//       $("#myModal").css("display", "none");
+//     }
+//   };
+// }
+
+function isPublished(bozza) {
+  return bozza ? false : true;
 }
