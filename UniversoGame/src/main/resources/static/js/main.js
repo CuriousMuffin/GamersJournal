@@ -9,7 +9,6 @@ $(document).ready(function () {
     $(this).addClass("active");
     $("#reviews").removeClass("active");
     $("#home").removeClass("active");
-    // $(this).addClass("active");
     $("#content").load("news.html", getNewsList());
   });
 
@@ -17,7 +16,6 @@ $(document).ready(function () {
     $(this).addClass("active");
     $("#home").removeClass("active");
     $("#news").removeClass("active");
-    // document.getElementById("reviews").setAttribute("class", "active");
     $("#content").load("recensioni.html", getRevList());
   });
 
@@ -35,13 +33,18 @@ $(document).ready(function () {
     document.location.href = "index.html";
   });
 
-  // $("#ricerca").on("focus", function () {
-  //   $("#search-icon").css("transition", "width 0.4s ease-in-out");
-  // });
-
-  // $("#ricerca").click(function () {
-  //   formRicerca();
-  // });
+  $("#container-ricerca").click(function () {
+    $(".ricerca").replaceWith(
+      "<input id='ricerca-input' type='text' name='titolo' placeholder=' Ricerca...'/>"
+    );
+    setTimeout(function () {
+      $("#ricerca-input").focus();
+      $("#ricerca-input").css("filter", "drop-shadow(0 0 5px #0095ff)");
+      $("#ricerca-input").css("background-color", "#0d0118");
+      $("#search-icon").css("filter", "drop-shadow(0 0 10px #0095ff)");
+      // $("#search-icon").css("color", "#0d0118");
+    }, 10);
+  });
 
   // qundo c'è qualcosa con questo id, all'evento assegna una funzione
   // $("#content").on("", "#multi-reviews", function () {
