@@ -108,7 +108,7 @@ p {
 /* ================ Content ================ */
 .content {
   z-index: 90;
-  padding: 1% 8%;
+  padding: 5% 8%;
   font-family: "Roboto", sans-serif;
   font-size: 1.5em;
   color: #cef3f1;
@@ -117,14 +117,16 @@ p {
 /* recensioni grid */
 .review-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(50vh, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(40vh, 2fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  /*grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));*/
   background-color: #0d0118;
-  padding: 10px;
-  grid-gap: 10px;
-  place-items: center;
+  padding: 0.8rem;
+  grid-gap: 0.8rem;
+  /* place-items: center; */
   filter: drop-shadow(0 0 11px #0095ff);
+  border-radius: 16px;
 }
+
 
 .review-container > div {
   /*background-color: rgba(255, 255, 255, 0.8);*/
@@ -138,13 +140,14 @@ p {
 /* news grid */
 .news-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(75vh, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(40vh, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+ /* grid-template-rows: repeat(auto-fill, minmax(40vh, 1fr)); */
   background-color: #0d0118;
-  padding: 10px;
-  grid-gap: 10px;
-  place-items: center;
+  padding: 0.8rem;
+  grid-gap: 0.8rem;
+ /* place-items: center; */
   filter: drop-shadow(0 0 11px #0095ff);
+  border-radius: 16px;
 }
 
 .news-container > div {
@@ -275,6 +278,7 @@ footer {
   width: 100%;
   height: 20vw;
   object-fit: cover;
+  border-radius: 8px;
 }
 
 /* The overlay effect - lays on top of the container and over the image */
@@ -300,11 +304,21 @@ footer {
 
 /* ================ list style ================ */
 
+.review-list {
+  list-style-type:none;
+  padding: 0;
+}
+
+.news-list {
+  list-style-type:none;
+  padding: 0;
+}
+
 .review-list > li {
   margin: 0 0 20px 0;
 }
 
-.news-list > div {
+.news-list > li {
   margin: 0 0 20px 0;
 }
 
@@ -350,4 +364,25 @@ footer {
   color: #ffffff;
   text-decoration: none;
   cursor: pointer;
+}
+
+
+/* ================ MOBILE DEVICES ================ */
+
+/* css rules for screen smaller than 300px horizontal */
+@media (max-width: 600px) {
+	.review-container {
+	 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	}
+	.news-container {
+	 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	}
+}
+
+
+	
+@media (hover:none) {
+	.overlay {
+	opacity: 1;
+	}
 }
