@@ -39,12 +39,14 @@ $(document).ready(function () {
     );
     setTimeout(function () {
       $("#ricerca-input").focus();
+      $("#container-ricerca").css("padding", "13px 20px");
       $("#ricerca-input").css("filter", "drop-shadow(0 0 5px #0095ff)");
       $("#ricerca-input").css("background-color", "#0d0118");
       $("#search-icon").css("filter", "drop-shadow(0 0 10px #0095ff)");
-      // $("#search-icon").css("color", "#0d0118");
     }, 10);
   });
+
+  
 
   // qundo c'è qualcosa con questo id, all'evento assegna una funzione
   // $("#content").on("", "#multi-reviews", function () {
