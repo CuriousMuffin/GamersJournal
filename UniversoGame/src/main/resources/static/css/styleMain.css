@@ -17,6 +17,12 @@ p {
   margin: 0;
 }
 
+.boxSignup{
+  display: flex;
+  justify-content: center;
+
+}
+
 /* ================ Header ================ */
 .logo {
   display: flex;

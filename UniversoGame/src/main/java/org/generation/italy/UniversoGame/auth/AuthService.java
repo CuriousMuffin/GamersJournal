@@ -56,5 +56,4 @@ public class AuthService implements UserDetailsService
 		return true;
 	}
 
-}
-
+}//fine AuthService
