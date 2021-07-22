@@ -172,7 +172,7 @@ function getNewsList() {
     for (let i = 0; i < res.length; i++) {
       if (isPublished(res[i].bozza)) {
         $(`
-      <div id="notizia" data-id='${res[i].id}'>
+      <li id="notizia" data-id='${res[i].id}'>
         <div class="container">
           <img src="${res[i].immagine.pathImmagine}"
           alt="This was supposed to be an image"
@@ -183,7 +183,7 @@ function getNewsList() {
             <h3 id="SubtRev">Autore: ${res[i].utente.username}</h3>
           </div>
         </div>
-      </div>
+      </li>
       `).appendTo($(".news-list"));
       }
     }
