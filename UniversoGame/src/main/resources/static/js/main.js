@@ -46,7 +46,9 @@ $(document).ready(function () {
     }, 10);
   });
 
-  
+  $("#ricerca-input").on("", function () {
+    $.get();
+  });
 
   // qundo c'è qualcosa con questo id, all'evento assegna una funzione
   // $("#content").on("", "#multi-reviews", function () {
@@ -119,7 +121,7 @@ function getLastRevPreviewInfo() {
 
 function getLastNewsPreviewInfo() {
   $.get("notizia/byPublDataDesc", function (res) {
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 6; i++) {
       if (isPublished(res[i].bozza)) {
         $(`
         <div id="notizia" data-id='${res[i].id}'>
