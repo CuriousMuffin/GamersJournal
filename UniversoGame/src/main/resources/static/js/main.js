@@ -107,8 +107,7 @@ function getLastRevPreviewInfo() {
           />
           <div class="overlay">
             <h1 id="TitleRev">${res[i].titolo}</h1>
-            <h3 id="SubtRev">Autore: ${res[i].utente.username} </h3>
-            <h3 id="SubtRev">Pubblicato il: ${res[i].dataPubblicazione} </h3>
+            <h3 id="SubtRev">di ${res[i].utente.username} - ${res[i].dataPubblicazione} </h3>
           </div>
         </div>
       </div>
@@ -131,8 +130,7 @@ function getLastNewsPreviewInfo() {
             />
             <div class="overlay">
               <h1 id="TitleRev">${res[i].titolo}</h1>
-              <h3 id="SubtRev">Autore: ${res[i].utente.username} </h3>
-              <h3 id="SubtRev">Pubblicato il: ${res[i].dataPubblicazione} </h3>
+              <h3 id="SubtRev">di ${res[i].utente.username} - ${res[i].dataPubblicazione} </h3>
             </div>
           </div>
         </div>
@@ -162,7 +160,7 @@ function getRevList() {
           />
           <div class="overlay">
             <h1 id="TitleRev">${res[i].titolo}</h1>
-            <h3 id="SubtRev">Autore: ${res[i].utente.username}</h3>
+            <h3 id="SubtRev">di ${res[i].utente.username} - ${res[i].dataPubblicazione} </h3>
           </div>
         </div>
       </li>
@@ -185,7 +183,7 @@ function getNewsList() {
           />
           <div class="overlay">
             <h1 id="TitleRev">${res[i].titolo}</h1>
-            <h3 id="SubtRev">Autore: ${res[i].utente.username}</h3>
+            <h3 id="SubtRev">di ${res[i].utente.username} - ${res[i].dataPubblicazione} </h3>
           </div>
         </div>
       </li>
@@ -220,10 +218,17 @@ function getRev(id) {
           		alt="This was supposed to be an image"
           		class="image"
       />
-				<h1>RECENSIONE: ${res.titolo}</h1>
-				<h2>Gioco: ${res.videogioco.titolo} - voto: ${res.valutazione}</h2>
+				<h1>${res.titolo}</h1>
+				<div class="scheda-vg">
+					<h2>${res.videogioco.titolo} - voto: ${res.valutazione} su 5</h2>
+					<h3>GENERE: ${res.videogioco.genere}</h3>
+					<h3>PIATTAFORMA: ${res.videogioco.compatibilita}</h3>
+					<h3>PRODUTTORE: ${res.videogioco.casaProduttrice}</h3>
+					<h3>DATA DI USCITA: ${res.videogioco.dataUscita}</h3>
+				</div>
+				<br>
 				<p>${res.contenuto}</p>
-				<h4>Autore: ${res.utente.username} - pubblicata il: ${res.dataPubblicazione}</h4>
+				<h4><em>Autore: ${res.utente.username} - pubblicata il: ${res.dataPubblicazione}</em></h4>
 				`).appendTo($(".review-detail"));
   });
 }
@@ -235,8 +240,15 @@ function getNews(id) {
           		alt="This was supposed to be an image"
           		class="image"
       />
-				<h1>NOTIZIA: ${res.titolo}</h1>
-				<h2>Gioco: ${res.videogioco.titolo} - publisher: ${res.videogioco.casaProduttrice}</h2>
+				<h1>${res.titolo}</h1>
+				<div class="scheda-vg">
+					<h2>${res.videogioco.titolo}</h2>
+					<h3>GENERE: ${res.videogioco.genere}</h3>
+					<h3>PIATTAFORMA: ${res.videogioco.compatibilita}</h3>
+					<h3>PRODUTTORE: ${res.videogioco.casaProduttrice}</h3>
+					<h3>DATA DI USCITA: ${res.videogioco.dataUscita}</h3>
+				</div>
+				<br>
 				<p>${res.contenuto}</p>
 				<h4>Autore: ${res.utente.username} - pubblicata il: ${res.dataPubblicazione}</h4>
 				`).appendTo($(".news-detail"));
