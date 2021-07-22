@@ -230,7 +230,8 @@ function getRev(id) {
 				</div>
 				<br>
 				<p>${res.contenuto}</p>
-				<h4><em>Autore: ${res.utente.username} - pubblicata il: ${res.dataPubblicazione}</em></h4>
+				<h4><em><i class="fa fa-fw fa-id-badge"></i>di ${res.utente.username}
+				 <i class="far fa-fw fa-file-alt"></i> pubblicato il: ${res.dataPubblicazione}</em></h4>
 				`).appendTo($(".review-detail"));
   });
 }
@@ -252,7 +253,8 @@ function getNews(id) {
 				</div>
 				<br>
 				<p>${res.contenuto}</p>
-				<h4>Autore: ${res.utente.username} - pubblicata il: ${res.dataPubblicazione}</h4>
+				<h4><em><i class="fa fa-fw fa-id-badge"></i>di ${res.utente.username}
+				 <i class="far fa-fw fa-file-alt"></i> pubblicato il: ${res.dataPubblicazione}</em></h4>
 				`).appendTo($(".news-detail"));
   });
 }
