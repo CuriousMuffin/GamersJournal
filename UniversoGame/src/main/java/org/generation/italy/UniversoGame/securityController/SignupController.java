@@ -15,10 +15,11 @@ public class SignupController
 	private AuthService authService;
 
 	@PostMapping
-	public String signup(@RequestParam String email, @RequestParam String username, @RequestParam String password) {
+	public String signup(@RequestParam String email, @RequestParam String username, @RequestParam String password) 
+	{
 		authService.signup(email, username, password);
-		return "<h1>Hey, new face; welcome into the mothership!</h1>\r\n"
-				+ "<button onclick=\"location.href='/login'\" type=\"button\">\r\n"
-				+ " Log-In</button>\r\n";
+		return "<h1>Hey, new face; welcome into the mothership!</h1>"
+			 + "<button onclick=\"location.href='/login'\" type=\"button\">"
+			 + " Log-In</button>";
 	}
 }

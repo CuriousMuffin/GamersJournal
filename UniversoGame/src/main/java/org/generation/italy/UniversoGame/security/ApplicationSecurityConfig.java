@@ -47,15 +47,17 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter
 		.accessDeniedPage("/forbidden.html")
 		.and()
 		.formLogin()
-		// .loginPage("/login.html")
+		.loginPage("/login.html")
 		.loginProcessingUrl("/login")
 		.permitAll() 
 		.defaultSuccessUrl("/index.html", true) // se riesce ad accedere lo rimando ad index.html
 		.failureUrl("/fail.html")
 		.and()
-		.logout().logoutUrl("/logout")
-		.logoutSuccessUrl("/loggedout.html")// indirizzo per fare logout
-		.clearAuthentication(true).logoutSuccessUrl("/index.html");
+		.logout()
+		.logoutUrl("/logout.html")
+		.logoutSuccessUrl("/logout.html")// indirizzo per fare logout
+		.clearAuthentication(true)
+		.logoutSuccessUrl("/index.html");
 	}
 
 	@Bean 
