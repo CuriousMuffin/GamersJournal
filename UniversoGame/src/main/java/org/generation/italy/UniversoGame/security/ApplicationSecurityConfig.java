@@ -37,7 +37,7 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter
 		.antMatchers("/", "index.html", "/css/**", "/js/**", "/signup.html", "/signup", "/login", "/fail.html", 
 					 "/forbidden.html", "/assets/**", "homeContentContainer.html").permitAll() 
 		.antMatchers("/altro.html").hasAnyRole(Roles.ADMIN, Roles.USER)
-		.antMatchers("/account.html").hasAnyRole(Roles.ADMIN)
+		.antMatchers("/admin.html").hasAnyRole(Roles.ADMIN)
 		.antMatchers(HttpMethod.GET, "/dettaglio").hasAnyRole(Roles.USER)
 		.antMatchers("/account.html").hasAnyRole(Roles.ADMIN, Roles.USER)
 		.antMatchers("/accountmanager/**").hasAnyRole(Roles.ADMIN) // solo gli admin accedono a /management/**
