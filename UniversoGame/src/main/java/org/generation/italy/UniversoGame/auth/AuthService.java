@@ -36,7 +36,7 @@ public class AuthService implements UserDetailsService
 		throw new UsernameNotFoundException("Nessun utente col username: " + username);
 	}
 
-	public void signup(String email, String username, String password) 
+	public boolean signup(String email, String username, String password) 
 	{
 		Utente newUtente = new Utente();
 		newUtente.setEmail(email);
@@ -44,13 +44,16 @@ public class AuthService implements UserDetailsService
 		newUtente.setPassword(passwordEncoder.encode(password));
 		newUtente.setRuolo(Roles.USER);
 		try 
-		{			
+		{	
 			dao.save(newUtente);
 		} 
 		catch (Exception e) 
 		{
-			e.printStackTrace();
+			System.out.println("Utente già registrato");
+			return false;
 		}
+		
+		return true;
 	}
 
 }
