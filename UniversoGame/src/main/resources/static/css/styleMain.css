@@ -274,6 +274,7 @@ footer {
 .container {
   position: relative;
   width: 100%;
+  color: white;
   /* max-width: 300px; */
 }
 
