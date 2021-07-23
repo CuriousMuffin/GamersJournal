@@ -95,7 +95,7 @@ public class ControllerNotizia
 		dao.update(notizia);
 	}
 	
-	@PutMapping("/{bozza}")
+	@PutMapping("/bozza")
 	public void updateBozza(@RequestBody Notizia notizia) 
 	{
 		dao.updateBozza(notizia);
