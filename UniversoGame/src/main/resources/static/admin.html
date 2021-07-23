@@ -21,24 +21,28 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Tourney:ital,wght@1,400&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+      @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
     </style>
-    <!-- API's -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
-      rel="stylesheet"
-    />
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/styleCms.css" />
   </head>
   <body>
-        <a id="home" class="active" href="#"
+  	<div id="header">
+		<pre>
+   __  __        _                                    ______                             
+  / / / /____   (_)_   __ ___   _____ _____ ____     / ____/____ _ ____ ___   ___   _____
+ / / / // __ \ / /| | / // _ \ / ___// ___// __ \   / / __ / __ `// __ `__ \ / _ \ / ___/
+/ /_/ // / / // / | |/ //  __// /   (__  )/ /_/ /  / /_/ // /_/ // / / / / //  __/(__  ) 
+\____//_/ /_//_/  |___/ \___//_/   /____/ \____/   \____/ \__,_//_/ /_/ /_/ \___//____/  
+
+		</pre>
+  	</div>
+        <a id="home" href="/#"
         ><i class="fas fa-home"></i> Home</a
       >
   	<h1>Gestione contenuti</h1>
-	  <div class="published">
-	  <h2>Pubblicati</h2>
+	  <div id="articles">
 	  	<table class="content-list">
 	  	<thead>
 	  	<tr>
@@ -52,12 +56,11 @@
 	  	<th>OPZIONI</th>
 	  	</tr>
 	  	</thead>
-	  	<tbody>
+	  	<tbody id="pubbli-list">
 	  	</tbody>
 	  	</table>
-	  </div>
-	  <div class="drafts">
-	  <h2>Bozze</h2>
+			<br>
+			<br>
 	  	<table class="draft-list">
 	  	<thead>
 	  	<tr>
@@ -71,9 +74,36 @@
 	  	<th>OPZIONI</th>
 	  	</tr>
 	  	</thead>
-	  	<tbody>
+	  	<tbody id="bozze-list">
 	  	</tbody>
 	  	</table>
 	  </div>
+	  
+	<!-- The Modal -->
+	<div id="article-editor-modal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close" id="close-article-editor">&times;</span>
+			<p id='titolo-editor'>EDITOR CONTENUTO</p>
+			<p>
+				Titolo: <input type="text" id="titolo" required>
+			</p>
+			<p>
+				Contenuto:
+				<textarea rows="3" cols="21" id="contenuto" required></textarea>
+			</p>
+			<p>
+				Voto: <input type="number" id='valutazione' min=1 max=5 step=1 required>
+			</p>
+			<p>
+				Videogioco: <select id="videogioco"></select>
+			</p>
+			<br> <br>
+			<button id="add-article">Salva</button>
+		</div>
+
+	</div>
+	  
   </body>
 </html>
