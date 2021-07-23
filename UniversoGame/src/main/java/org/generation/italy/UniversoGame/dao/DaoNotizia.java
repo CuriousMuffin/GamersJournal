@@ -152,6 +152,12 @@ public class DaoNotizia extends BasicDao implements IDaoNotizia
 						  notizia.getTitolo(), notizia.getContenuto(), notizia.getDataPubblicazione(), notizia.isBozza(), notizia.getUtente(),
 						  notizia.getVideogioco(), notizia.getId());
 	}
+	
+	@Override
+	public boolean updateBozza(Notizia notizia) {
+		return isExecute("update notizia set bozza = ? where id = ?", notizia.isBozza(), notizia.getId());
+	}
+	
 
 	/*================================================================================================================================================================*/
 
@@ -191,6 +197,7 @@ public class DaoNotizia extends BasicDao implements IDaoNotizia
 		List<Notizia> res = notizieORM("SELECT * FROM  notizia order by datapubblicazione desc ");
 		return res;
 	}
+
 
 
 }//fine dao

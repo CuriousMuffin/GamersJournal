@@ -205,4 +205,15 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 				recensione.getDataPubblicazione(), recensione.isApprovato(), recensione.isBozza(), recensione.getVideogioco(), recensione.getId());
 	}
 
+	/**
+	 * Metodo CRUD per la modifica delle proprietà bozza e approvato di Recensione
+	 * Ha la possibilità di modificare anche uno solo dei due alla volta
+	 * Restituisce un valore booleano TRUE se l'operazione è andata a buon fine
+	 * o FALSE in caso di errore
+	 */
+	@Override
+	public boolean updateBozza(Recensione recensione) {
+		return isExecute("update recensione set approvato = ?,bozza = ? where id = ?", recensione.isApprovato(), recensione.isBozza(), recensione.getId());
+	}
+
 }//fine dao
