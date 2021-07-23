@@ -10,4 +10,4 @@ public class UniversoGameApplication {
 		SpringApplication.run(UniversoGameApplication.class, args);
 	}
 
-} 
+}
