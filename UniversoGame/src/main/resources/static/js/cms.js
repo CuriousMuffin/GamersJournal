@@ -6,7 +6,7 @@ $(document).ready(function () {
 getContentList();
 
   $("#home").click(function () {
-    $(this).addClass("active");
+    //$(this).addClass("active");
     document.location.href = "index.html";
   });
 
@@ -24,7 +24,7 @@ function getContentList() {
 			<td>${res[i].titolo}</td>
 			<td>${res[i].dataPubblicazione}</td>
 			<td>${res[i].utente.username}</td>
-			<td><button class='edit-button' tipo='recensione' data-id='${res[i].id}' disabled><i class="far fa-fw fa-edit"></i></button>
+			<td class='options'><button class='edit-button' tipo='recensione' data-id='${res[i].id}' disabled><i class="far fa-fw fa-edit"></i></button>
 			 	<button class='delete-button' tipo='recensione' data-id='${res[i].id}'><i class="far fa-fw fa-trash-alt"></i></button> 
 				<button class='draft-button' id='recensione-draft-button-${res[i].id}' tipo='recensione' data-id='${res[i].id}'>Bozza</button>
 			</td>
@@ -37,7 +37,7 @@ function getContentList() {
 			<td>${res[i].titolo}</td>
 			<td>${res[i].dataPubblicazione}</td>
 			<td>${res[i].utente.username}</td>
-			<td><button class='edit-button' tipo='recensione' data-id='${res[i].id}' disabled><i class="far fa-fw fa-edit"></i></button>
+			<td class='options'><button class='edit-button' tipo='recensione' data-id='${res[i].id}' disabled><i class="far fa-fw fa-edit"></i></button>
 			 	<button class='delete-button' tipo='recensione' data-id='${res[i].id}'><i class="far fa-fw fa-trash-alt"></i></button> 
 				<button class='draft-button' id='recensione-draft-button-${res[i].id}' tipo='recensione' data-id='${res[i].id}'>Pubblica</button>
 			</td>
@@ -58,7 +58,7 @@ function getContentList() {
 			<td>${res[i].titolo}</td>
 			<td>${res[i].dataPubblicazione}</td>
 			<td>${res[i].utente.username}</td>
-			<td><button class='edit-button' tipo='notizia' data-id='${res[i].id}' disabled><i class="far fa-fw fa-edit"></i></button>
+			<td class='options'><button class='edit-button' tipo='notizia' data-id='${res[i].id}' disabled><i class="far fa-fw fa-edit"></i></button>
 			 	<button class='delete-button' tipo='notizia' data-id='${res[i].id}'><i class="far fa-fw fa-trash-alt"></i></button> 
 				<button class='draft-button' id='notizia-draft-button-${res[i].id}' tipo='notizia' data-id='${res[i].id}'>Bozza</button>
 			</td>
@@ -71,7 +71,7 @@ function getContentList() {
 			<td>${res[i].titolo}</td>
 			<td>${res[i].dataPubblicazione}</td>
 			<td>${res[i].utente.username}</td>
-			<td><button class='edit-button' tipo='notizia' data-id='${res[i].id}' disabled><i class="far fa-fw fa-edit"></i></button>
+			<td class='options'><button class='edit-button' tipo='notizia' data-id='${res[i].id}' disabled><i class="far fa-fw fa-edit"></i></button>
 			 	<button class='delete-button' tipo='notizia' data-id='${res[i].id}'><i class="far fa-fw fa-trash-alt"></i></button> 
 				<button class='draft-button' id='notizia-draft-button-${res[i].id}' tipo='notizia' data-id='${res[i].id}'>Pubblica</button>
 			</td>
@@ -86,6 +86,21 @@ function getContentList() {
 function isPublished(bozza) {
   return bozza ? false : true;
 }
+
+// =========================== AGGIUNTA ARTICOLI ===========================
+		
+	$('#add-articolo').click(function() {
+		$('#article-creation-modal').css('display', 'block');
+		$('.modal-content').load('editor.html');
+	})
+	
+	$(".modal-content").on("click", "#close-article-creation", function () {
+		closeAddModal();
+	})
+	
+	function closeAddModal() {
+		$('#article-creation-modal').css('display', 'none');	
+	}
 
 // =========================== CANCELLA ARTICOLI ===========================
 
@@ -106,7 +121,7 @@ $('#articles').on('click', '.delete-button', function() {
 		})
 	}
 	
-// =========================== MODIFICA BOZZA/PUBBLICATO ===========================
+// =========================== SPOSTAMENTO BOZZA/PUBBLICATO ===========================
 
 $('#articles').on('click', '.draft-button', function() {
 	

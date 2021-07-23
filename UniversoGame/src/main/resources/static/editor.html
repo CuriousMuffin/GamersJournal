@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+  	<div class="title-bar">
+  		<button class="close" id="close-article-creation">&times;</button>
+		<p id='titolo-editor'>Editor Contenuti</p>
+  	</div>
+  	<div class="input-fields">
+  	<form id="input">
+  	
+  	<label for="radio-recensione">Recensione</label>
+  	<input type="radio" id="radio-recensione" name="tipologia" value="recensione" checked>
+  	
+  	<label for="radio-notizia">Notizia</label>
+  	<input type="radio" id="radio-notizia" name="tipologia" value="notizia">
+  	
+	<label for="videogioco">Videogioco:</label>
+	<select id="videogioco"></select>
+	
+	<label for="titolo">Titolo:</label>
+	<input type="text" id="titolo" required>
+	
+	<label for="immagine">URL Immagine:</label>
+	<input type="text" id="immagine" required>
+	
+	<label for="contenuto">Contenuto:</label>
+	<textarea rows="20" id="contenuto" required></textarea>
+	
+	<label for="valutazione">Voto:</label>
+	<input type="number" id='valutazione' min=1 max=5 step=1 required>
+	
+	<button id="add-article">Salva</button>
+	</form>
+  	</div>
+  </body>
+</html>

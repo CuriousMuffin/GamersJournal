@@ -38,9 +38,8 @@
 
 		</pre>
   	</div>
-        <a id="home" href="/#"
-        ><i class="fas fa-home"></i> Home</a
-      >
+        <a id="home" href="/"><i class="fas fa-home"></i> Home</a>
+        <a id="add-articolo" href="#"><i class="fas fa-plus-circle"></i> Nuovo articolo</a>
   	<h1>Gestione contenuti</h1>
 	  <div id="articles">
 	  	<table class="content-list">
@@ -78,29 +77,12 @@
 	  	</tbody>
 	  	</table>
 	  </div>
-	  
-	<!-- The Modal -->
-	<div id="article-editor-modal" class="modal">
+	
+		<!-- MODALE AGGIUNTA ARTICOLO -->
+	<div id="article-creation-modal" class="modal">
 
 		<!-- Modal content -->
 		<div class="modal-content">
-			<span class="close" id="close-article-editor">&times;</span>
-			<p id='titolo-editor'>EDITOR CONTENUTO</p>
-			<p>
-				Titolo: <input type="text" id="titolo" required>
-			</p>
-			<p>
-				Contenuto:
-				<textarea rows="3" cols="21" id="contenuto" required></textarea>
-			</p>
-			<p>
-				Voto: <input type="number" id='valutazione' min=1 max=5 step=1 required>
-			</p>
-			<p>
-				Videogioco: <select id="videogioco"></select>
-			</p>
-			<br> <br>
-			<button id="add-article">Salva</button>
 		</div>
 
 	</div>

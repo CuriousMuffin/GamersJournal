@@ -41,6 +41,10 @@ thead {
 	border: 4px outset #c0c0c0;
 }
 
+.options {
+	text-align: center;
+}
+
 
 /* The Modal (background) */
 .modal {
@@ -58,18 +62,45 @@ thead {
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
+  background-color: #c0c0c0;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 0;
+  border: 4px outset white;
   width: 80%; /* Could be more or less, depending on screen size */
+  color: black;
+}
+
+.title-bar {
+	background-color: #000b7b;
+	text-align: center;
+	color: white;
+}
+
+#input {
+	padding: 10px;
+	display: grid;
+	grid-template-columns: 150px 1fr;
+	grid-gap: 16px;
+}
+
+textarea {
+	resize: none;
+}
+
+label {
+    grid-column: 1 / 2;
+}
+
+input, button {
+    grid-column: 2 / 3;
 }
 
 /* The Close Button */
 .close {
-  color: #aaa;
+  background-color: #c0c0c0;
+  color: black;
   float: right;
-  font-size: 28px;
+  font-size: 20;
   font-weight: bold;
 }
 
