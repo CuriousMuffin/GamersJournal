@@ -107,5 +107,11 @@ public class ControllerRecensione
 	{
 		return dao.update(recensione);
 	}
+	
+	@PutMapping("/{bozza}")
+	public boolean updateBozza(@RequestBody Recensione recensione)
+	{
+		return dao.updateBozza(recensione);
+	}
 
 }//fine controller

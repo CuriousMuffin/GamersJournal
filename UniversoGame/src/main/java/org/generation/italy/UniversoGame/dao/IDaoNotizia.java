@@ -23,6 +23,6 @@ public interface IDaoNotizia
 	public boolean add(Notizia notizia);
 	public boolean delete(int id);
 	public boolean update(Notizia notizia);
-	   
+	public boolean updateBozza(Notizia notizia);
 
 }// fine Idao
