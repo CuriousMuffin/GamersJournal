@@ -1,5 +1,6 @@
 package org.generation.italy.UniversoGame.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.generation.italy.UniversoGame.util.IMappablePro;
@@ -20,7 +21,7 @@ public class Videogioco implements IMappablePro
 	private String genere;
 	private String dataUscita;
 	private String casaProduttrice;
-	private List<String> compatibilita; //lista delle compatibilità dei videogiochi
+	private List<String> compatibilita = new ArrayList<>(); //lista delle compatibilità dei videogiochi
 
 	public Videogioco(int id, String titolo, String genere, String dataUscita, String casaProduttrice, List<String> compatibilita) 
 	{
@@ -33,9 +34,7 @@ public class Videogioco implements IMappablePro
 		this.compatibilita = compatibilita;
 	}
 
-	public Videogioco() {
-		super();
-	}
+	public Videogioco() {}
 
 	public int getId() 
 	{
@@ -94,7 +93,7 @@ public class Videogioco implements IMappablePro
 	public void setCompatibilita(List<String> compatibilita) 
 	{
 		this.compatibilita = compatibilita;
-	}
+    }
 
 	@Override
 	public String toString() 
@@ -106,5 +105,6 @@ public class Videogioco implements IMappablePro
 				" casaProduttrice: " + casaProduttrice + "\n" + 
 				" compatibilità:   " + compatibilita   +"\n\n";
 	}
+	
 
 }//fine classe

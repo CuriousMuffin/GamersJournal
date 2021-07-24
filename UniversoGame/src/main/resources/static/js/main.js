@@ -218,8 +218,7 @@ function getRev(id) {
     $(`
 			<img src="${res.immagine.pathImmagine}"
           		alt="This was supposed to be an image"
-          		class="image"
-      />
+          		class="image"/>
 				<h1>${res.titolo}</h1>
 				<div class="scheda-vg">
 					<h2>${res.videogioco.titolo} - voto: ${res.valutazione} su 5</h2>
@@ -241,8 +240,7 @@ function getNews(id) {
     $(`
 			<img src="${res.immagine.pathImmagine}"
           		alt="This was supposed to be an image"
-          		class="image"
-      />
+          		class="image"/>
 				<h1>${res.titolo}</h1>
 				<div class="scheda-vg">
 					<h2>${res.videogioco.titolo}</h2>
