@@ -17,6 +17,7 @@ public interface IDaoRecensione
 	
 	public List<Recensione> recensioni(String query, Object... conditions);
 	public List<Recensione> recensioniORM(String query, Object... conditions);
+	public List<Recensione> searchRecensioni(String titoloVideogioco);
 	public List<Recensione> recensioni();
 	public List<Recensione> recensioniORM();
 	public List<Recensione> recensioniPerData();

@@ -67,6 +67,13 @@ public class ControllerRecensione
 	}
 	
 	/*================================================================================================================================================================*/
+	
+	@GetMapping("/cerca/{titoloVid}")
+	public List<Recensione> getAllRicerca(@PathVariable String titoloVid) {
+		return dao.searchRecensioni(titoloVid);
+	}
+	
+	/*================================================================================================================================================================*/
 
 	/**
 	 * Metodo add dellla classe ControllerRecensione

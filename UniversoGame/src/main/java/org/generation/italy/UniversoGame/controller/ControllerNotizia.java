@@ -58,6 +58,13 @@ public class ControllerNotizia
 	
 	/*================================================================================================================================================================*/
 	
+	@GetMapping("/cerca/{titoloVid}")
+	public List<Notizia> getAllRicerca(@PathVariable String titoloVid) {
+		return dao.searchNotizie(titoloVid);
+	}
+	
+	/*================================================================================================================================================================*/
+	
 	/**
 	 * Metodo add della classe ControllerNotizia che 
 	 * aggiunge una notizia al database

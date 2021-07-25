@@ -46,15 +46,53 @@ $(document).ready(function () {
     }, 10);
   });
 
-  // $("#container-ricerca").on("keyup", function () {
-  //   // alert("up");
-  //   let testo = $("#ricerca-input").val();
-  //   console.log(testo);
-  // });
-
   $("#container-ricerca").on("keyup", "#ricerca-input", function (e) {
     var code = e.keyCode ? e.keyCode : e.which;
+    let titoloVideog = document.getElementById("ricerca-input").value;
     if (code === 13) {
+      formRisultatiRicerca();
+
+      $.get(`recensione/cerca/${titoloVideog}`, function (res) {
+        console.log(titoloVideog);
+        console.log(res);
+        //   for (let i = 0; i < res.length; i++) {
+        //     $(`
+        // <li id="recensione" data-id='${res[i].id}'>
+        //   <div class="container">
+        //     <img src="${res[i].immagine.pathImmagine}"
+        //     alt="This was supposed to be an image"
+        //     class="image"
+        //     />
+        //     <div class="overlay">
+        //       <h1 id="TitleRev">${res[i].titolo}</h1>
+        //       <h3 id="SubtRev">di ${res[i].utente.username} - ${res[i].dataPubblicazione} </h3>
+        //     </div>
+        //   </div>
+        // </li>
+        // `).appendTo($(".modal-content-recensioni"));
+        //   }
+      });
+
+      $.get(`notizia/cerca/${titoloVideog}`, function (res) {
+        console.log(titoloVideog);
+        console.log(res);
+        //   for (let i = 0; i < res.length; i++) {
+        //     $(`
+        // <li id="notizia" data-id='${res[i].id}'>
+        //   <div class="container">
+        //     <img src="${res[i].immagine.pathImmagine}"
+        //     alt="This was supposed to be an image"
+        //     class="image"
+        //     />
+        //     <div class="overlay">
+        //       <h1 id="TitleRev">${res[i].titolo}</h1>
+        //       <h3 id="SubtRev">di ${res[i].utente.username} - ${res[i].dataPubblicazione} </h3>
+        //     </div>
+        //   </div>
+        // </li>
+        // `).appendTo($(".modal-content-notizie"));
+        //   }
+      });
     }
   });
 
@@ -274,31 +312,31 @@ function getNews(id) {
   });
 }
 
-// function formRicerca() {
-//   // Get the modal
-//   var modal = document.getElementById("myModal");
+function formRisultatiRicerca() {
+  // Get the modal
+  var modal = document.getElementById("myModal");
 
-//   // Get the button that opens the modal
-//   var btn = document.getElementById("myBtn");
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
 
-//   // Get the <span> element that closes the modal
-//   var span = document.getElementsByClassName("close")[0];
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
 
-//   // When the user clicks on the button, open the modal
-//   $("#myModal").css("display", "block");
+  // When the user clicks on the button, open the modal
+  $("#myModal").css("display", "block");
 
-//   // When the user clicks on <span> (x), close the modal
-//   span.onclick = function () {
-//     $("#myModal").css("display", "none");
-//   };
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+    $("#myModal").css("display", "none");
+  };
 
-//   // When the user clicks anywhere outside of the modal, close it
-//   window.onclick = function (event) {
-//     if (event.target == modal) {
-//       $("#myModal").css("display", "none");
-//     }
-//   };
-// }
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      $("#myModal").css("display", "none");
+    }
+  };
+}
 
 function isPublished(bozza) {
   return bozza ? false : true;

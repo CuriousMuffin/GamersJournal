@@ -3,6 +3,7 @@ package org.generation.italy.UniversoGame.dao;
 import java.util.List;
 
 import org.generation.italy.UniversoGame.models.Notizia;
+import org.generation.italy.UniversoGame.models.Recensione;
 
 /**
  * IDaoNotizia
@@ -15,7 +16,8 @@ import org.generation.italy.UniversoGame.models.Notizia;
 public interface IDaoNotizia 
 {
 	public List<Notizia> notizie(String query, Object... conditions);
-	public List<Notizia> notizieORM(String query, Object... conditions);   
+	public List<Notizia> notizieORM(String query, Object... conditions);
+	public List<Notizia> searchNotizie(String titoloVideogioco);
 	public List<Notizia> notizie();
 	public List<Notizia> notizieORM();
 	public List<Notizia> notiziePerData();
