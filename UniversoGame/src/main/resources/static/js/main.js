@@ -34,8 +34,8 @@ $(document).ready(function () {
   });
 
 	$(".logo-footer").click(function () {
-    $(this).addClass("active");
-    document.location.href = "game.html";
+      var redirectWindow = window.open('game.html', '_blank');
+      redirectWindow.location;
   });
 
   $("#container-ricerca").click(function () {
