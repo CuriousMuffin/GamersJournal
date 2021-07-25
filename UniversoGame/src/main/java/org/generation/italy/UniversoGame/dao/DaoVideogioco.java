@@ -102,7 +102,7 @@ public class DaoVideogioco extends BasicDao implements IDaoVideogioco
 
 			for (Map<String, String> m : maps) 
 			{
-				String c = m.get("piattaforma.nome");
+				String c = m.get("nome");
 				comp.add(c);
 			}
 			ris.setCompatibilita(comp);

@@ -268,9 +268,10 @@ $("#content").on("click", "#notizia", function () {
   $("#content").load("notizia-detail.html", getNews(id));
 });
 
+
 function getRev(id) {
   $.get(`recensione/${id}`, function (res) {
-    $(`
+    const htmlSnippet = $(`
 			<img src="${res.immagine.pathImmagine}"
           		alt="This was supposed to be an image"
           		class="image"/>
@@ -278,7 +279,7 @@ function getRev(id) {
 				<div class="scheda-vg">
 					<h2>${res.videogioco.titolo} - voto: ${res.valutazione} su 5</h2>
 					<h3>GENERE: ${res.videogioco.genere}</h3>
-					<h3>PIATTAFORMA: ${res.videogioco.compatibilita}</h3>
+					<h3 id="piatta"></h3>
 					<h3>PRODUTTORE: ${res.videogioco.casaProduttrice}</h3>
 					<h3>DATA DI USCITA: ${res.videogioco.dataUscita}</h3>
 				</div>
@@ -286,13 +287,49 @@ function getRev(id) {
 				<p>${res.contenuto}</p>
 				<h4><em><i class="fa fa-fw fa-id-badge"></i>di ${res.utente.username}
 				<i class="far fa-fw fa-file-alt"></i> pubblicato il: ${res.dataPubblicazione}</em></h4>
-				`).appendTo($(".review-detail"));
+				`);
+	const idGame = +(res.videogioco.id);
+	
+	//console.log(idGame);
+	
+	getVidRev(htmlSnippet, idGame);
+				//.appendTo($(".review-detail"));
   });
 }
 
+function getVidRev(htmlSnippet, idGame) {
+	$.get(`videogioco/${idGame}`, function (res) {
+			const compat = res.compatibilita;
+			
+			//console.log(compat);
+			htmlSnippet.appendTo($(".review-detail"));
+			$("#piatta").text("PIATTAFORMA: " + compat);
+		});
+}
+/*
+  function getRev(id) {
+  $.ajax({ 
+	  url: `recensione/${id}`,
+       type: 'GET',
+       success: function(res) {
+               $('#titolo').val(res.videogioco.titolo);
+               $('#genere').val(res.videogioco.genere);
+               $('#compatibilita').val(res.videogioco.compatibilita);
+               $('#casaProduttrice').val(res.videogioco.casaProduttrice);
+               $('#dataUscita').val(res.videogioco.dataUscita),
+        	     $('#constenuto').val(res.contenuto);
+        		$('#username').val(res.utente.username);
+			$('#dataPubblicazione').val(res.dataPubblicazione).appendTo($(".review-detail"));
+		}
+	})
+}
+*/
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 function getNews(id) {
   $.get(`notizia/${id}`, function (res) {
-    $(`
+    const htmlSnippet = $(`
 			<img src="${res.immagine.pathImmagine}"
           		alt="This was supposed to be an image"
           		class="image"/>
@@ -300,7 +337,7 @@ function getNews(id) {
 				<div class="scheda-vg">
 					<h2>${res.videogioco.titolo}</h2>
 					<h3>GENERE: ${res.videogioco.genere}</h3>
-					<h3>PIATTAFORMA: ${res.videogioco.compatibilita}</h3>
+					<h3 id="piatta"></h3>
 					<h3>PRODUTTORE: ${res.videogioco.casaProduttrice}</h3>
 					<h3>DATA DI USCITA: ${res.videogioco.dataUscita}</h3>
 				</div>
@@ -308,13 +345,29 @@ function getNews(id) {
 				<p>${res.contenuto}</p>
 				<h4><em><i class="fa fa-fw fa-id-badge"></i>di ${res.utente.username}
 				<i class="far fa-fw fa-file-alt"></i> pubblicato il: ${res.dataPubblicazione}</em></h4>
-				`).appendTo($(".news-detail"));
+				`);
+				
+		const idGame = +(res.videogioco.id);
+	
+		//console.log(idGame);
+	
+		getVidNews(htmlSnippet, idGame);
   });
 }
 
-function formRisultatiRicerca() {
-  // Get the modal
-  var modal = document.getElementById("myModal");
+function getVidNews(htmlSnippet, idGame) {
+	$.get(`videogioco/${idGame}`, function (res) {
+			const compat = res.compatibilita;
+			
+			//console.log(compat);
+			htmlSnippet.appendTo($(".news-detail"));
+			$("#piatta").text("PIATTAFORMA: " + compat);
+		});
+}
+
+// function formRicerca() {
+//   // Get the modal
+//   var modal = document.getElementById("myModal");
 
   // Get the button that opens the modal
   var btn = document.getElementById("myBtn");
