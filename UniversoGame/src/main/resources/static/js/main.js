@@ -230,6 +230,7 @@ $("#content").on("click", "#notizia", function () {
   $("#content").load("notizia-detail.html", getNews(id));
 });
 
+
 function getRev(id) {
   $.get(`recensione/${id}`, function (res) {
     $(`
@@ -251,6 +252,27 @@ function getRev(id) {
 				`).appendTo($(".review-detail"));
   });
 }
+
+/*
+  function getRev(id) {
+  $.ajax({ 
+	  url: `recensione/${id}`,
+       type: 'GET',
+       success: function(res) {
+               $('#titolo').val(res.videogioco.titolo);
+               $('#genere').val(res.videogioco.genere);
+               $('#compatibilita').val(res.videogioco.compatibilita);
+               $('#casaProduttrice').val(res.videogioco.casaProduttrice);
+               $('#dataUscita').val(res.videogioco.dataUscita),
+        	     $('#constenuto').val(res.contenuto);
+        		$('#username').val(res.utente.username);
+			$('#dataPubblicazione').val(res.dataPubblicazione).appendTo($(".review-detail"));
+		}
+	})
+}
+*/
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 function getNews(id) {
   $.get(`notizia/${id}`, function (res) {
