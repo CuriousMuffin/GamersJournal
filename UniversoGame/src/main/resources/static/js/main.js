@@ -268,7 +268,6 @@ $("#content").on("click", "#notizia", function () {
   $("#content").load("notizia-detail.html", getNews(id));
 });
 
-
 function getRev(id) {
   $.get(`recensione/${id}`, function (res) {
     const htmlSnippet = $(`
@@ -288,23 +287,23 @@ function getRev(id) {
 				<h4><em><i class="fa fa-fw fa-id-badge"></i>di ${res.utente.username}
 				<i class="far fa-fw fa-file-alt"></i> pubblicato il: ${res.dataPubblicazione}</em></h4>
 				`);
-	const idGame = +(res.videogioco.id);
-	
-	//console.log(idGame);
-	
-	getVidRev(htmlSnippet, idGame);
-				//.appendTo($(".review-detail"));
+    const idGame = +res.videogioco.id;
+
+    //console.log(idGame);
+
+    getVidRev(htmlSnippet, idGame);
+    //.appendTo($(".review-detail"));
   });
 }
 
 function getVidRev(htmlSnippet, idGame) {
-	$.get(`videogioco/${idGame}`, function (res) {
-			const compat = res.compatibilita;
-			
-			//console.log(compat);
-			htmlSnippet.appendTo($(".review-detail"));
-			$("#piatta").text("PIATTAFORMA: " + compat);
-		});
+  $.get(`videogioco/${idGame}`, function (res) {
+    const compat = res.compatibilita;
+
+    //console.log(compat);
+    htmlSnippet.appendTo($(".review-detail"));
+    $("#piatta").text("PIATTAFORMA: " + compat);
+  });
 }
 /*
   function getRev(id) {
@@ -346,28 +345,28 @@ function getNews(id) {
 				<h4><em><i class="fa fa-fw fa-id-badge"></i>di ${res.utente.username}
 				<i class="far fa-fw fa-file-alt"></i> pubblicato il: ${res.dataPubblicazione}</em></h4>
 				`);
-				
-		const idGame = +(res.videogioco.id);
-	
-		//console.log(idGame);
-	
-		getVidNews(htmlSnippet, idGame);
+
+    const idGame = +res.videogioco.id;
+
+    //console.log(idGame);
+
+    getVidNews(htmlSnippet, idGame);
   });
 }
 
 function getVidNews(htmlSnippet, idGame) {
-	$.get(`videogioco/${idGame}`, function (res) {
-			const compat = res.compatibilita;
-			
-			//console.log(compat);
-			htmlSnippet.appendTo($(".news-detail"));
-			$("#piatta").text("PIATTAFORMA: " + compat);
-		});
+  $.get(`videogioco/${idGame}`, function (res) {
+    const compat = res.compatibilita;
+
+    //console.log(compat);
+    htmlSnippet.appendTo($(".news-detail"));
+    $("#piatta").text("PIATTAFORMA: " + compat);
+  });
 }
 
-// function formRicerca() {
-//   // Get the modal
-//   var modal = document.getElementById("myModal");
+function formRisultatiRicerca() {
+  // Get the modal
+  var modal = document.getElementById("myModal");
 
   // Get the button that opens the modal
   var btn = document.getElementById("myBtn");
@@ -394,28 +393,6 @@ function getVidNews(htmlSnippet, idGame) {
 function isPublished(bozza) {
   return bozza ? false : true;
 }
-
-// function searchGlobalList() {
-//   let listaN = [];
-//   let listaR = [];
-//   let listaUnita = [];
-//   $.get("notizia", function (res) {
-//     for (item in res) {
-//       if (isPublished(item.bozza)) {
-//         listaN.add(item);
-//       }
-//     }
-//   });
-//   $.get("recensione", function (res) {
-//     for (item in res) {
-//       if (isPublished(item.bozza)) {
-//         listaR.add(item);
-//       }
-//     }
-//   });
-
-//   listaUnita = listaN.concat(listaR);
-// }
 
 function renderPreviewRec(res) {
   $(`
