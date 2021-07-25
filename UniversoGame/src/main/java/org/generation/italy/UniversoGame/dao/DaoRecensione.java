@@ -119,14 +119,11 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 	@Override
 	public Recensione recensione(int id) 
 	{
-		Map<String, String> map = getOne("SELECT * FROM recensione WHERE id = ?", id);
-		//		
+		Map<String, String> map = getOne("SELECT * FROM recensione WHERE id = ?", id);	
 		Recensione recensione = IMappablePro.fromMap(Recensione.class, map);
 		
 		Map<String,String> mappaImmagine = getOne("select * from immagine where id = ?", map.get("idimmagine"));
-		
 		recensione.setImmagine(IMappablePro.fromMap(Immagine.class, mappaImmagine));
-		//		
 
 		Map<String,String> mappaUtente = getOne("select * from utente where id = ?", map.get("idutente"));
 		recensione.setUtente(IMappablePro.fromMap(Utente.class, mappaUtente)); //recupera l'utente che ha scritto la recensione
@@ -134,10 +131,10 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 		Videogioco v = null;
 		Map<String,String> mappaVideogioco = getOne("select * from videogioco where id = ?", map.get("idvideogioco")); //recupera il videogioco relativo alla recensione
 
-		List<Map<String,String>> maps = getAll("select piattaforma.nome from videogioco "
-											+ "inner join compatibilita on compatibilita.idvideogioco = videogioco.id "
-											+ "inner join piattaforma on compatibilita.idpiattaforma = piattaforma.id "
-											+ "where compatibilita.idvideogioco = ?",id);
+		List<Map<String,String>> maps = getAll("SELECT piattaforma.nome FROM videogioco "
+											 + "INNER JOIN compatibilita ON videogioco.id = idvideogioco "
+											 + "INNER JOIN piattaforma ON piattaforma.id = idpiattaforma "
+											 + "WHERE compatibilita.idvideogioco = ?",id);
 
 		List<String> comp = new ArrayList<>();
 

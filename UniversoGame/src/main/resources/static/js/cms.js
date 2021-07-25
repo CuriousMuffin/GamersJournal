@@ -92,9 +92,59 @@ function isPublished(bozza) {
 	$('#add-articolo').click(function() {
 		$('#article-creation-modal').css('display', 'block');
 		$('.modal-content').load('editor.html');
+		getElencoVideogiochi();
 	})
 	
-	$(".modal-content").on("click", "#close-article-creation", function () {
+		function getElencoVideogiochi() {
+		$.get('videogioco', function(res) {
+			for (let i = 0; i < res.length; i++) {
+				$(`<option value='${res[i].id}'>${res[i].titolo}</option>`).appendTo('#videogioco');
+			}
+		})
+	}
+	
+		$('#save').click(function() {
+			/**
+			json da correggere
+			 */
+		const articolo = {
+			titolo: $('#titolo').val(),
+			descrizione: $('#descrizione').val(),
+			prezzo: $('#prezzo').val(),
+			disponibilita: $('#disponibilita').val(),
+			categoria: { 
+				id:	$('#categoria').val(),
+				nome: "",
+				iva: 0
+			}
+		}
+		
+		const tipo = document.getElementsByName('radio');
+		
+		if (editMode) {
+			console.log('WORK IN PROGRESS');
+			//articolo.id = editId;
+			//editArticolo(articolo);	
+		} else {
+			//addArticolo(tipo, articolo);
+		}
+	})
+	
+		function addArticolo(tipo, articolo) {
+		$.ajax({
+			type: 'POST',
+			url: `${tipo}`,
+			data: JSON.stringify(articolo),
+			contentType: 'application/json',
+			success: function() {
+				alert("INSERIMENTO RIUSCITO!");
+				getContentList();
+				closeAddModal();		
+			}
+		})
+	}
+	
+	$(".modal-content").on("click", "#close", function () {
 		closeAddModal();
 	})
 	
@@ -105,11 +155,17 @@ function isPublished(bozza) {
 // =========================== CANCELLA ARTICOLI ===========================
 
 $('#articles').on('click', '.delete-button', function() {
+	
 		const id = +$(this).attr('data-id');
 		const tipo = $(this).attr('tipo');
 	
+	
+	if (confirm(`Vuoi davvero eliminare questa ${tipo}?`)) {
 		deleteArticle(id, tipo, $(`#${tipo}-${id}`));
-	})
+	} else {
+		return null;
+	}
+})
 	
 	function deleteArticle(id, tipo, HTMLrow) {
 		$.ajax({
@@ -129,24 +185,30 @@ $('#articles').on('click', '.draft-button', function() {
 	const tipo = $(this).attr('tipo');
 	const idBottone = $(this).attr('id');
 	const testoBottone = $(this).text();
+	var azione = "";
 	
+		const body = {
+			id: id,
+			bozza: false
+		}
 	
-	//console.log(`premuto tasto ${testoBottone} della ${tipo} con id ${id}`);
+		if (testoBottone == "Bozza") {
+			body.bozza = true;
+			azione = "spostare nelle bozze";
+		} else {
+			body.bozza = false;
+			azione = "pubblicare";
+		}
+		
+	if (confirm(`Vuoi davvero ${azione} questa ${tipo}?`)) {
 	
-	const body = {
-		id: id,
-		bozza: false
-	}
-	
-	if (testoBottone == "Bozza") {
-		body.bozza = true;
+		 moveArticle(tipo, body, $(`#${idBottone}`), $(`#${tipo}-${id}`));
+
 	} else {
-		body.bozza = false;
+		return null;
 	}
 	
-	 //console.log(id, tipo, body, $(`#${idBottone}`), $(`#${tipo}-${id}`));
-	
-	 moveArticle(tipo, body, $(`#${idBottone}`), $(`#${tipo}-${id}`));
+
 })
 
 function moveArticle(tipo, body, HTMLelement, HTMLrow) {
