@@ -33,6 +33,11 @@ $(document).ready(function () {
     document.location.href = "index.html";
   });
 
+	$(".logo-footer").click(function () {
+    $(this).addClass("active");
+    document.location.href = "game.html";
+  });
+
   $("#container-ricerca").click(function () {
     $(".ricerca").replaceWith(
       "<input id='ricerca-input' type='text' name='titolo' placeholder=' Ricerca...'/>"
