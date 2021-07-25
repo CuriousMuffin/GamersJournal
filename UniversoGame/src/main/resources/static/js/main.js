@@ -46,9 +46,28 @@ $(document).ready(function () {
     }, 10);
   });
 
-  $("#ricerca-input").on("", function () {
-    $.get();
+  // $("#container-ricerca").on("keyup", function () {
+  //   // alert("up");
+  //   let testo = $("#ricerca-input").val();
+  //   console.log(testo);
+  // });
+
+  $("#container-ricerca").on("keyup", "#ricerca-input", function (e) {
+    var code = e.keyCode ? e.keyCode : e.which;
+    if (code === 13) {
+    }
   });
+
+  // var e = jQuery.Event("keydown");
+  // e.which = 13; // # Some key code value
+
+  // $("#ricerca-input").trigger(e);
+  // , function () {
+  //   console.log($("#ricerca-input").find('input[name="titolo"]').val());
+  // $.get("notizia", function (res) {
+  //   searchFunc(res, $("#ricerca-input").find('input[name="titolo"]').val());
+  // });
+  // });
 
   // qundo c'è qualcosa con questo id, all'evento assegna una funzione
   // $("#content").on("", "#multi-reviews", function () {
@@ -99,22 +118,20 @@ function topFunction() {
 function getLastRevPreviewInfo() {
   $.get("recensione/byPublDataDesc", function (res) {
     for (let i = 0; i < 6; i++) {
-      if (isPublished(res[i].bozza)) {
-        $(`
-      <div id="recensione" data-id='${res[i].id}' >
-        <div class="container">
-          <img src="${res[i].immagine.pathImmagine}"
-          alt="This was suppose to be an image"
-          class="image"
-          />
-          <div class="overlay">
-            <h1 id="TitleRev">${res[i].titolo}</h1>
-            <h3 id="SubtRev">di ${res[i].utente.username} - ${res[i].dataPubblicazione} </h3>
+      $(`
+        <div id="recensione" data-id='${res[i].id}' >
+          <div class="container">
+            <img src="${res[i].immagine.pathImmagine}"
+            alt="This was suppose to be an image"
+            class="image"
+            />
+            <div class="overlay">
+              <h1 id="TitleRev">${res[i].titolo}</h1>
+              <h3 id="SubtRev">di ${res[i].utente.username} - ${res[i].dataPubblicazione} </h3>
+            </div>
           </div>
         </div>
-      </div>
-      `).appendTo($(".review-container"));
-      }
+        `).appendTo($(".review-container"));
     }
   });
 }
@@ -122,8 +139,7 @@ function getLastRevPreviewInfo() {
 function getLastNewsPreviewInfo() {
   $.get("notizia/byPublDataDesc", function (res) {
     for (let i = 0; i < 6; i++) {
-      if (isPublished(res[i].bozza)) {
-        $(`
+      $(`
         <div id="notizia" data-id='${res[i].id}'>
           <div class="container">
             <img src="${res[i].immagine.pathImmagine}"
@@ -137,7 +153,6 @@ function getLastNewsPreviewInfo() {
           </div>
         </div>
         `).appendTo($(".news-container"));
-      }
     }
   });
 }
@@ -149,6 +164,7 @@ function getPreviewInfo() {
 
 // =========================== LISTA NEWS/RECENSIONI ===========================
 
+// implementare metodo lato be per filtrare le bozze
 function getRevList() {
   $.get("recensione", function (res) {
     for (let i = 0; i < res.length; i++) {
@@ -172,6 +188,7 @@ function getRevList() {
   });
 }
 
+// implementare metodo lato be per filtrare le bozze
 function getNewsList() {
   $.get("notizia", function (res) {
     for (let i = 0; i < res.length; i++) {
@@ -231,7 +248,7 @@ function getRev(id) {
 				<br>
 				<p>${res.contenuto}</p>
 				<h4><em><i class="fa fa-fw fa-id-badge"></i>di ${res.utente.username}
-				 <i class="far fa-fw fa-file-alt"></i> pubblicato il: ${res.dataPubblicazione}</em></h4>
+				<i class="far fa-fw fa-file-alt"></i> pubblicato il: ${res.dataPubblicazione}</em></h4>
 				`).appendTo($(".review-detail"));
   });
 }
@@ -254,7 +271,7 @@ function getNews(id) {
 				<br>
 				<p>${res.contenuto}</p>
 				<h4><em><i class="fa fa-fw fa-id-badge"></i>di ${res.utente.username}
-				 <i class="far fa-fw fa-file-alt"></i> pubblicato il: ${res.dataPubblicazione}</em></h4>
+				<i class="far fa-fw fa-file-alt"></i> pubblicato il: ${res.dataPubblicazione}</em></h4>
 				`).appendTo($(".news-detail"));
   });
 }
@@ -288,3 +305,44 @@ function getNews(id) {
 function isPublished(bozza) {
   return bozza ? false : true;
 }
+
+// function searchGlobalList() {
+//   let listaN = [];
+//   let listaR = [];
+//   let listaUnita = [];
+//   $.get("notizia", function (res) {
+//     for (item in res) {
+//       if (isPublished(item.bozza)) {
+//         listaN.add(item);
+//       }
+//     }
+//   });
+//   $.get("recensione", function (res) {
+//     for (item in res) {
+//       if (isPublished(item.bozza)) {
+//         listaR.add(item);
+//       }
+//     }
+//   });
+
+//   listaUnita = listaN.concat(listaR);
+// }
+
+function renderPreviewRec(res) {
+  $(`
+          <div id="recensione" data-id='${item.id}' >
+            <div class="container">
+              <img src="${item.immagine.pathImmagine}"
+              alt="This was suppose to be an image"
+              class="image"
+              />
+              <div class="overlay">
+                <h1 id="TitleRev">${item.titolo}</h1>
+                <h3 id="SubtRev">di ${item.utente.username} - ${item.dataPubblicazione} </h3>
+              </div>
+            </div>
+          </div>
+          `).appendTo($(".review-container"));
+}
+
+function renderPreviewNews(res) {}

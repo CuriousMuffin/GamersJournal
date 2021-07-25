@@ -1,0 +1,297 @@
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("CYBERPUNK 2077 ATTENDE I DLC E LE ESPANSIONI: NUMERI E DETTAGLI AVVISTATI DA DATAMINER:",
+"Mentre una grande patch da 38 GB di Cyberpunk 2077 appare su Epic Games Store, emergono in rete interessanti
+dettagli sulla possibile struttura del supporto post lancio in programma per il titolo.Come noto da tempo, 
+i prossimi mesi dovrebbero vedere CD Projekt RED pronta ad ampliare l'universo di Night City, tramite DLC gratuiti ed espansioni a 
+pagamento. Per il momento, la software house si è limitata a confermare che i primi 
+contenuti aggiuntivi esordiranno nel corso del 2021, ma manca ancora un calendario preciso. 
+Assenti anche dettagli più specifici su quelli che saranno i contenuti proposti: 
+circostanza che ha condotto diversi dataminer a dedicarsi alla ricerca di indizi 
+tra le maglie del codice di Cyberpunk 2077.Tra questi ultimi, trova spazio anche un utente Reddit dall'occhio particolarmente attento, 
+che afferma di essere riuscito a recuperare diversi dati, tra cui i nomi provvisori dei DLC del GDR. Secondo il dataminer, 
+questi ultimi sarebbero 17 e risponderebbero alle seguenti nomenclature:
+dlc1_swp,
+dlc2_jposes,
+dlc3_kab01,
+dlc4_quartz,
+dlc5_jackets,
+dlc6_apart,
+dlc7_pwp,
+dlc8_mirror,
+dlc9_arr06,
+dlc10_monster,
+dlc11_jlook,
+dlc12_mfinish,
+dlc13_twp,
+dlc14_arr12,
+dlc15_ngplus,
+dlc16_jpn06
+dlc17_bwp.
+In aggiunta, prosegue l'indagatore di codici, sarebbero previste due grandi espansioni a pagamento, 
+indicate come EP1 ed EP2. Se su quest'ultima il dataminer afferma di non aver scovato indizi, per quanto riguarda invece la prima, 
+l'utente afferma che amplierà l'area di Pacifica e aggiungerà una Combat Zone. A livello narrativo, inoltre, EP1 dovrebbe
+veder aggiungersi altre quest all'elenco di attività proposte da Mr. Hands.
+Ricordiamo tuttavia che quanto avvistato dal dataminer potrebbe non rappresentare correttamente i piani di CD Projekt RED. Per saperne 
+di più, non resta che attendere eventuali conferme da parte del team polacco. Nel frattempo, 
+a dispetto delle polemiche che hanno accompagnato il lancio del gioco, Cyberpunk 2077 è stato il gioco più venduto su PS4 a giugno.", "2021-7-20", false, 1, 1, 18);
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("CYBERPUNK 2077 È DI NUOVO DISPONIBILE SUL PLAYSTATION STORE!",
+"Cyberpunk 2077 fa il suo ritorno sul PlayStation Store ed è ora disponibile in tutto il mondo.
+Potete giocarlo su PlayStation 4 Pro e PlayStation 5. In aggiunta, un upgrade per le console next gen 
+sarà disponibile gratuitamente nella seconda metà del 2021, per tutti i possessori della versione PS4 di Cyberpunk 2077. 
+Questo upgrade permetterà al titolo di sfruttare appieno l’hardware più potente presente nelle console di nuova generazione.
+Gli utenti potrebbero ancora riscontrare dei problemi di prestazioni con la versione PS4 del gioco mentre continuiamo 
+a rilasciare aggiornamenti per migliorare la stabilità su tutte le piattaforme. Potete avere la migliore esperienza 
+di gioco su PlayStation, giocando su PS4 Pro e PS5.", "2021-7-13", true, 1, 1, 19);
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("ANIMAL CROSSING NEW HORIZONS TRASFORMA NINTENDO SWITCH: LE SPETTACOLARI DOCK DEI FAN",
+"Dopo aver conquistato i giocatori diventando un fenomeno pop di portata mondiale, 
+Animal Crossing New Horizons conquista anche gli appassionati dei celebri mattoncini danesi grazie 
+al lavoro di OrangeTeam, uno dei LEGO User Group (LUG) più attivi in Italia e riconosciuto ufficialmente da LEGO.Oltre 6.000 mattoncini
+e tre mesi di realizzazione in pieno lockdown, che hanno visto la nascita del diorama di un’isola di Animal Crossing 
+New Horizons con i personaggi più iconici del videogioco, dal cane musicista K.K. Slider al gabbiano marinaio Gulliver.
+Un’isola reale con tutti gli elementi che i fan della serie hanno imparato a conoscere: dal Banco da lavoro agli alberi, 
+fino a un immancabile falò con panchine pronte ad accogliere gli Abitanti dell’Isola. Nonostante le complicazioni dovute al lockdown, 
+dopo tre mesi di lavoro Animal Crossing New Horizons è finalmente giunto nel mondo reale e oltre ai personaggi 
+già realizzati altri personaggi come Tom Nook sbarcheranno presto sull'isola LEGO.Sui canali ufficiali di 
+OrangeTeamLug arriveranno presto delle pratiche guide alla costruzione, che consentiranno di riprodurre 
+fedelmente i personaggi entrati nell’immaginario collettivo nell’anno trascorso dall’uscita del gioco.
+Animal Crossing New Horizons ha venduto oltre 35 milioni di copie dal marzo 2020 ad oggi, sette milioni delle quali sono in Europa.", "2021-6-30",true, 1,5, 3);
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("ANIMAL CROSSING NEW HORIZONS FESTEGGIA I CAMPIONATI EUROPEI DI CALCIO",
+"L'isola di Calciopea debutta su Animal Crossing New Horizons: uno spazio pensato per vivere i campionati europei di calcio con spogliatoi,
+uno stadio, postazioni fotografica e Il Viale delle Nazioni, una zona dedicata alle 24 nazionali che prenderanno parte a UEFA EURO 2020.
+L’isola è accessibile anche attraverso un sito web che offre in aggiunta a un tour virtuale delle aree visitabili, 
+anche un kit per il tifoso da indossare in-game con maglia di gioco, bandierina e makeup,
+utile per supportare gli Azzurri e le altre compagini impegnate nella fase finale della competizione.
+Animal Crossing New Horizons è il videogioco Nintendo venduto più velocemente in Europa, 
+con oltre 7 milioni di copie vendute e si dimostra ancora una volta simbolo della creatività per eccellenza, 
+un luogo di incontro ideale per settori e ambiti più disparati, dentro e fuori dal mondo dei videogiochi.
+Animal Crossing New Horizons ha venduto più di 35 milioni di copie dal marzo 2020 ad oggi diventando un vero 
+e proprio fenomeno di costume e conquistando anche attori, cantanti e personaggi del mondo dello spettacolo.
+Questa è solo l'ultima delle numerose collaborazioni tra Animal Crossing e il mondo reale come dimostra l'arrivo delle jersey 
+NSS x Puma x StockX dedicate a Napoli o il diorama Animal Crossing x LEGO realizzato da OrangeTeam.", "2021-7-1", false, 1,5, 4);
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("STAY È UN CORTO FANMADE CON UN FINALE STRAZIANTE ISPIRATO A THE LAST OF US",
+"Un artista VFX che ha già dato il suo prezioso contributo alla realizzazione di kolossal cinematografici
+quali Deadpool 2 e Star Wars: Episodio IX - L'ascesa di Skywalker ha dato vita ad un impressionante
+corto fanmade ispirato a The Last of Us, capolavoro di Naughty Dog e uno dei titoli più iconici
+all'interno della lineup Sony.Stay è il titolo del sorprendente corto che, pur includendo il
+noto personaggio di Ellie, racconta l'emozionante storia di due volti completamente originali,
+Emily e Sean, qui condensata in circa 7 minuti di filmato. Se inizialmente troviamo i due amanti
+in una situazione di calma e complicità, in seguito le cose diventano estremamente più drammatiche
+alla prima apparizione dei clicker, forse le creature che più sono in grado di mettere in stato 
+di ansia i giocatori (in questo gli spettatori) di The Last of Us. Sfortunatamente, 
+sarà Emily a pagare per prima le conseguenze degli eventi venendo infettata da parte
+di una delle mostruose creature. Vi invitiamo a prendere visione del video che trovate in cima
+per dare uno sguardo al finale a dir poco straziante con cui si conclude il corto.
+Come precisato all'interno della descrizione del filmato, Stay è un'idea di Joshua Toonen 
+e realizzata grazie alla collaborazione di 40 artisti. Non è la prima volta in cui assistiamo
+ad un tributo questo genere: in passato abbiamo già avuto la fortuna di ammirare in azione un 
+altro corto ispirato al gioco, The Last of Us Ellie's Revenge. Tutto questo, in attesa di conoscere
+la data di uscita della serie TV di HBO dedicata a The Last of Us che si dipanerà nel corso di 10 episodi.", "2021-7-18", false, 1,13, 59);
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("THE LAST OF US 2: IN ARRIVO UN TAGLIO DI PREZZO PERMANENTE? INDIZI DAL PS STORE USA",
+"Sul PlayStation Store americano, il capolavoro di Naughty Dog viene proposto ad un prezzo inferiore, ma senza alcuna indicazione su sconti applicati o promozioni in atto. L'ipotesi del taglio di prezzo permanente di The Last of Us 2 sta già alimentando un acceso dibattito sui social e sui forum più frequentati.
+Come segnalato dagli appassionati che stanno affollando di messaggi le bacheche dei portali online e dei social, l'edizione Standard di The Last of Us Parte 2 viene venduta sul PlayStation Store americano a 39,99 dollari. 
+Allo stesso modo, anche la Digital Deluxe è interessata da questo cambio di prezzo inatteso e viene proposta all'utenza PS4 e PS5 statunitense a 49,99 dollari.
+A differenza delle altre promozioni in corso, la piattaforma digitale di Sony non riporta alcuna indicazione sulla conclusione dello sconto, da qui la ridda di commenti della community che spera nell'annuncio imminente di un taglio di prezzo definitivo per TLOU 2.
+Nel momento in cui scriviamo, nelle diverse versioni europee del PlayStation Store il prezzo indicato per le edizioni Standard e Digital Deluxe di The Last of Us 2 continua ad essere rispettivamente di 69,99 e 79,99 euro. Anche il PS Store britannico riporta un prezzo in sterline rapportabile a quello italiano e degli altri mercati del Vecchio Continente.Rimaniamo perciò in attesa di ricevere delle informazioni esaustive da parte di Naughty Dog e Sony Interactive Entertainment.
+Nel frattempo, ricordiamo a chi ci segue che sulle nostre pagine potete leggere lo speciale sull'update PS5 di The Last of Us 2 e la differenza dei 60fps.", "2021-7-14",true, 2, 13, 60);
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("FALLOUT 76: DENTRO IL VAULT - AGGIORNAMENTI DI LUGLIO 2021",
+"Viene difficile credere che l’aggiornamento Regno d’acciaio sia già stato pubblicato da un’intera settimana! Ci siamo divertiti un mondo ad affrontare la nuova serie di missioni della Confraternita d’Acciaio, a salire di grado sul tavoliere della stagione 5 e a creare oggetti leggendari insieme a voi. Con queste nuove missioni e funzionalità finalmente disponibili, stiamo già guardando al nostro prossimo aggiornamento importante di Fallout 76, la cui pubblicazione è prevista a settembre.
+Non abbiamo ancora discusso di cosa ci sarà nell’aggiornamento di settembre, ma includerà una nuova e significativa funzionalità che offrirà ai giocatori ancora più varietà nel modo di vivere Fallout 76. Stiamo lavorando per riaprire il server pubblico di test questo mese affinché la community possa collaudare questa nuova funzionalità e condividere il proprio feedback il prima possibile. Anche se non possiamo ancora fornire tutti i dettagli, tenete d’occhio Fallout.com la prossima settimana per aggiornamenti su contenuti e modalità di accesso al PTS.
+Questa settimana abbiamo riscontrato un volume insolitamente elevato di movimenti sotterranei. Al momento, crediamo che i minatori talpa cacciatori di tesori si stiano preparando ancora una volta a uscire in superficie. Sventate i loro piani di saccheggio cercando e abbattendo quanti più cacciatori di tesori possibile nel fine settimana. Ognuno di loro lascerà a terra del bottino leggendario e un contenitore da minatore talpa che potete aprire per ottenere alcuni dei tesori che hanno trovato.
+Inoltre, i commercianti presso le stazioni ferroviarie vi venderanno contenitori da minatore talpa vuoti in cambio di qualche tappo. Usateli per creare e aprire contenitori pieni e ottenere ancora più bottino. L’evento inizia oggi. Qui sotto, gli orari di inizio e fine.", "2021-7-10", false, 5, 8, 23);
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("FALLOUT 76: CREAZIONI C.A.M.P.: MINATORI TALPA",
+"Il tema per le creazioni C.A.M.P. di giugno era “Minatori talpa”! Da condotti minerari abbandonati a rifugi sventrati, passando per scavi in piena regola, la community si è dimostrata in grado di realizzare qualsiasi cosa, utilizzando solo qualche attrezzo e un’abbondante quantità di pietre e fango.
+La sfida più difficile di ogni mese è scegliere solo alcuni tra i meravigliosi C.A.M.P. e rifugi che avete condiviso. Consigliamo quindi di ammirare TUTTE le creazioni sul nostro canale Discord ufficiale. Se non siete riusciti a inviare il materiale in tempo l’ultima volta, nessun problema! Luglio è già qui! Il tema di questo mese è “Circo”. Ricordatevi di inviare le foto dei vostri C.A.M.P. o rifugi tramite Discord entro il 28 luglio per avere modo di partecipare ed essere selezionati nell’articolo del prossimo mese.
+Non vediamo l’ora di goderci i vostri C.A.M.P.!", "2021-7-13",true, 6,8, 24);
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("MONSTER HUNTER RISE RICEVE LA NUOVA MISSIONE EVENTO: ECCO I BONUS E LE SFIDE DA COMPLETARE",
+"Il supporto post-lancio di Monster Hunter Rise prosegue con la nuova Missione Evento organizzata da Capcom per spronare tutti gli appassionati dell'ultimo kolossal action ruolistico su Switch a proseguire la propria avventura.
+L'ultima attività ingame introdotta dalla software house giapponese è già disponibile dal 9 luglio e può essere sbloccata semplicemente recandosi al banco delle missioni della base di caccia.
+Una volta acquisita, la Missione Evento Furia: Festa del Fango sprona gli utenti a recarsi presso la Fortezza Rossa per difendere il cancello finale dagli assalti delle creature del posto.Per partecipare a questa attività, è richiesto il raggiungimento del livello GC 4 o superiore.
+Come ricompensa per i servizi resi al villaggio di Kamura e agli abitanti degli insediamenti limitrofi, gli avventurieri di Monster Hunter Rise maggiormente dediti alla causa potranno sbloccare il Set Adesivi Festival per customizzare ulteriormente il proprio alter-ego.
+In calce alla notizia trovate un'immagine che mostra in anteprima alcuni dei set di cui si compone il nuovo pacchetto come bonus per il completamento dell'ultima attività endgame.
+Se vi state avventurando solo adesso nelle lande dell'ultimo capolavoro di Capcom, o intendete farlo a breve, vi tornerà certamente comodo leggere questo nostro speciale su armi e armature più indicate per i novizi di MH Rise.", "2021-6-1", true, 3, 4, 43);
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("MONSTER HUNTER RISE: A CACCIA DEL LEVIATANO ALMUDRON NELLA NUOVA MISSIONE EVENTO",
+"Dopo aver svelato i nuovi contenuti di giugno e luglio di Monster Hunter Rise, gli sviluppatori di Capcom arricchiscono ulteriormente la già enorme esperienza ludica del loro action GDR lanciando una nuova Missione Evento con sfide di caccia e bonus per chi sarà in grado di avere la meglio su Almudron.La nuova attività ingame di MH Rise è attiva dal 25 giugno e sprona gli appassionati del kolossal ruolistico per Nintendo Switch a partecipare all'evento Almudron, Vittima della Moda, una sfida di alto livello per cacciatori di livello GC8 e superiore.Una volta accettata la sfida attraverso l'apposita opzione accessibili dal banco delle missioni evento del villaggio,
+gli esploratori della dimensione fantasy di Monster Hunter Rise devono recarsi nelle Piane Sabbiose e cacciare il possente leviatano Almudron per ottenere i materiali per forgiare lo stile armatura speciale Pelle Nera.
+Ma non è tutto.Chi desidera mettersi alla prova in sfide altrettanto impegnative, può infatti partecipare a diverse missioni introdotte di recente da Capcom per rimpolpare di contenuti l'endgame di Monster Hunter Rise:
+Wyvern rapaci della rovina? - caccia Gran Baggi, Gran Izuchi e Kulu-Ya-Ku nell'Arena per ricevere i materiali con cui sbloccare la skin di Tsukino per il companion
+Cuore di ninja - caccia Tobi-Kadachi, Barrioth e Nargacuga nell'Arena per ottenere i titoli speciali Ninja, Esca, Duprrr-lica, Spedito, Tecnica, Fianco, Il codice, Prepara!, È così e Avanzata!
+Parasole danzante, aria nevosa - caccia un Aknosom nelle Isole Ghiacciate per ottenere gli Adesivi \Set Gufufo
+Un'alleanza danzante - caccia un Somnacanth nelle Isole Ghiacciate per sbloccare il gesto Mandare un Bacio
+La fretta è cattiva consigliera - caccia un Arzuros Apex nella Foresta inondata per ottenere Occhiali arguti
+A chi si sta avventurando solo adesso nelle pericolose lande del capolavoro di Capcom, consigliamo di leggere questo nostro approfondimento sulle armi e le armature più indicate per i novizi di MH Rise.", "2021-7-17", false, 4, 4, 44);
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("Watch Dogs: Legion – Bloodline: un video dietro le quinte per l'attesa espansione",
+"Ubisoft ha pubblicato un video dietro le quinte di Watch Dogs: Legion - Bloodline per svelare alcuni dettagli sullo sviluppo. Per chi non sapesse di cosa stiamo parlando, si tratta della nuova espansione del gioco con protagonista Aiden Pearce. Sarà pubblicata il 6 luglio 2021 su PC, Xbox One, Xbox Series X e S, PS4 e PS5.
+Legion sarà acquistabile singolarmente come DLC o scaricabile come parte del Season Pass di Watch Dogs Legion.", "2021-7-21", true, 6, 2, 69);
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("WATCH DOGS LEGION: L'ESPANSIONE BLOODLINE CON AIDEN PEARCE ARRIVA A LUGLIO",
+"Nelle fasi finali del pre-show dell'Ubisoft Forward è stato mostrato lo story trailer di Watch Dogs Legion Bloodline, la nuova espansione del terzo capitolo della serie che sarà disponibile a partire dal prossimo 6 luglio.
+Il nuovo contenuto, parte del Season Pass relativo a Watch Dogs Legion, vedrà il ritorno come personaggio principale di Aiden Pearce, protagonista del primo capitolo della serie uscito nel 2014. Assieme a lui farà il suo ritorno anche Wrench, già visto in Watch Dogs 2.
+Pearce si trova nella Londra post-Brexit dopo aver ricevuto una chiamata di una sua vecchia conoscenza, Jordi Chin, che gli ha chiesto aiuto per creare una nuova organizzazione DedSec operativa nel Regno Unito. Bloodline promette di offrire una storia carica di tensione e coinvolgimento, con Aiden che rischierà spesso la sua vita ritrovandosi coinvolto in qualcosa di ancora più grande di quanto immaginato.
+Dovrà quindi fare affidamento su tutte le sue abilità di hacker e con le armi da fuoco per sopravvivere alle minacce di una Londra ostile.
+Ricordiamo che Ubisoft ha di recente diffuso l'update 4.5 di Watch Dogs Legion che aggiunge diversi nuovi contenuti al gioco base, incluso l'arrivo della nonnina hacker Helen come Operatrice aggiuntiva gratis a partire da martedì 15 giugno.", "2021-6-13", false, 6, 2, 70);
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("Little Nightmares 2: Tarsier Studios passerà ad altro, ma Bandai Namco potrebbe proseguire la serie",
+"Little Nightmares 2 ha confermato ulteriormente la validità della serie e le capacità del team Tarsier Studios, ma il team svedese in ogni caso ha concluso l'impegno sulla serie, volendo ora passare a nuovi progetti, lasciando però aperta la porta a ulteriori sviluppi da parte di Bandai Namco.
+Non abbiamo nulla da annunciare in questo momento, ma visto che abbiamo ricevuto così tanto supporto da parte dei fan in tutto il mondo con il rilascio di Little Nightmares 2, ci sentiamo propensi a portare nuovi contenuti in futuro, ha infatti scritto il publisher Bandai Namco con una comunicazione ufficiale.", "2021-5-11", true, 3, 3, 38);
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("LITTLE NIGHTMARES 2, L'ORRORE AI FORNELLI: ANNUNCIATO COOKING MONO",
+"Con oltre 1 milione di copie vendute per Little Nightmares II, Bandai Namco festeggia il traguardo con un succulento annuncio legato all'inquietante e cupa avventura.Nonostante una Tarsier Studio al lavoro su nuove IP, l'universo dei Piccoli Incubi è infatti pronto ad offrire ancora un'ulteriore gustosa avventura.
+Come potete verificare direttamente in calce a questa news, Bandai Namco ha infatti annunciato ufficialmente Little Nightmares 2: Cooking Mono. Al momento non sono stati diffusi trailer dedicati, ma dagli account social ufficiali della serie è stata diffusa la key art del prodotto, la cui natura non è però al momento del tutto chiara: si tratterà di un titolo stand-alone oppure di un DLC?
+In attesa di saperne di più sulle modalità di distribuzione, si apprende che Little Nightmares 2: Cooking Mono vedrà il giocatore impegnato a rifornire di manicaretti la caffetteria di una scuola rimasta orfana di Lunch Lady. La cuoca dell'istituto è infatti inspiegabilmente assente e toccherà proprio al povero Mono destreggiarsi tra le richieste di un gruppo di bulli affamati. 
+Fallire è fuori discussione: significherebbe infatti divenire il pasto degli spietati studenti! Ancora restia a comunicare la data di uscita di Little Nightmares 2: Cooking Mono, Bandai Namco ha comunque invitato i videogiocatori con la passione per la cucina a inviare le proprie ricette per essere si da ora d'aiuto a Mono: i migliori 3 cuochi riceveranno un premio via mail.", "2021-6-10", false, 2, 3, 39);
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("GRAN TURISMO SPORT: POLYPHONY CI PRESENTA IL NUOVO UPDATE GRATIS CON UN TRAILER",
+"Al netto del work in progress attualmente in corso per dare vita al settimo capitolo numerato della serie automobilistica, Katsunori Yamauchi e Polyphony Digital non si sono dimenticati di Gran Turismo Sport. 
+Il titolo PlayStation si aggiornerà nella giornata di domani e vedrà l'introduzione di una nuova auto di una celebre casa giapponese.L'auto che si prepara ad entrare nei box degli appassionati è la Toyota GR 86 '21, che in realtà non avevamo faticato a riconoscere già con il criptico teaser pubblicato qualche giorno fa da Polyphony.
+Il nuovo bolide sarà introdotto da domani e potrà essere ottenuto da chiunque in via del tutto gratuita.Grazie al trailer che vi abbiamo riportato in cima possiamo dare un primo sguardo al design dell'auto ed apprezzare i ruggiti del suo motore.
+I piloti di Gran Turismo Sport potranno già posare le proprie mani sul volante della Toyota GR 86 '21, che ancora non è stata lanciata ufficialmente sul mercato e che si appresta a debuttare durante questo weekend al Goodwood Festival of Speed.Ricordiamo che l'aggiornamento sarà preceduto da una fase di manutenzione che si terrà domani, giovedì 8 luglio, dalle ore 08:00 alle 10:00, e che renderà temporaneamente fuori servizio le funzionalità online del gioco.
+In attesa che il settimo capitolo arrivi su PlayStation 5, vi invitiamo a ripercorrere insieme a noi la storia dell'iconica serie di Gran Turismo.", "2021-06-19", true, 5, 10, 33);
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("Fanatec e Gran Turismo annunciano la loro collaborazione per lo sviluppo di nuove periferiche da gioco!",
+"Fanatec, marchio leader nell'hardware per corse simulate, ha annunciato il 13 luglio una nuova collaborazione con Gran Turismo per lo sviluppo di nuove periferiche che utilizzeranno tecnologie avanzate di force feedback.
+L'azienda di hardware per corse simulate ha dichiarato che la collaborazione punta a ridurre il divario tra corse simulate e reali.
+Informazioni su Fanatec:
+Fondata nel 1997, Fanatec ha portato nel mondo delle corse simulate diverse innovazioni, come l'incorporazione della tecnologia a cinghia nelle basi per volanti commerciali, la tecnologia delle celle di carico e dei sensori contactless nelle pedaliere commerciali e il primo sistema ad azionamento diretto per PlayStation®4. Le collaborazioni con i costruttori automobilistici di punta e le serie di corse più famose hanno aumentato la visibilità delle corse simulate, rendendole parte integrante degli sport motoristici moderni.
+Thomas Jackermeier, Amministratore delegato di Endor AG:
+Per molti anni Kazunori Yamauchi ha esplorato nuove frontiere sul fronte software, ricoprendo un ruolo fondamentale nell'ascesa delle corse simulate. Ora lavoriamo insieme con l'obiettivo comune di continuare verso l'unione di corse virtuali e reali. Abbiamo in programma diversi progetti, che sono impaziente di vedere attuati in Gran Turismo.
+Kazunori Yamauchi, Produttore della serie Gran Turismo:Fanatec è da molti anni un pioniere della tecnologia per simulazioni. Qualità e prestazioni dei suoi prodotti sono impressionanti, ma è il suo desiderio di innovare negli sport motoristici a essere particolarmente in sintonia con noi. Polyphony Digital e Fanatec condividono lo stesso spirito e le stesse ambizioni di lungo periodo. Sono impaziente di scoprire ciò che potremo creare insieme. ", "2021-09-07", false, 4, 10, 34);
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("RATCHET & CLANK RIFT APART, SUCCESSO NEGLI USA: È IL GIOCO PIÙ VENDUTO DI GIUGNO 2021",
+"Dopo aver saputo delle ottime vendite di Xbox Series X/S, Switch e PS5 da NPD, gli analisti della società di ricerche di mercato statunitense segnalano anche le classifiche in ambito software relativi al mese di giugno 2021, con la prima posizione saldamente nelle mani di Sony.A guidare la lista dei titoli più venduti è infatti Ratchet & Clank: Rift Apart, nuovo capitolo della storica serie firmata Insomniac Games disponibile in esclusiva PlayStation 5 dallo scorso 10 giugno. In meno di un mese la nuova avventura del dinamico duo ha scalato le vette della classifica,superando un peso massimo del mercato a stelle e strisce come Call of Duty Black Ops Cold War, che arriva alla seconda posizione.
+Sul terzo gradino del podio troviamo invece Mario Golf: Super Rush per Nintendo Switch, che dopo alcuni anni ha riportato Mario e i suoi compagni sui verdi campi da golf.
+Per Sony è stato un mese di successo, considerato che nella Top 10 trovano spazio anche MLB The Show 21 (titolo di Sony San Diego, al quarto posto) e Marvel's Spider-Man Miles Morales (sempre di Insomniac, al nono). Di seguito ecco la classifica delle prime 10 posizioni:
+Ratchet & Clank Rift Apart
+Call of Duty Black Ops Cold War
+Mario Golf Super Rush
+MLB The Show 21
+Scarlet Nexus
+Resident Evil Village
+Mario Kart 8
+Minecraft
+Marvel's Spider-Man Miles Morales
+Mortal Kombat 11
+Rift Apart segna inoltre un altro importante record per il suo longevo franchise di appartenenza: ha segnato il miglior lancio di sempre per la serie, raddoppiando i risultati del precedente episodio per PS4 del 2016 (che era stato tra l'altro venduto a prezzo budget negli Stati Uniti).
+L'ultima avventura degli eroi Insomniac continua quindi ad ottenere grandi consensi: Ratchet & Clank Rift Apart è il gioco del 2021 preferito dal boss di PlayStation, oltre ad essere nuovamente tornato al vertice delle classifiche di vendita UK.", "2021-08-12", false, 1, 11, 49);
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("RATCHET & CLANK RIFT APART È IL GIOCO DEL 2021 PREFERITO DEL BOSS DI PLAYSTATION",
+"Sono numerosi gli spunti emersi nell'ambito di una corposa intervista che Jim Ryan, il boss di PlayStation, ha concesso a TMTPost, portale tecnologico e finanziario tra i più influenti in Cina. L'esecutivo non ha però parlato solamente della strategia gaming di Sony, ma ha anche espresso alcuni suoi pensieri personali.
+In più di un punto dell'intervista, l'esecutivo ha tessuto le lodi di Ratchet & Clank Rift Apart, recente esclusiva per PlayStation 5 che ha stimolato le sue emozioni e lo ha reso felice. Ryan lo considera il miglior gioco dell'ultimo anno: Ratchet & Clank Rift Apart è il mio gioco preferito dell'ultimo anno, quello più piacevole.
+Anche se non è un titolo dai ritmi lenti i giochi preferiti del boss di PlayStation, ndr, la piacevolezza dell'esperienza e le performance su PS5 mi hanno sorpreso.
+L'opera di Insomniac Games lo ha anche reso estremamente ottimista per il futuro: Ho pensato, se un nostro team è in grado di crearequesto 6 mesi dopo il lancio di PS5, cosa saranno in grado di fare fra tre o quattro anni? Questo pensiero mi eccita tantissimo.
+Secondo Ryan, Ratchet & Clank Rift Apart è un dei migliori giochi in circolazione poiché è in grado di scatenare un'ampia varietà di emozioni nei videogiocatori,facendoli eccitare, dando loro una scarica di adrenalina, oppure facendoli sentire felici o tristi.
+In questo modo, riesce a raggiungere anche gli amanti dei film hollywoodiani. Lo shooter platform rappresenta anche un eccellente showcase tecnico per PS5, poiché mostra cosa è in grado di fare la console con il suo SSD, il controller, ecc. Scoprite come se la cava il gioco nella nostra recensione di Ratchet & Clank Rift Apart per PS5.", "2021-06-29", true, 1, 11 , 50);
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("NEW SUPER MARIO BROS 3 PER NINTENDO SWITCH È IN DIRITTURA DI ARRIVO?",
+"Siamo nel pieno dei festeggiamenti per i 35 anni di Super Mario, alla fine dello scorso anno Nintendo ha lanciato Super Mario 3D All-Stars, Super Mario Bros 35, il Game & Watch Super Mario Bros e siamo in attesa di Super Mario 3D World + Bowser's Fury. Le sorprese però potrebbero non essere finite qui...Apparentemente sono stati trovati dei riferimenti a New Super Mario Bros 3 per Nintendo Switch sul sito ufficiale di Nintendo USA, con data di uscita TBD (da definire) e senza alcuna cover art, neanche una immagine provvisoria. Che la compagnia di Kyoto stia pensando dunque di lanciare anche un nuovo episodio della serie New Super Mario Bros?A parte i presunti avvistamenti in questione non ci sono riscontri concreti su questa possibilità e il materiale trapelato potrebbe anche essere falso, da considerare come non provenga da fonti note e nessun insider legato al mondo Nintendo ha ricondiviso il leak, dunque prendete tutto con le dovute precauzioni.La serie New Super Mario Bros è nata su Nintendo DS nel 2006 ed è proseguita poi su Wii (New Super Mario Bros Wii), Nintendo 3DS (New Super Mario Bros 2) e su Wii U con New Super Mario Bros U, quest'ultimo oggetto di un porting Deluxe per Nintendo Switch.", "2021-07-11",true, 2, 12, 54);
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("SUPER MARIO BROS. 3: IL PORTING PER PC DI ID SOFTWARE FINISCE IN UN MUSEO",
+"L'esistenza di id Software è in gran parte dovuta alla volontà da parte dei suoi membri fondatori di creare un porting per PC di Super Mario Bros. 3. Nintendo (manco a dirlo) rifiutò la demo, e gli sviluppatori utilizzarono la medesima tecnologia per dare forma a Commander Keen... il resto, è storia.Nel 2015 John Romero condivise sul web un video tratto dalla versione PC di Super Mario Bros. 3, mentre oggi scopriamo che quella demo è stata consegnata nelle mani dei curatori del museo Strong National Museum of Play di Rochester (nello Stato di New York), dove verrà preservata per sempre come un importante pezzo di storia videoludica.Il Digital Games Curator Andrew Borman afferma di aver trovato il floppy disk della demo in mezzo ad altri oggetti donati al museo da uno sviluppatore anonimo. Dopo averne testato il funzionamento, verificando la validità del materiale mediante DOSBox, Borman ha conservato il codice sia in formato fisico, sia in formato digitale. Al momento non ci sono piani per mostralo al pubblico, ma in futuro le cose potrebbero cambiare. In ogni caso, adesso la demo è a disposizione su richiesta per tutti i ricercatori interessati. In calce trovate il video gameplay condiviso da John Romero sei anni or sono.", "2021-07-13", false, 2, 12, 55);
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("Assassin's creed Valhalla: prossimo aggiornamento potrebbe introdurre le spade a una mano",
+"Il prossimo aggiornamento di Assassin's Creed Valhalla potrebbe aggiungere una caratteristica richiestissima dai giocatori: le spade a una mano. Sì, attualmente i vichinghi protagonisti dell'avventura non dispongono di questa opzione per il loro arsenale.
+Qualche mese fa Ubisoft aveva confermato di volerla implementare, ma poi non aveva più dato notizie in merito. Aggiornamenti ed espansioni sono stati lanciati, ma delle spade a una mano non si era saputo più nulla, almeno fino a oggi, in cui l'account Twitter ufficiale del franchise ha pubblicato un messaggio dal testo inequivocabile:
+Che ne dite se con il prossimo aggiornamento introducessimo le spade a una mano?
+Purtroppo non c'è ancora una data per l'arrivo del nuovo aggiornamento, anche se immaginiamo che non manchi molto, vista la pubblicazione del messaggio. Forse potrebbe uscire insieme a L'assedio di Parigi, la nuova espansione del gioco prevista per questa estate.", "2021-05-17", false, 6, 6, 8);
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("Assassin's Creed Valhalla per PC supporta il controller DualSense di PS5",
+"Assassin's Creed Valhalla per PC supporta il controller DualSense di PS5 e le sue tante funzionalità, dai trigger adattivi al feedback aptico, proprio come sulla console Sony.
+Non è dato sapere quando Ubisoft ha reso disponibili queste feature anche nella versione PC del gioco, ma non si tratta di un caso isolato: qualche tempo fa anche Metro Exodus Enhanced Edition ha introdotto il supporto al DualSense su PC tramite una patch.
+Per il momento il controller di PlayStation 5 funziona e viene riconosciuto in automatico su PC, a patto però di utilizzarlo in modalità cablata. La modalità wireless non è ancora supportata, ma lo sarà in futuro.
+L'aggiornamento consente dunque di sfruttare il feedback extra fornito dal dispositivo, in particolare durante i combattimenti: i trigger esprimono maggiore resistenza a seconda della situazione o dell'arma utilizzata, e così via.
+A proposito dell'ultimo episodio della serie Ubisoft, il DLC L'Assedio di Parigi è stato mostrato con un primo trailer all'Ubisoft Forward e arriverà questa estate, sebbene non ci sia ancora una data di uscita ufficiale.", "2021-06-02", true, 5, 6, 9);
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("Crash Bandicoot 4: It’s About Time è attualmente scontato per console del 43% grazie al Prime Day",
+"Crash Bandicoot 4: It’s About Time si inserisce a gamba tesa tra i videogiochi che Amazon ha deciso di scontare per il Prime Day che si terrà nella giornata odierna (il 21 giugno) e domani (22 giugno). Le offerte sono tantissime e molte di esse sono incredibilmente pazze. Quindi ti consigliamo di agire subito se vuoi accaparrarti un qualsiasi prodotto per non perdere l’offerta!
+Inoltre, ogni prodotto che ti indicheremo come “scontato per il Prime Day” è riservato solo ai clienti di Amazon Prime, come deciso dalla piattaforma. Non hai l’abbonamento annuale o mensile? Potresti pensare di approfittare del primo mese di prova gratuita, con inclusi Prime Video e Twitch Prime/Prime Game con tantissimi giochi e contenuti extra ogni mese.
+Si tratta del nuovo gioco della saga Crash Bandicoot! Muovi il diavoletto della Tazmania in compagnia di tantissimi compagni per salvare il Multiverso da Neo Cortex e N. Tropy. Dovrai dare sfogo a tutte le tue abilità e capacità per andare avanti nelle sfide e raggiungere l’obiettivo finale.
+L’edizione di cui stiamo parlando è per PlayStation 4 con l’aggiornamento gratuito per chi possiede la console next-gen: PlayStation 5. Ti basterà inserire il disco fisico del gioco nello scomparto della console e il gioco è fatto: partirà l’aggiornamento automatico!
+Le novità non sono finite qui, in quanto lo sconto è previsto anche per la console portatile di , ma con una piccola percentuale in meno. Infatti presenta solo il 20% di sconto e il prezzo passa da €49,99 a €39,99.
+Ti ricordiamo che essendo un prodotto venduto sulla piattaforma di Amazon potrebbe essere soggetto a variazioni di prezzo improvvise, specialmente durante il Prime Day che le offerte si alzano o si abbassano repentinamente.Il prezzo sul mercato per PlayStation 4 del titolo è di €69,99, ma lo andrai a pagare solo €39,99. Un grandissimo affare, conoscendo il titolo in questione.", "2021-08-20", true, 2, 7, 13);
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("Crash Bandicoot 4: It's About Time, Activision smentisce licenziamenti del team",
+"Activision ha smentito la notizia relativa ai licenziamenti che avrebbero colpito Toys for Bob, il team di sviluppo che ha realizzato di recente Crash Bandicoot 4: It's About Time.
+Stando alle parole del character designer Nicholas Kole, Activision avrebbe licenziato quasi tutti coloro che hanno lavorato a Crash Bandicoot 4 e Spyro Trilogy, ma il publisher ha rilasciato un comunicato che nega tale ricostruzione.Le notizie circa i licenziamenti di Toys for Bob non sono veritiere, ha dichiarato un rappresentante di Activision ai microfoni di GamesIndustry.biz.Non c'è stata alcuna riduzione del personale di recente presso lo studio.
+Il team di sviluppo continua a operare a pieno regime e anzi ci sono diverse posizioni aperte in questo momento per l'assunzione di nuovo personale, ha aggiunto il portavoce.Toys for Bob è entusiasta di continuare a supportare Crash Bandicoot 4:It's About Time, e più di recente a fornire supporto aggiuntivo per Call of Duty: Warzone.", "2021-08-29", false,2, 7, 14);
+
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("007 GoldenEye in Far Cry 5, Ubisoft ha rimosso la mappa fan-made su richiesta di MGM",
+"Ubisoft ha rimosso i livelli fan made di Far Cry 5 ispirati a 007 GoldenEye, a quanto pare su richiesta di MGM per infrazione dei diritti d'autore, che per quanto riguarda la serie di 007 appartengono alla compagnia cinematografica in questione.
+La mappa in questione era opera soprattutto dello youtuber Krollywood, che ha impiegato circa due anni e mezzo per ricostruire buona parte del celebre sparatutto in prima persona per Nintendo 64 attraverso l'editor di livelli all'interno di Far Cry 5, raggiungendo risultati davvero impressionanti, come testimoniato dal video riportato qui sotto.
+Tutti i 18 livelli di GoldenEye ricreati in maniera artigianale con l'editor di Far Cry 5 erano stati messi a disposizione di tutti nella modalità arcade del gioco Ubisoft con il consenso della casa francese, ma evidentemente MGM non era d'accordo con l'iniziativa.
+Krollywood si è detto ovviamente rattristato dalla notizia che il suo lavoro è stato completamente rimosso, sostenendo che Ubisoft è stata contattata da MGM per l'infrazione del copyright su 007 GoldenEye. Il publisher francese ha confermato di aver effettuato l'eliminazione dei livelli a causa dell'infrazione sui diritti d'autore legati alla serie 007, pur senza menzionare nello specifico proprio MGM:Rispettiamo la richiesta di adesione ai diritti sulla proprietà intellettuale effettuate da chi li detiene e ci aspettiamo che anche i nostri utenti facciano lo stesso, ha riferito Ubisoft, contattata da Kotaku.
+Questa faccenda ha a che fare con il creatore della mappa e chi detiene i diritti e non abbiamo nient'altro da riferire al momento. L'azione è indubbiamente drastica, se si pensa oltretutto al fatto che si trattava di una creazione originale senza riciclo di asset e che era distribuita in forma gratuita. D'altra parte, non è la prima volta che MGM si dimostra estremamente protettiva sulle questioni riguardanti 007, anzi.
+L'anno scorso, la compagnia cinematografica ha richiesto la cancellazione di un progetto di remake di GoldenEye 007 su Unreal Engine 4, allo stesso modo questioni relative alla gestione dei diritti hanno impedito l'uscita del remaster di 007 GoldenEye su Xbox Live Arcade che era praticamente pronto nel 2007. Nel frattempo, IO Interactive sta sviluppato il nuovo gioco ufficiale identificato al momento come Project 007.", "2020-01-05", false, 4, 9, 28);
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+("Far Cry 5: la data del primo DLC",
+"Finalmente conosciamo la data di uscita del primo contenuto scaricabile incluso nel Season Pass di Far Cry 5: Ore di Tenebra sarà disponibile su tutte le piattaforme dal 5 giugno.
+Il Season Pass, ovviamente, non sarà l'unico modo per accedere al DLC, che sarà scaricabile e acquistabile anche singolarmente a un prezzo non ancora precisato.
+Per tutte le novità su Far Cry 5, restate sintonizzati su IGN Italia.", "2021-02-03", true, 3, 9, 29);
+
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+
+("ZELDA BREATH OF THE WILD: ARRESTATO IN GIAPPONE PER AVER VENDUTO SALVATAGGI TRUCCATI",
+"Giunge direttamente dal Giappone la storia di un ragazzo cinese di 27 anni che ad aprile aveva messo in vendita su un sito di e-commerce dei salvataggi personalizzati di The Legend of Zelda Breath of the Wild.Ichimin Sho, residente nel quartiere Toshima Ward di Tokyo, ha reso disponibile per l'acquisto online i cosiddetti Ultimate Save Data dell'iconico open world di Nintendo. Ma cosa rendeva questi file così tanto appetibili? Un po' tutto ciò che richiedeva l'acquirente, dal momento che l'hacker cinese prometteva di aumentare statistiche e sbloccare qualsiasi abilità utili a recuperare gli oggetti più preziosi del gioco. Messi in vendita al prezzo di 3.500 yen (circa 26 euro), i salvataggi hanno attirato l'attenzione di due clienti, ma non solo.L'articolo non è passato inosservato agli occhi della Polizia di Niigata che ha arrestato il ragazzo per aver violato l'Unfair Competition Prevention Act. Sho ha ammesso le proprie colpe ed ha svelato di aver iniziato a vendere salvataggi truccati dal dicembre del 2019, riuscendo a guadagnare la bellezza di 10 milioni di yen (oltre 7.600 euro).Si potrebbe pensare che l'arresto sia ingiustificato, dal momento che si tratta di andare ad alterare un titolo single player, tuttavia il problema sussiste nei metodi adottati dall'hacker. La violazione specifica di Sho è stata quella di aver fornito servizi per aggirare le restrizioni tecniche di Switch applicate da Nintendo.Come sappiamo, esistono dei sotterfugi legittimi per ottenere rapidamente gli oggetti più desiderati di Breath of the Wild: un glitch, ad esempio, consente sbloccare subito la Master Sword.", "2019-07-09", false,2, 14, 64);
+
+
+insert into notizia (titolo,contenuto,datapubblicazione,bozza,idutente,idvideogioco,idimmagine) values
+
+("ZELDA BREATH OF THE WILD: UN GLITCH PERMETTE DI SBLOCCARE SUBITO LA MASTER SWORD",
+"Sono passati più di quattro anni dalla sua uscita, eppure The Legend of Zelda: Breath of the Wild continua a stupire, in un modo o nell'altro. Il mastodontico GDR per Nintendo Switch ha attirato a sé una fanbase estremamente affezionata, che proprio non vuole saperne di lasciare il mondo di Hyrule.Gli speedrunner, in particolare, sono alla continua ricerca di modi per velocizzare il gameplay. Di recente, hanno scoperto un nuovo glitch che consente di acquisire la Master Sword molto presto, (subito dopo il completamento dell'are tutorial del Great Plateau, con Link dotato di soli 3 cuori) e in maniera molto semplice. Servono appena due cose: un pezzo di legno e una fonte per il fuoco, come un freccia infiammata. Dopodiché, tutto ciò che bisogna fare è attraversare Lost Woods e ottenere la Master Sword nel modo illustrato nel video in cima a questa notizia: posizionarsi vicino alla spada, creare un falò, puntare la telecamera verso il cielo, dormire fino al mattino e, quando lo schermo diventa nero, premere il pulsante A.Il gioco non reputa questo metodo come legittimo. Ad esempio, non viene sbloccato lo slot aggiuntivo, inoltre anche se il giocatore possiede la spada, il gioco è come se non lo sapesse. Più avanti, quando Link ottiene i 13 cuori, è possibile persino completare la quest in maniera regolare. Fondamentalmente la Master Sword non conferisce neppure dei grandi vantaggi agli speedrunner, ma almeno offre una sana dose di divertimento per coloro ai quali piace andare in giro e perdersi nel mondo di Hyrule.Lo sapete che di recente i giocatori sono riusciti ad aprire l'ultimo dei forzieri impossibili di The Legend of Zelda: Breath of the Wild?", "2019-10-10", false, 1, 14, 65);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

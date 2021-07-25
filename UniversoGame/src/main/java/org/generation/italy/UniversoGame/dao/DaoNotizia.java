@@ -194,7 +194,7 @@ public class DaoNotizia extends BasicDao implements IDaoNotizia
 	@Override
 	public List<Notizia> notiziePerData() 
 	{
-		List<Notizia> res = notizieORM("SELECT * FROM  notizia order by datapubblicazione desc ");
+		List<Notizia> res = notizieORM("SELECT * FROM  notizia WHERE bozza is false order by datapubblicazione desc ");
 		return res;
 	}
 

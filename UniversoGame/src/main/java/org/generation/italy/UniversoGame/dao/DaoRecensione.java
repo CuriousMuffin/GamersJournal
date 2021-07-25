@@ -110,7 +110,7 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 	 */
 	public List<Recensione> recensioniPerData(){
 	
-		return recensioniORM("SELECT * FROM recensione ORDER BY datapubblicazione desc ");
+		return recensioniORM("SELECT * FROM recensione WHERE bozza is false ORDER BY datapubblicazione desc ");
 	}
 	
     /**
