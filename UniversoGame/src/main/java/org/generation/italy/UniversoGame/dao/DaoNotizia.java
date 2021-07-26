@@ -201,7 +201,7 @@ public class DaoNotizia extends BasicDao implements IDaoNotizia
 	@Override
 	public List<Notizia> searchNotizie(String titoloVideogioco) {
 		return notizieORM("SELECT * FROM recensione inner join videogioco on idvideogioco = videogioco.id "
-				+ "WHERE bozza is false and videogioco.titolo like = '%" + titoloVideogioco + "%' ");
+				+ "WHERE bozza is false and videogioco.titolo like ?", "%"+titoloVideogioco+"%");
 	}
 
 	

@@ -216,7 +216,7 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 	@Override
 	public List<Recensione> searchRecensioni(String titoloVideogioco) {
 		return recensioniORM("SELECT * FROM recensione inner join videogioco on idvideogioco = videogioco.id "
-				+ "WHERE bozza is false and videogioco.titolo like = '%"+ titoloVideogioco + "%' ");
+				+ "WHERE bozza is false and videogioco.titolo like ?", "%"+titoloVideogioco+"%" );
 	}
 
 }//fine dao

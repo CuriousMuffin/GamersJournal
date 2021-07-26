@@ -328,6 +328,11 @@ footer {
   padding: 0;
 }
 
+.modal-content > ul {
+  list-style-type: none;
+  padding: 0;
+}
+
 .review-list > li {
   margin: 0 0 20px 0;
 }
@@ -427,6 +432,10 @@ footer {
 ::-webkit-scrollbar {
   width: 20px;
   background-color: #000;
+}
+
+.modal::-webkit-scrollbar {
+  display: none;
 }
 
 /* Track */

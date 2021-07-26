@@ -1,10 +1,14 @@
 $(document).ready(function () {
+  /**
+   * caricamento della home con le preview di recensioni e news
+   */
   $("#content").load("homeContentContainer.html", function () {
     setTimeout(function () {
       getPreviewInfo();
     }, 100);
   });
 
+  // Caricamento dell'elenco news al click del pulsante nella navbar
   $("#news").click(function () {
     $(this).addClass("active");
     $("#reviews").removeClass("active");
@@ -12,6 +16,7 @@ $(document).ready(function () {
     $("#content").load("news.html", getNewsList());
   });
 
+  // Caricamento dell'elenco recensioni al click del pulsante nella navbar
   $("#reviews").click(function () {
     $(this).addClass("active");
     $("#home").removeClass("active");
@@ -19,6 +24,7 @@ $(document).ready(function () {
     $("#content").load("recensioni.html", getRevList());
   });
 
+  // Caricamento della home al click del pulsante nella navbar
   $("#home").click(function () {
     $(this).addClass("active");
     $("#reviews").removeClass("active");
@@ -26,6 +32,7 @@ $(document).ready(function () {
     document.location.href = "index.html";
   });
 
+  // Caricamento della home al click del logo nell'header
   $(".logo").click(function () {
     $(this).addClass("active");
     $("#reviews").removeClass("active");
@@ -33,6 +40,7 @@ $(document).ready(function () {
     document.location.href = "index.html";
   });
 
+  //caricamento dinamico della barra di ricerca
   $("#container-ricerca").click(function () {
     $(".ricerca").replaceWith(
       "<input id='ricerca-input' type='text' name='titolo' placeholder=' Ricerca...'/>"
@@ -46,72 +54,54 @@ $(document).ready(function () {
     }, 10);
   });
 
+  //ricerca attraverso la barra
   $("#container-ricerca").on("keyup", "#ricerca-input", function (e) {
     var code = e.keyCode ? e.keyCode : e.which;
     let titoloVideog = document.getElementById("ricerca-input").value;
+    //onclick del tasto enter
     if (code === 13) {
       formRisultatiRicerca();
 
       $.get(`recensione/cerca/${titoloVideog}`, function (res) {
-        console.log(titoloVideog);
-        console.log(res);
-        //   for (let i = 0; i < res.length; i++) {
-        //     $(`
-        // <li id="recensione" data-id='${res[i].id}'>
-        //   <div class="container">
-        //     <img src="${res[i].immagine.pathImmagine}"
-        //     alt="This was supposed to be an image"
-        //     class="image"
-        //     />
-        //     <div class="overlay">
-        //       <h1 id="TitleRev">${res[i].titolo}</h1>
-        //       <h3 id="SubtRev">di ${res[i].utente.username} - ${res[i].dataPubblicazione} </h3>
-        //     </div>
-        //   </div>
-        // </li>
-        // `).appendTo($(".modal-content-recensioni"));
-        //   }
+        for (let i = 0; i < res.length; i++) {
+          $(`
+        <li id="recensione" data-id='${res[i].id}'>
+          <div class="container">
+            <img src="${res[i].immagine.pathImmagine}"
+            alt="This was supposed to be an image"
+            class="image"
+            />
+            <div class="overlay">
+              <h1 id="TitleRev">${res[i].titolo}</h1>
+              <h3 id="SubtRev">di ${res[i].utente.username} - ${res[i].dataPubblicazione} </h3>
+            </div>
+          </div>
+        </li>
+        `).appendTo($(".modal-content-recensioni"));
+        }
       });
 
       $.get(`notizia/cerca/${titoloVideog}`, function (res) {
-        console.log(titoloVideog);
-        console.log(res);
-        //   for (let i = 0; i < res.length; i++) {
-        //     $(`
-        // <li id="notizia" data-id='${res[i].id}'>
-        //   <div class="container">
-        //     <img src="${res[i].immagine.pathImmagine}"
-        //     alt="This was supposed to be an image"
-        //     class="image"
-        //     />
-        //     <div class="overlay">
-        //       <h1 id="TitleRev">${res[i].titolo}</h1>
-        //       <h3 id="SubtRev">di ${res[i].utente.username} - ${res[i].dataPubblicazione} </h3>
-        //     </div>
-        //   </div>
-        // </li>
-        // `).appendTo($(".modal-content-notizie"));
-        //   }
+        for (let i = 0; i < res.length; i++) {
+          $(`
+        <li id="notizia" data-id='${res[i].id}'>
+          <div class="container">
+            <img src="${res[i].immagine.pathImmagine}"
+            alt="This was supposed to be an image"
+            class="image"
+            />
+            <div class="overlay">
+              <h1 id="TitleRev">${res[i].titolo}</h1>
+              <h3 id="SubtRev">di ${res[i].utente.username} - ${res[i].dataPubblicazione} </h3>
+            </div>
+          </div>
+        </li>
+        `).appendTo($(".modal-content-notizie"));
+        }
       });
     }
   });
-
-  // var e = jQuery.Event("keydown");
-  // e.which = 13; // # Some key code value
-
-  // $("#ricerca-input").trigger(e);
-  // , function () {
-  //   console.log($("#ricerca-input").find('input[name="titolo"]').val());
-  // $.get("notizia", function (res) {
-  //   searchFunc(res, $("#ricerca-input").find('input[name="titolo"]').val());
-  // });
-  // });
-
-  // qundo c'è qualcosa con questo id, all'evento assegna una funzione
-  // $("#content").on("", "#multi-reviews", function () {
-  //   $("#multiReviews").load("recensionePreview.html");
-  // });
-});
+}); //fine document.ready
 
 // =========================== NAVBAR ===========================
 // Sticky nav bar & ToTop button function
@@ -255,15 +245,11 @@ function getNewsList() {
 $("#content").on("click", "#recensione", function () {
   const id = +$(this).attr("data-id");
 
-  // console.log("click su recensione id " + id);
-
   $("#content").load("recensione-detail.html", getRev(id));
 });
 
 $("#content").on("click", "#notizia", function () {
   const id = +$(this).attr("data-id");
-
-  // console.log("click su notizia numero " + id);
 
   $("#content").load("notizia-detail.html", getNews(id));
 });
@@ -289,42 +275,26 @@ function getRev(id) {
 				`);
     const idGame = +res.videogioco.id;
 
-    //console.log(idGame);
-
     getVidRev(htmlSnippet, idGame);
-    //.appendTo($(".review-detail"));
   });
 }
 
 function getVidRev(htmlSnippet, idGame) {
   $.get(`videogioco/${idGame}`, function (res) {
     const compat = res.compatibilita;
-
-    //console.log(compat);
     htmlSnippet.appendTo($(".review-detail"));
     $("#piatta").text("PIATTAFORMA: " + compat);
   });
 }
-/*
-  function getRev(id) {
-  $.ajax({ 
-	  url: `recensione/${id}`,
-       type: 'GET',
-       success: function(res) {
-               $('#titolo').val(res.videogioco.titolo);
-               $('#genere').val(res.videogioco.genere);
-               $('#compatibilita').val(res.videogioco.compatibilita);
-               $('#casaProduttrice').val(res.videogioco.casaProduttrice);
-               $('#dataUscita').val(res.videogioco.dataUscita),
-        	     $('#constenuto').val(res.contenuto);
-        		$('#username').val(res.utente.username);
-			$('#dataPubblicazione').val(res.dataPubblicazione).appendTo($(".review-detail"));
-		}
-	})
-}
-*/
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+function getVidNews(htmlSnippet, idGame) {
+  $.get(`videogioco/${idGame}`, function (res) {
+    const compat = res.compatibilita;
+    htmlSnippet.appendTo($(".news-detail"));
+    $("#piatta").text("PIATTAFORMA: " + compat);
+  });
+}
 
 function getNews(id) {
   $.get(`notizia/${id}`, function (res) {
@@ -348,19 +318,7 @@ function getNews(id) {
 
     const idGame = +res.videogioco.id;
 
-    //console.log(idGame);
-
     getVidNews(htmlSnippet, idGame);
-  });
-}
-
-function getVidNews(htmlSnippet, idGame) {
-  $.get(`videogioco/${idGame}`, function (res) {
-    const compat = res.compatibilita;
-
-    //console.log(compat);
-    htmlSnippet.appendTo($(".news-detail"));
-    $("#piatta").text("PIATTAFORMA: " + compat);
   });
 }
 
@@ -380,12 +338,20 @@ function formRisultatiRicerca() {
   // When the user clicks on <span> (x), close the modal
   span.onclick = function () {
     $("#myModal").css("display", "none");
+    $(".modal-content-recensioni").html(
+      "<li>Nessuna recensione trovata :(</li>"
+    );
+    $(".modal-content-notizie").html("<li>Nessuna notizia trovata :(</li>");
   };
 
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function (event) {
     if (event.target == modal) {
       $("#myModal").css("display", "none");
+      $(".modal-content-recensioni").html(
+        "<li>Nessuna recensione trovata :(</li>"
+      );
+      $(".modal-content-notizie").html("<li>Nessuna notizia trovata :(</li>");
     }
   };
 }
@@ -410,5 +376,3 @@ function renderPreviewRec(res) {
           </div>
           `).appendTo($(".review-container"));
 }
-
-function renderPreviewNews(res) {}
