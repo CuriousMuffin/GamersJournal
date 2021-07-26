@@ -484,7 +484,7 @@
   
   function preDrawImages() {
     var canvas = drawIntoCanvas(2, 8, function(ctx) {
-        ctx.fillStyle = 'white';
+        ctx.fillStyle = 'cyan';
         ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
       });
       bulletImg = new Image();
@@ -601,7 +601,7 @@
         var alien = aliens[j];
         if (checkRectCollision(bullet.bounds, alien.bounds)) {
           alien.alive = bullet.alive = false;
-          particleManager.createExplosion(alien.position.x, alien.position.y, 'white', 70, 5,5,3,.15,50);
+          particleManager.createExplosion(alien.position.x, alien.position.y, 'purple', 70, 5,5,3,.15,50);
           player.score += 25;
         }
       }
@@ -616,7 +616,7 @@
           hasGameStarted = false;
         } else {
          alien.bullet.alive = false;
-         particleManager.createExplosion(player.position.x, player.position.y, 'green', 100, 8,8,6,0.001,40);
+         particleManager.createExplosion(player.position.x, player.position.y, 'cyan', 100, 8,8,6,0.001,40);
          player.position.set(CANVAS_WIDTH/2, CANVAS_HEIGHT - 70);
          player.lives--;
           break;
@@ -666,9 +666,9 @@
   }
   
   function drawBottomHud() {
-    ctx.fillStyle = '#02ff12';
+    ctx.fillStyle = '#0095ff';
     ctx.fillRect(0, CANVAS_HEIGHT - 30, CANVAS_WIDTH, 2);
-    fillText(player.lives + ' x ', 10, CANVAS_HEIGHT - 7.5, 'white', 20);
+    fillText(player.lives + ' x ', 10, CANVAS_HEIGHT - 7.5, 'cyan', 20);
     ctx.drawImage(spriteSheetImg, player.clipRect.x, player.clipRect.y, player.clipRect.w, 
                    player.clipRect.h, 45, CANVAS_HEIGHT - 23, player.clipRect.w * 0.5,
                    player.clipRect.h * 0.5);

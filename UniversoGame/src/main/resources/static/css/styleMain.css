@@ -31,7 +31,7 @@ p {
   width: 40vw;
 }
 
-.logo:hover {
+.logo:hover, .logo-footer:hover {
   cursor: pointer;
 }
 
