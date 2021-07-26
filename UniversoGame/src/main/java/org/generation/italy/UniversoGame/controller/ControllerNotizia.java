@@ -58,9 +58,9 @@ public class ControllerNotizia
 	
 	/*================================================================================================================================================================*/
 	
-	@GetMapping("/cerca/{titoloVid}")
-	public List<Notizia> getAllRicerca(@PathVariable String titoloVid) {
-		return dao.searchNotizie(titoloVid);
+	@GetMapping("/cercaId/{idVideogioco}")
+	public List<Notizia> getAllRicerca(@PathVariable int idVideogioco) {
+		return dao.searchNotizie(idVideogioco);
 	}
 	
 	/*================================================================================================================================================================*/

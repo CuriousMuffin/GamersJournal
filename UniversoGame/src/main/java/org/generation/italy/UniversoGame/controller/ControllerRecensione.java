@@ -68,9 +68,9 @@ public class ControllerRecensione
 	
 	/*================================================================================================================================================================*/
 	
-	@GetMapping("/cerca/{titoloVid}")
-	public List<Recensione> getAllRicerca(@PathVariable String titoloVid) {
-		return dao.searchRecensioni(titoloVid);
+	@GetMapping("/cercaId/{idVidegioco}")
+	public List<Recensione> getAllRicerca(@PathVariable int idVideogioco) {
+		return dao.searchRecensioni(idVideogioco);
 	}
 	
 	/*================================================================================================================================================================*/

@@ -52,6 +52,13 @@ public class ControllerVideogioco
 	{
 		return dao.videogioco(id);
 	}
+	
+	
+	@GetMapping("/cerca/{titoloVG}")
+	public List<Videogioco> getAllVGbyTitles(@PathVariable String titoloVG) 
+	{
+		return dao.ricercaVideogiochibyName(titoloVG);
+	}
 
 	/*================================================================================================================================================================*/
 

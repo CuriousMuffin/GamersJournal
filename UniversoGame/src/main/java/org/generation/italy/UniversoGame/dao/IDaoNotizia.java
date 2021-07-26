@@ -17,7 +17,7 @@ public interface IDaoNotizia
 {
 	public List<Notizia> notizie(String query, Object... conditions);
 	public List<Notizia> notizieORM(String query, Object... conditions);
-	public List<Notizia> searchNotizie(String titoloVideogioco);
+	public List<Notizia> searchNotizie(int idVideogioco);
 	public List<Notizia> notizie();
 	public List<Notizia> notizieORM();
 	public List<Notizia> notiziePerData();

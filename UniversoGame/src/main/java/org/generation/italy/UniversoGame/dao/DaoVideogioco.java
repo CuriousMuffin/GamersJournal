@@ -36,6 +36,20 @@ public class DaoVideogioco extends BasicDao implements IDaoVideogioco
 	{
 		super(dbAddress, user, password);
 	}
+	
+	/*================================================================================================================================================================*/
+	
+	@Override
+	public List<Videogioco> videogiochi(String query, Object...conditions) {
+		List<Videogioco> ris = new ArrayList<>();
+
+		List<Map<String, String>> maps = getAll(query, conditions);
+
+		for (Map<String, String> map : maps) {
+			ris.add(IMappablePro.fromMap(Videogioco.class, map));
+		}
+		return ris;
+	}
 
 	/*================================================================================================================================================================*/
 
@@ -158,5 +172,12 @@ public class DaoVideogioco extends BasicDao implements IDaoVideogioco
 				videogioco.getTitolo(), videogioco.getGenere(), videogioco.getDataUscita(),
 				videogioco.getCasaProduttrice(), videogioco.getCompatibilita(), videogioco.getId());
 	}
+	
+	/*================================================================================================================================================================*/
+	
+	@Override
+	public List<Videogioco> ricercaVideogiochibyName(String titolo) {
+		return videogiochi("SELECT * FROM videogioco WHERE titolo like ?", "%"+titolo+"%");
+	};
 
 }//fine DaoVideogioco

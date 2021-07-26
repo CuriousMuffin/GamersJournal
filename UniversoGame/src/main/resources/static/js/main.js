@@ -55,6 +55,18 @@ $(document).ready(function () {
   });
 
   //ricerca attraverso la barra
+  // $("#container-ricerca").on("keyup", "#ricerca-input", function (e) {
+  //   var code = e.keyCode ? e.keyCode : e.which;
+  //   let titoloVideog = document.getElementById("ricerca-input").value;
+  //onclick del tasto enter
+  // if (code === 13) {
+  //   formRisultatiRicerca();
+
+  // $.get(`videogioco/cerca/${titoloVideog}`, searchByID(res));
+  // }
+  // });
+
+  //ricerca attraverso la barra
   $("#container-ricerca").on("keyup", "#ricerca-input", function (e) {
     var code = e.keyCode ? e.keyCode : e.which;
     let titoloVideog = document.getElementById("ricerca-input").value;
@@ -376,3 +388,50 @@ function renderPreviewRec(res) {
           </div>
           `).appendTo($(".review-container"));
 }
+
+// Ricerca
+
+// function searchByID(res) {
+//   for (let item in res) {
+//     $.get(`recensione/cercaId/${item.id}`, renderSearchedReviews(res));
+//     $.get(`notizia/cercaId/${item.id}`, renderSearchedNews(res));
+//   }
+// }
+
+// function renderSearchedReviews(res) {
+//   for (let i = 0; i < res.length; i++) {
+//     $(`
+//         <li id="recensione" data-id='${res[i].id}'>
+//           <div class="container">
+//             <img src="${res[i].immagine.pathImmagine}"
+//             alt="This was supposed to be an image"
+//             class="image"
+//             />
+//             <div class="overlay">
+//               <h1 id="TitleRev">${res[i].titolo}</h1>
+//               <h3 id="SubtRev">di ${res[i].utente.username} - ${res[i].dataPubblicazione} </h3>
+//             </div>
+//           </div>
+//         </li>
+//         `).appendTo($(".modal-content-recensioni"));
+//   }
+// }
+
+// function renderSearchedNews(res) {
+//   for (let i = 0; i < res.length; i++) {
+//     $(`
+//         <li id="notizia" data-id='${res[i].id}'>
+//           <div class="container">
+//             <img src="${res[i].immagine.pathImmagine}"
+//             alt="This was supposed to be an image"
+//             class="image"
+//             />
+//             <div class="overlay">
+//               <h1 id="TitleRev">${res[i].titolo}</h1>
+//               <h3 id="SubtRev">di ${res[i].utente.username} - ${res[i].dataPubblicazione} </h3>
+//             </div>
+//           </div>
+//         </li>
+//         `).appendTo($(".modal-content-notizie"));
+//   }
+// }
