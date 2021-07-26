@@ -93,6 +93,7 @@ function isPublished(bozza) {
 		$('#article-creation-modal').css('display', 'block');
 		$('.modal-content').load('editor.html');
 		getElencoVideogiochi();
+
 	})
 	
 		function getElencoVideogiochi() {
