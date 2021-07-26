@@ -87,9 +87,9 @@ public class DaoImmagine extends BasicDao implements IDaoImmagine
 	 * 
 	 */
 	@Override
-	public boolean add(Immagine immagine) 
+	public int add(Immagine immagine) 
 	{
-		return isExecute("insert into immagine (pathimmagine) values (?)", immagine.getPathImmagine());
+		return insertAndGetId("insert into immagine (pathimmagine) values (?)", immagine.getPathImmagine());
 	}
 
 	/*================================================================================================================================================================*/

@@ -16,7 +16,7 @@ public interface IDaoImmagine
 {
 	   public List<Immagine> immagini();
 	   public Immagine immagine(int id);
-	   public boolean add(Immagine immagine);
+	   public int add(Immagine immagine);
 	   public boolean delete(int id);
 	   public boolean update(Immagine immagine);
 

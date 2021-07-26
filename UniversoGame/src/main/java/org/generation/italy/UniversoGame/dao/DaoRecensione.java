@@ -165,10 +165,10 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 	@Override
 	public boolean add(Recensione recensione) 
 	{
-		return isExecute("INSERT INTO recensione (titolo, idimmagine, contenuto, valutazione, idutente, datapubblicazione, approvato, bozza, idvideogioco) "
+		return isExecute("INSERT INTO recensione (titolo, idimmagine, contenuto, valutazione, datapubblicazione, approvato, bozza, idutente, idvideogioco) "
 						+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
-				recensione.getTitolo(), recensione.getImmagine(), recensione.getContenuto(), recensione.getValutazione(), recensione.getUtente(), 
-				recensione.getDataPubblicazione(), recensione.isApprovato(), recensione.isBozza(), recensione.getVideogioco());
+				recensione.getTitolo(), recensione.getImmagine().getId(), recensione.getContenuto(), recensione.getValutazione(), 
+				recensione.getDataPubblicazione(), recensione.isApprovato(), recensione.isBozza(), recensione.getUtente().getId(), recensione.getVideogioco().getId());
 	}
 	
 	/*================================================================================================================================================================*/
@@ -196,10 +196,10 @@ public class DaoRecensione extends BasicDao implements IDaoRecensione
 	@Override
 	public boolean update(Recensione recensione) 
 	{
-		return isExecute("UPDATE recensione SET titolo = ?, idimmagine= ?, contenuto = ?, valutazione = ?, idutente = ?, datapubblicazione = ?, "
-						+ "approvato = ?, bozza = ?, idvideogioco = ? WHERE id = ?", 
-				recensione.getTitolo(), recensione.getImmagine(), recensione.getContenuto(), recensione.getValutazione(), recensione.getUtente(), 
-				recensione.getDataPubblicazione(), recensione.isApprovato(), recensione.isBozza(), recensione.getVideogioco(), recensione.getId());
+		return isExecute("UPDATE recensione SET titolo = ?, contenuto = ?, valutazione = ?, datapubblicazione = ?, "
+						+ "bozza = ?, idimmagine = ?, idvideogioco = ? WHERE id = ?", 
+				recensione.getTitolo(), recensione.getContenuto(), recensione.getValutazione(), 
+				recensione.getDataPubblicazione(), recensione.isBozza(), recensione.getImmagine().getId(), recensione.getVideogioco().getId(), recensione.getId());
 	}
 
 	/**

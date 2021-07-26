@@ -61,7 +61,7 @@ public class ControllerImmagine
 	 * @param immagine
 	 */
 	@PostMapping
-	public boolean add(@RequestBody Immagine immagine)
+	public int add(@RequestBody Immagine immagine)
 	{
 		return dao.add(immagine); 
 	}

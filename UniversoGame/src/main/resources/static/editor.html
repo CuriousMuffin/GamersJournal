@@ -13,11 +13,11 @@
   	<div class="input-fields">
   	<form id="input">
   	
-	<button id="save">SALVA</button>
+	<button id="save" class="salva-button" type="button">SALVA</button>
   	
   	<div class="radios">
   	<label for="radio-recensione">Recensione</label>
-  	<input type="radio" id="radio-recensione" name="tipologia" value="recensione" checked>
+  	<input type="radio" id="radio-recensione" name="tipologia" value="recensione">
   	<label for="radio-notizia">Notizia</label>
   	<input type="radio" id="radio-notizia" name="tipologia" value="notizia">
   	</div>
@@ -35,6 +35,7 @@
 	</div>
 	
 	<div>
+	<input type="hidden" id="idimmagine">
 	<label for="immagine">URL Immagine:</label>
 	<input type="text" id="immagine" required>
 	</div>
