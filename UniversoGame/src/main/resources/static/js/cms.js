@@ -189,7 +189,7 @@ articolo = {
         "id": res,
     },
 	"utente": {
-		"id": 1,
+		"id": 6,
 	},
     "videogioco": {
         "id": +$('#videogioco').val(),
@@ -205,7 +205,7 @@ articolo = {
         "id": res,
     },
 	"utente": {
-		"id": 1,
+		"id": 6,
 	},
     "videogioco": {
         "id": +$('#videogioco').val(),
