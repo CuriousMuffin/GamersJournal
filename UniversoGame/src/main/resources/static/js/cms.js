@@ -93,6 +93,7 @@ function isPublished(bozza) {
 		$('#article-creation-modal').css('display', 'block');
 		$('.modal-content').load('editor.html');
 		getElencoVideogiochi();
+
 	})
 	
 		function getElencoVideogiochi() {
@@ -188,7 +189,7 @@ articolo = {
         "id": res,
     },
 	"utente": {
-		"id": 1,
+		"id": 6,
 	},
     "videogioco": {
         "id": +$('#videogioco').val(),
@@ -204,7 +205,7 @@ articolo = {
         "id": res,
     },
 	"utente": {
-		"id": 1,
+		"id": 6,
 	},
     "videogioco": {
         "id": +$('#videogioco').val(),
